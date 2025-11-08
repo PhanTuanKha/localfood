@@ -1,0 +1,37 @@
+.footer {
+  font-size: 14px;
+}
+h6 {
+  font-weight: 700;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+a:hover {
+  color: #FF8C00;
+}
+
+hr {
+  opacity: 0.15;
+}
+
+.btn-subscribe {
+  background-color: #FF8C00;
+  border-color: #FF8C00;
+  color: #ffffff;
+  &:hover {
+    background-color: darken(#FF8C00, 8%);
+    border-color: darken(#FF8C00, 8%);
+  }
+}
+
+.form-control {
+  &::placeholder {
+    color: #bbbbbb;
+  }
+}
+.bi.bi-heart-fill{
+  color: #FF8C00
+}

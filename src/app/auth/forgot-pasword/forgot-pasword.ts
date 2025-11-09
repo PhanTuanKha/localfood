@@ -30,7 +30,7 @@ export class ForgotPasswordComponent {
     }
 
     if (!this.phone.match(/^[0-9]{9}$/)) {
-      this.error = 'Số điện thoại phải gồm 9 chữ số.';
+      this.error = 'Số điện thoại phải gồm 9 chữ số (không tính mã quốc gia).';
       return;
     }
 
@@ -40,9 +40,8 @@ export class ForgotPasswordComponent {
     }
 
     const fullPhone = '+84' + this.phone;
-    const user = users.find(
-      u => (u as any).email === this.email && (u as any).phone === fullPhone
-    );
+
+    const user = users.find(u => u.email === this.email && u.phone === fullPhone);
 
     if (!user) {
       this.error = 'Không tìm thấy người dùng với email hoặc số điện thoại này.';
@@ -50,7 +49,8 @@ export class ForgotPasswordComponent {
     }
 
     user.password = this.newPassword;
-    this.success = 'Cập nhật mật khẩu thành công!';
+
+    this.success = 'Cập nhật mật khẩu thành công! Đang chuyển hướng...';
 
     setTimeout(() => {
       this.router.navigate(['/signin']);

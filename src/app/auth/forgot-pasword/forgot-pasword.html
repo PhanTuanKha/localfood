@@ -1,1 +1,44 @@
-<p>forgot-pasword works!</p>
+<div class="forgot-page">
+  <div class="forgot-container">
+    <h2>Thay đổi mật khẩu</h2>
+    <form (ngSubmit)="onSubmit()" #changePasswordForm="ngForm">
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Số điện thoại (Việt Nam):</label>
+        <div class="phone-wrapper">
+          <input type="text"
+                 [(ngModel)]="phone"
+                 name="phone"
+                 maxlength="9"
+                 pattern="^[0-9]{9}$"
+                 placeholder="+84"
+                 required
+                 class="phone-input">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Mật khẩu mới:</label>
+        <input type="password" [(ngModel)]="newPassword" name="newPassword" required>
+      </div>
+
+      <div class="form-group">
+        <label>Xác nhận mật khẩu:</label>
+        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+      </div>
+
+      <div *ngIf="error" class="error">{{ error }}</div>
+      <div *ngIf="success" class="success">{{ success }}</div>
+
+      <button type="submit">Cập nhật mật khẩu</button>
+    </form>
+  </div>
+
+  <div class="register-image">
+    <img src="assets/images/main.png" alt="Forgot Password">
+  </div>
+</div>

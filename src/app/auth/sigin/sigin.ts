@@ -32,7 +32,6 @@ export class Signin {
       this.error = '';
       this.role = user.role;
 
-      // Lưu user và thời gian đăng nhập
       const sessionData = {
         user,
         loginTime: new Date().toISOString(),
@@ -41,7 +40,6 @@ export class Signin {
 
       alert(`Đăng nhập thành công với vai trò ${this.role}`);
 
-      // Điều hướng về trang chính hoặc trang bạn muốn
       this.router.navigate(['/']);
     } else {
       this.error = 'Đăng nhập sai. Vui lòng đăng nhập lại hoặc chọn quên mật khẩu.';

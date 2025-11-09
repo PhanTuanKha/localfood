@@ -5,11 +5,18 @@ import { AuthService } from '../services/auth.service';
 import { Subscription } from 'rxjs';
 
 @Component({
+<<<<<<< Updated upstream
   selector: 'app-header',
   imports: [CommonModule],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
+=======
+  selector: 'app-header', 
+  imports: [CommonModule], 
+  templateUrl: './header.html', 
+  styleUrl: './header.css', })
+>>>>>>> Stashed changes
 export class Header implements OnInit, OnDestroy {
   location: string = 'Đang tải vị trí...';
   loading: boolean = true;
@@ -28,7 +35,7 @@ export class Header implements OnInit, OnDestroy {
     this.dropdownOpen = !this.dropdownOpen;
   }
 
-  selectMenu(menu: string) {
+  handleMenuClick(menu: string) {
     this.activeMenu = menu;
     if (menu === 'Đăng nhập') {
       this.router.navigate(['/signin']);
@@ -49,6 +56,9 @@ export class Header implements OnInit, OnDestroy {
       if (!inside) {
         this.ngZone.run(() => (this.dropdownOpen = false));
       }
+    });
+    this.authSubscription = this.authService.isLoggedIn$.subscribe(status => {
+      this.isLoggedIn = status;
     });
   }
   getUserLocation(): void {

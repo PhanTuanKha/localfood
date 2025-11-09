@@ -20,11 +20,15 @@
                 "glob": "**/*",
                 "input": "public"
               },
+<<<<<<< Updated upstream
               {
                 "glob": "**/*",
                 "input": "src/app/assets",
                 "output": "assets"
               }
+=======
+              "src/assets"
+>>>>>>> Stashed changes
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -83,11 +87,15 @@
                 "glob": "**/*",
                 "input": "public"
               },
+<<<<<<< Updated upstream
               {
                 "glob": "**/*",
                 "input": "src/app/assets",
                 "output": "assets"
               }
+=======
+              "src/assets"
+>>>>>>> Stashed changes
             ],
             "styles": [
               "src/styles.css"

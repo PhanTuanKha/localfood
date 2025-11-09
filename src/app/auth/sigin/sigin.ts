@@ -39,6 +39,10 @@ export class Signin {
       };
       sessionStorage.setItem('currentUserSession', JSON.stringify(sessionData));
       this.authService.login();
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
       alert(`Đăng nhập thành công với vai trò ${this.role}`);
 
       this.router.navigate(['/']);

@@ -1,6 +1,11 @@
 <nav class="navbar navbar-form navbar-left navbar-inverse px-3 d-flex justify-content-between align-items-center shadow-sm">
+<<<<<<< Updated upstream
   <div class="d-flex alin-items-center">
     <img src="assets/images/logo/localfood.jpg" alt="Không hiển thị được ảnh" width="40px" height="40%">
+=======
+  <div class="d-flex align-items-center">
+    <img src="assets/images/logo/localfood.jpg" alt="Không hiển thị được ảnh" width="40px">
+>>>>>>> Stashed changes
     <h4 class="logo-text mb-0 logo-text">local<strong class="text">food</strong></h4>
   </div>
   <div class="location">
@@ -23,19 +28,19 @@
   <div class="dropdown-wrapper">
   <i class="bi bi-border-width" (click)="toggleDropdown()"></i>
   <div class="dropdown-menu" [class.show]="dropdownOpen">
-    <div class="dropdown-item" (click)="selectMenu('Tài khoản')" [class.active]="activeMenu === 'Tài khoản'">Tài khoản</div>
-    <div class="dropdown-item" (click)="selectMenu('Đơn hàng')" [class.active]="activeMenu === 'Đơn hàng'">Đơn hàng</div>
-    <div class="dropdown-item" (click)="selectMenu('Cài đặt')" [class.active]="activeMenu === 'Cài đặt'">Cài đặt</div>
-    <div class="dropdown-item" (click)="selectMenu('Hỗ trợ')" [class.active]="activeMenu === 'Hỗ trợ'">Hỗ trợ</div>
+    <div class="dropdown-item" (click)="handleMenuClick('Tài khoản')" [class.active]="activeMenu === 'Tài khoản'">Tài khoản</div>
+    <div class="dropdown-item" (click)="handleMenuClick('Đơn hàng')" [class.active]="activeMenu === 'Đơn hàng'">Đơn hàng</div>
+    <div class="dropdown-item" (click)="handleMenuClick('Cài đặt')" [class.active]="activeMenu === 'Cài đặt'">Cài đặt</div>
+    <div class="dropdown-item" (click)="handleMenuClick('Hỗ trợ')" [class.active]="activeMenu === 'Hỗ trợ'">Hỗ trợ</div>
     @if (!isLoggedIn) {
       <div class="dropdown-item"
-        (click)="selectMenu('Đăng nhập')"
+        (click)="handleMenuClick('Đăng nhập')"
         [class.active]="activeMenu === 'Đăng nhập'">
         Đăng nhập
       </div>
     } @else {
       <div class="dropdown-item"
-        (click)="selectMenu('Đăng xuất')"
+        (click)="handleMenuClick('Đăng xuất')"
         [class.active]="activeMenu === 'Đăng xuất'">
         Đăng xuất
       </div>

@@ -1,27 +1,45 @@
 <nav class="navbar navbar-form navbar-left navbar-inverse px-3 d-flex justify-content-between align-items-center shadow-sm">
   <div class="d-flex alin-items-center">
-    <!-- <img src="assets/images/logo/localfood.jpg" alt="Không hiển thị được ảnh" width="40px" height="40%"> -->
     <h4 class="logo-text mb-0 logo-text">local<strong class="text">food</strong></h4>
   </div>
   <div class="location">
-    <i class="bi bi-geo-alt-fill"></i>Current Location: Mirpur 1 Bus Stand, Dhakas
+    <i class="bi bi-geo-alt-fill"></i> Địa điểm gần đây: {{ location }}
   </div>
   <div class="local">
    Địa phương<i class="bi bi-caret-down-fill"></i>
   </div>
-  <form class="navbar-form navbar-left" action="...">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+  <form class="navbar-form navbar-left" action="#">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search" name="search">
+      <button class="btn btn-search" type="submit">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </form>
   <div class="block">
     <i class="bi bi-bell-fill"></i>
     <i class="bi bi-chat-dots-fill"></i>
-    <i class="bi bi-border-width"></i>
+  <div class="dropdown-wrapper">
+  <i class="bi bi-border-width" (click)="toggleDropdown()"></i>
+  <div class="dropdown-menu" [class.show]="dropdownOpen">
+    <div class="dropdown-item" (click)="selectMenu('Tài khoản')" [class.active]="activeMenu === 'Tài khoản'">Tài khoản</div>
+    <div class="dropdown-item" (click)="selectMenu('Đơn hàng')" [class.active]="activeMenu === 'Đơn hàng'">Đơn hàng</div>
+    <div class="dropdown-item" (click)="selectMenu('Cài đặt')" [class.active]="activeMenu === 'Cài đặt'">Cài đặt</div>
+    <div class="dropdown-item" (click)="selectMenu('Hỗ trợ')" [class.active]="activeMenu === 'Hỗ trợ'">Hỗ trợ</div>
+    @if (!isLoggedIn) {
+      <div class="dropdown-item"
+        (click)="selectMenu('Đăng nhập')"
+        [class.active]="activeMenu === 'Đăng nhập'">
+        Đăng nhập
+      </div>
+    } @else {
+      <div class="dropdown-item"
+        (click)="selectMenu('Đăng xuất')"
+        [class.active]="activeMenu === 'Đăng xuất'">
+        Đăng xuất
+      </div>
+    }
+  </div>
+  </div>
   </div>
 </nav>

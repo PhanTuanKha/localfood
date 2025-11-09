@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { checkLogin, User, users } from '../../data/users';
+import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-sigin',
   imports: [CommonModule, FormsModule, RouterLink],
@@ -16,7 +17,7 @@ export class Signin {
   role: 'customer' | 'admin' | 'vendor' = 'customer';
   error: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   onSubmit() {
     if (!this.username || !this.password) {
@@ -37,7 +38,7 @@ export class Signin {
         loginTime: new Date().toISOString(),
       };
       sessionStorage.setItem('currentUserSession', JSON.stringify(sessionData));
-
+      this.authService.login();
       alert(`Đăng nhập thành công với vai trò ${this.role}`);
 
       this.router.navigate(['/']);

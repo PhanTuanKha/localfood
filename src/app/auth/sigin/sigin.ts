@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-
+import { Router } from '@angular/router';
+import { checkLogin, User, users } from '../../data/users';
 @Component({
   selector: 'app-sigin',
   imports: [CommonModule, FormsModule, RouterLink],
@@ -14,17 +15,36 @@ export class Signin {
   password: string = '';
   role: 'customer' | 'admin' | 'vendor' = 'customer';
   error: string = '';
+
+  constructor(private router: Router) {}
+
   onSubmit() {
     if (!this.username || !this.password) {
       this.error = 'Vui lòng điền đầy đủ thông tin';
       return;
     }
-    console.log('Login attempt:', {
-      username: this.username,
-      password: this.password,
-      role: this.role,
-    });
-    this.error = '';
-    alert(`Đăng nhập thành công với ${this.role}`);
+
+    const user = users.find(
+      (u) => u.username === this.username && u.password === this.password
+    );
+
+    if (user) {
+      this.error = '';
+      this.role = user.role;
+
+      // Lưu user và thời gian đăng nhập
+      const sessionData = {
+        user,
+        loginTime: new Date().toISOString(),
+      };
+      sessionStorage.setItem('currentUserSession', JSON.stringify(sessionData));
+
+      alert(`Đăng nhập thành công với vai trò ${this.role}`);
+
+      // Điều hướng về trang chính hoặc trang bạn muốn
+      this.router.navigate(['/']);
+    } else {
+      this.error = 'Đăng nhập sai. Vui lòng đăng nhập lại hoặc chọn quên mật khẩu.';
+    }
   }
 }

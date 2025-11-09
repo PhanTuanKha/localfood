@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit, NgZone, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header', 
-  imports: [CommonModule], 
+  imports: [], 
   templateUrl: './header.html', 
   styleUrl: './header.css', })
 export class Header implements OnInit, OnDestroy {

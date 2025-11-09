@@ -1,41 +1,64 @@
 import { Component, OnInit, NgZone, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { Subscription } from 'rxjs';
 
 @Component({
+<<<<<<< Updated upstream
+  selector: 'app-header',
+  imports: [CommonModule],
+  templateUrl: './header.html',
+  styleUrl: './header.css',
+})
+=======
   selector: 'app-header', 
-  imports: [], 
+  imports: [CommonModule], 
   templateUrl: './header.html', 
   styleUrl: './header.css', })
+>>>>>>> Stashed changes
 export class Header implements OnInit, OnDestroy {
   location: string = 'Đang tải vị trí...';
   loading: boolean = true;
   dropdownOpen: boolean = false;
   activeMenu: string = '';
   isLoggedIn: boolean = false;
-  constructor(private ngZone: NgZone) {}
+  private authSubscription!: Subscription;
+
+  constructor(private ngZone: NgZone, private router: Router, private authService: AuthService) {}
   ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
+    if (this.authSubscription) {
+      this.authSubscription.unsubscribe();
+    }
   }
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
 
-  selectMenu(menu: string) {
+  handleMenuClick(menu: string) {
     this.activeMenu = menu;
     if (menu === 'Đăng nhập') {
-      this.isLoggedIn = true;
+      this.router.navigate(['/signin']);
     }
     if (menu === 'Đăng xuất') {
-      this.isLoggedIn = false;
+      this.authService.logout();
+      alert('Đã đăng xuất');
+      this.router.navigate(['/signin']);
     }
   }
   ngOnInit(): void {
+    this.authSubscription = this.authService.isLoggedIn$.subscribe(status => {
+      this.isLoggedIn = status;
+    });
     this.getUserLocation();
     document.addEventListener('click', (event: any) => {
       const inside = event.target.closest('.dropdown-wrapper');
       if (!inside) {
         this.ngZone.run(() => (this.dropdownOpen = false));
       }
+    });
+    this.authSubscription = this.authService.isLoggedIn$.subscribe(status => {
+      this.isLoggedIn = status;
     });
   }
   getUserLocation(): void {

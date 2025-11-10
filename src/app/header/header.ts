@@ -5,18 +5,11 @@ import { AuthService } from '../services/auth.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-<<<<<<< Updated upstream
   selector: 'app-header',
   imports: [CommonModule],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
-=======
-  selector: 'app-header', 
-  imports: [CommonModule], 
-  templateUrl: './header.html', 
-  styleUrl: './header.css', })
->>>>>>> Stashed changes
 export class Header implements OnInit, OnDestroy {
   location: string = 'Đang tải vị trí...';
   loading: boolean = true;

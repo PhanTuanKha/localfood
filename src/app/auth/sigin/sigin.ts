@@ -26,7 +26,7 @@ export class Signin {
     }
 
     const user = users.find(
-      (u) => u.username === this.username && u.password === this.password
+      (u) => u.username === this.username && u.password === this.password && u.role===this.role
     );
 
     if (user) {

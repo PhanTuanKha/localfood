@@ -14,7 +14,7 @@ import { AuthService } from '../../services/auth.service';
 export class Signin {
   username: string = '';
   password: string = '';
-  role: 'customer' | 'admin' | 'vendor' = 'customer';
+  role: 'customer' | 'admin' | 'vendor' = 'admin';
   error: string = '';
 
   constructor(private router: Router, private authService: AuthService) {}

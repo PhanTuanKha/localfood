@@ -73,3 +73,10 @@ button:hover {
 .signin-container p a:hover {
   color: #FF8C00;
 }
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}

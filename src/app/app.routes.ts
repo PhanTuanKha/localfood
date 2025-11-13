@@ -3,11 +3,14 @@ import { Signin } from './auth/sigin/sigin';
 import { Register } from './auth/register/register';
 import { ForgotPasswordComponent } from './auth/forgot-pasword/forgot-pasword';
 import { Mainpage } from './order/mainpage/mainpage';
+import { OrderDetail } from './order/order-detail/order-detail';
 
 export const routes: Routes = [{
-    path: '', redirectTo: 'mainpage', pathMatch: 'full'},
+    // path: '', redirectTo: 'mainpage', pathMatch: 'full'},
+    path: '', redirectTo: 'order-detail', pathMatch: 'full'},
     {path: 'signin', component: Signin},
     {path: 'register', component: Register},
     {path: 'forgot-password', component: ForgotPasswordComponent},
-    {path: 'mainpage', component: Mainpage}
+    {path: 'mainpage', component: Mainpage},
+    {path: 'order-detail', component: OrderDetail}
 ];

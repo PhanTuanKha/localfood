@@ -2,7 +2,7 @@ import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, Router } from '@angular/router';
-import { users } from '../../data/users';
+import { users, addUser, User } from '../../data/users';
 import { AuthService } from '../../services/auth.service';
 AuthService
 @Component({
@@ -17,8 +17,13 @@ export class Mainpage {
 
   username: string = '';
   password: string = '';
+  confirmPassword: string = '';
+  phone: string = '';
+  email: string = '';
   error: string = '';
+
   isLoggedIn: boolean = false;
+  isRegisterMode: boolean = false;
 
   constructor(private router: Router, private authService: AuthService) {}
 
@@ -26,6 +31,11 @@ export class Mainpage {
     this.isLoggedIn = this.authService.isLoggedIn();
   }
 
+  toggleRegisterMode() {
+    this.isRegisterMode = !this.isRegisterMode;
+    this.error = '';
+    this.username = this.password = this.confirmPassword = this.phone = this.email = '';
+  } 
   onSubmit() {
     if (!this.username || !this.password) {
       this.error = 'Vui lòng điền đầy đủ thông tin';

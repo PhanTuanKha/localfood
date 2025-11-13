@@ -1,16 +1,20 @@
-<!-- <div class="container-fluid main-page py-3">
+<div class="container-fluid main-page py-3">
     <div class="container mt-3 main-page-img"> 
-        <img src="assets/images/logo/logovendor.png" class="rounded" alt="Không hiển thị được ảnh"> 
+        <div class="content">
+            <h3>Desi Flavours with a blend of Italian aessthetics!</h3>
+            <h1>Tandoori Pizza London</h1>
+            <img src="assets/images/logo/Rectangle64.png" alt="Không hiển thị đượcc ảnh">
+        </div>
+        <img src="assets/images/logo/Rectangle.png" class="rounded" alt="Không hiển thị được ảnh"> 
     </div>
-
     <div class="find container mb-4">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
-      <h2 class="fw-bold text-orange mb-3">Đặt hàng từ MC Donald's</h2>
+      <h2 class="fw-bold text-orange mb-3">Đơn hàng từ Tandoori Pizza London</h2>
       <form class="d-flex" role="search">
         <button class="btn btn-orange rounded-circle" type="submit">
             <i class="bi bi-search text-white"></i>
         </button>
-        <input class="form-control me-2 rounded-pill" type="search" placeholder="Tìm kiếm món ăn..." aria-label="Search">
+        <input class="form-control me-2 rounded-pill" type="search" placeholder="Tìm kiếm món ăn" aria-label="Search">
       </form>
     </div>
     </div>
@@ -19,63 +23,145 @@
         <div class="col-lg-3 col-md-4 mb-4">
             <div class="card shadow-sm rounded-4 overflow-hidden">
                 <div class="card-header bg-dark text-white fw-bold py-3">
-                    <i class="bi bi-list"></i> Menu
+                    <img src="assets/images/logo/RestaurantMenu.png" alt="Không hiển thị được ảnh">Menu
                 </div>
                 <ul class="list-group list-group-flush menu-list">
-                    <li class="list-group-item">New Series</li>
-                    <li class="list-group-item">Best Seller</li>
-                    <li class="list-group-item">Flavored Tea</li>
-                    <li class="list-group-item">Milk Tea</li>
-                    <li class="list-group-item">Juice</li>
-                    <li class="list-group-item">Macchiato</li>
-                    <li class="list-group-item">Non tea</li>
-                    <li class="list-group-item">Hot series</li>
+                    <li class="list-group-item">Pizzas</li>
+                    <li class="list-group-item">Garlic Bread</li>
+                    <li class="list-group-item">Calzone</li>
+                    <li class="list-group-item">Kebabas</li>
+                    <li class="list-group-item">Salads</li>
+                    <li class="list-group-item">Cold drinks</li>
+                    <li class="list-group-item">Happy Meal</li>
+                    <li class="list-group-item">Desserts</li>
+                    <li class="list-group-item">Hot drinks</li>
+                    <li class="list-group-item">Sauces</li>
+                    <li 
+                    class="list-group-item">Orbit</li>
+                    
             </ul>
         </div>
     </div>
+    
     <div class="col-lg-9 col-md-8">
-    <h3 class="fw-bold mb-4 text-dark">New Seriest</h3>
+    <h3 class="fw-bold mb-4 text-dark">Pizzas</h3>
         <div class="card mb-4 shadow-sm rounded-4 hover-card">
             <div class="row g-0 align-items-center p-3">
-                <div class="col-md-8">
-                    <h5 class="fw-bold mb-2">Farm House Xtreme Burger</h5>
-                    <p class="mb-2 text-warning"><i class="bi bi-fire"></i>
-                    <i class="bi bi-fire"></i><i class="bi bi-fire"></i>
+            <div class="col-md-8">
+                <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
+                    <p class="mb-2 text-warning">
+                        <i class="bi bi-fire"></i>
+                        <i class="bi bi-fire"></i>
+                        <i class="bi bi-fire" style="color: grey"></i>
+                        <i class="bi bi-fire" style="color: grey"></i>
+                        <i class="bi bi-fire" style="color: grey"></i>
                     </p>
-                    <p class="text-muted mb-2">Roasted Oolong Latte</p>
-                    <div class="d-flex gap-2">
-                    <button class="btn btn-dark btn-sm rounded-pill">Nhỏ 60.000đ</button>
-                    <button class="btn btn-success btn-sm rounded-pill">Vừa 81.000đ</button>
-                    <button class="btn btn-outline-dark btn-sm rounded-pill">Lớn 100.000đ</button>
+                <p class="text-muted mb-3">
+        1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+                </p> 
+                <div class="d-flex gap-2 flex-wrap">
+                <button
+          *ngFor="let size of sizes"
+          (click)="selectSize(size)"
+          [ngClass]="{
+            'btn btn-sm rounded': true,
+            'btn-dark': selectedSize === size,
+            'btn-outline-dark': selectedSize !== size}">
+                <div class="fw-semibold">{{ size.label }}</div>
+                <div>{{ size.price | currency: 'VND' : '' : '1.0-0' }}đ</div>
+            </button>
                 </div>
+                </div>
+
+                <div class="col-md-4 text-center position-relative">
+                <img    src="assets/images/logo/pizza1.png"
+        class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
+            <button class="btn btn-outline-success position-absolute top-0 end-0 m-2 rounded-circle" [ngClass]="{ 'btn-success text-white': selectedSize }">
+                <i class="bi bi-plus-lg"></i>
+            </button>
             </div>
-            <div class="col-md-4 text-center">
-                <img src="assets/images/roastedoolonglatte.png" class="img-fluid rounded-circle shadow-sm" alt="món ăn" style="width:150px;height:150px;object-fit:cover;">
             </div>
-        </div>
+            </div>
+            <div class="card mb-4 shadow-sm rounded-4 hover-card">
+            <div class="row g-0 align-items-center p-3">
+            <div class="col-md-8">
+                <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
+                    <p class="mb-2 text-warning">
+                        <i class="bi bi-fire"></i>
+                        <i class="bi bi-fire"></i>
+                        <i class="bi bi-fire"></i>
+                        <i class="bi bi-fire" style="color: grey"></i>
+                        <i class="bi bi-fire" style="color: grey"></i>
+                    </p>
+                <p class="text-muted mb-3">
+        1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+                </p> 
+                <div class="d-flex gap-2 flex-wrap">
+                <button
+          *ngFor="let size of sizes"
+          (click)="selectSize(size)"
+          [ngClass]="{
+            'btn btn-sm rounded': true,
+            'btn-dark': selectedSize === size,
+            'btn-outline-dark': selectedSize !== size}">
+                <div class="fw-semibold">{{ size.label }}</div>
+                <div>{{ size.price | currency: 'VND' : '' : '1.0-0' }}đ</div>
+            </button>
+                </div>
+                </div>
+
+                <div class="col-md-4 text-center position-relative">
+                <img    src="assets/images/logo/pizza2.png"
+        class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
+            <button class="btn btn-outline-success position-absolute top-0 end-0 m-2 rounded-circle" [ngClass]="{ 'btn-success text-white': selectedSize }">
+                <i class="bi bi-plus-lg"></i>
+            </button>
+            </div>
+            </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm rounded-4 hover-card">
+            <div class="row g-0 align-items-center p-3">
+            <div class="col-md-8">
+                <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
+                    <p class="mb-2 text-warning">
+                        <i class="bi bi-fire"></i>
+                        <i class="bi bi-fire"></i>
+                        <i class="bi bi-fire" ></i>
+                        <i class="bi bi-fire" ></i>
+                        <i class="bi bi-fire" style="color: grey"></i>
+                    </p>
+                <p class="text-muted mb-3">
+        1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
+                </p> 
+                <div class="d-flex gap-2 flex-wrap">
+                <button
+          *ngFor="let size of sizes"
+          (click)="selectSize(size)"
+          [ngClass]="{
+            'btn btn-sm rounded': true,
+            'btn-dark': selectedSize === size,
+            'btn-outline-dark': selectedSize !== size}">
+                <div class="fw-semibold">{{ size.label }}</div>
+                <div>{{ size.price | currency: 'VND' : '' : '1.0-0' }}đ</div>
+            </button>
+                </div>
+                </div>
+
+                <div class="col-md-4 text-center position-relative">
+                <img    src="assets/images/logo/pizza3.png"
+        class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
+            <button class="btn btn-outline-success position-absolute top-0 end-0 m-2 rounded-circle" [ngClass]="{ 'btn-success text-white': selectedSize }">
+                <i class="bi bi-plus-lg"></i>
+            </button>
+            </div>
+            </div>
+            </div>
     </div>
 
-    <div class="card mb-4 shadow-sm rounded-4 hover-card">
-        <div class="row g-0 align-items-center p-3">
-            <div class="col-md-8">
-                <h5 class="fw-bold mb-2">McChicken Deluxe</h5>
-                <p class="mb-2 text-warning"><i class="bi bi-fire"></i><i class="bi bi-fire"></i></p>
-                <p class="text-muted mb-2">Gà chiên giòn, rau tươi và sốt đặc trưng McDonald's.</p>
-            <div class="d-flex gap-2">
-                <button class="btn btn-dark btn-sm rounded-pill">Nhỏ £19.90</button>
-                <button class="btn btn-success btn-sm rounded-pill">Vừa £22.90</button>
-                <button class="btn btn-outline-dark btn-sm rounded-pill">Lớn £25.90</button>
-            </div>
-        </div>
-        <div class="col-md-4 text-center">
-            <img src="assets/images/logo/logovendor.jpg" class="img-fluid rounded-circle shadow-sm" alt="món ăn" style="width:150px;height:150px;object-fit:cover;">
-        </div>
-        </div>
-    </div>
-    </div>
+    
     <div class="d-flex justify-content-center mt-4 gap-2">
-          <button class="btn btn-warning text-white rounded-circle"><i class="bi bi-chevron-left"></i></button>
-          <button class="btn btn-warning text-white rounded-circle"><i class="bi bi-chevron-right"></i></button>
-    </div>
+          <i class="bi bi-arrow-left-circle-fill arrow left"></i>
+          <i class="bi bi-arrow-right-circle-fill arrow left"></i>
 </div>
-</div> -->
+</div>

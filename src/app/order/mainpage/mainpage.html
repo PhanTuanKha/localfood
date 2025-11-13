@@ -1,1 +1,201 @@
-<p>mainpage works!</p>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h2>Bạn đang đói?</h2>
+      <p>Hãy khám phá những món ăn ngon gần bạn chỉ với vài nhấp chuột!</p>
+    </div>
+    <div class="main-image">
+      <img src="assets/images/main.png" alt="noodle" class="hero-img">
+    </div>
+  </div>
+</section>
+<div class="home-page">
+  <div class="first">
+    <div class="container">
+    <div class="item">
+      <div class="img-box">
+        <img src="assets/images/logo/salad.png" alt="Không hiển thị được ảnh">
+        <div class="con">
+          <span class="big">15</span>
+          <span class="small">% off</span>
+        </div>
+      </div>
+      <div class="content">
+        <p><b>Flat Hill Slingback</b></p>
+        <div class="btn-remaining">Còn 5 ngày</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="img-box">
+        <img src="assets/images/logo/salad2.png" alt="Không hiển thị được ảnh">
+        <div class="con">
+          <span class="big">10</span>
+          <span class="small">% off</span>
+        </div>
+      </div>
+      <div class="content">
+        <p><b>Fresh Caesar Salad</b></p>
+        <div class="btn-remaining">Còn 3 ngày</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="img-box">
+        <img src="assets/images/logo/soup.png" alt="Không hiển thị được ảnh">
+        <div class="con">
+          <span class="big">25</span>
+          <span class="small">% off</span>
+        </div>
+      </div>
+      <div class="content">
+        <p><b>Hot Mushroom Soup</b></p>
+        <div class="btn-remaining">Còn 2 ngày</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="img-box">
+        <img src="assets/images/logo/noodle.png" alt="Không hiển thị được ảnh">
+        <div class="con">
+          <span class="big">20</span>
+          <span class="small">% off</span>
+        </div>
+      </div>
+      <div class="content">
+        <p><b>Chicken Noodles</b></p>
+        <div class="btn-remaining">Còn 7 ngày</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="second">
+  <h2>Món ăn đang phổ biến</h2>
+  <div class="slider-wrapper">
+    <i class="bi bi-arrow-left-circle-fill arrow left" (click)="scrollLeft()"></i>
+
+    <div class="slider-container" #scrollContainer>
+      <div class="slider">
+        <div class="item">
+          <img src="assets/images/logo/cheeseburger.png" alt="Không hiển thị được ảnh">
+          <p><b>Cheese Burger</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i> Burger Arena</p>
+          <p><b>50.000đ</b></p>
+          <button>Đặt hàng ngay</button>
+        </div>
+        <div class="item">
+          <img src="assets/images/logo/toffecake.png" alt="Không hiển thị được ảnh">
+          <p><b>Toffe's Cake</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i> Top Sticks</p>
+          <p><b>40.000đ</b></p>
+          <button>Đặt hàng ngay</button>
+        </div>
+        <div class="item">
+          <img src="assets/images/logo/pancake.png" alt="Không hiển thị được ảnh">
+          <p><b>Pancake</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i> Cake Word</p>
+          <p><b>28.000đ</b></p>
+          <button>Đặt hàng ngay</button>
+        </div>
+        <div class="item">
+          <img src="assets/images/logo/crispy.png" alt="Không hiển thị được ảnh">
+          <p><b>Crispy Sandwich</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Fastfood Dine</p>
+          <p><b>45.000đ</b></p>
+          <button>Đặt hàng ngay</button>
+        </div>
+        <div class="item">
+          <img src="assets/images/logo/thaisoup.png" alt="Không hiển thị được ảnh">
+          <p><b>Thai Soup</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Foody Man</p>
+          <p><b>48.000đ</b></p>
+          <button>Đặt hàng ngay</button>
+        </div>
+        <div class="item">
+          <img src="assets/images/logo/crispy.png" alt="Không hiển thị được ảnh">
+          <p><b>Crispy Sandwich</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Fastfood Dine</p>
+          <p><b>45.000đ</b></p>
+          <button>Đặt hàng ngay</button>
+        </div>
+        <div class="item">
+          <img src="assets/images/logo/thaisoup.png" alt="Không hiển thị được ảnh">
+          <p><b>Thai Soup</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Foody Man</p>
+          <p><b>48.000đ</b></p>
+          <button>Đặt hàng ngay</button>
+        </div>
+      </div>
+    </div>
+    <i class="bi bi-arrow-right-circle-fill arrow right" (click)="scrollRight()"></i>
+  </div>
+</div>
+
+<div class="third">
+  <h2>Nhà hàng nổi tiếng</h2>
+</div>
+
+<div class="fourth">
+  <div class="top d-flex justify-content-between align-items-center mb-4">
+    <h2 class="m-0">Tìm kiếm theo món ăn</h2>
+    <div class="d-flex align-items-center gap-3">
+      <p class="m-0"><i><a href="#" class="view-all">Views all</a></i></p>
+        <i class="bi bi-arrow-left-circle-fill arrow" (click)="scrollLeft()"></i>
+        <i class="bi bi-arrow-right-circle-fill arrow" (click)="scrollRight()"></i>
+    </div>
+  </div>
+  <div class="food-category-wrapper">
+      <div class="food-category" id="foodCategory">
+        <div class="circle"><img src="assets/images/logo/pizza.png" alt="Pizza"><p>Pizza</p></div>
+        <div class="circle"><img src="assets/images/logo/burger.png" alt="Burger"><p>Burger</p></div>
+        <div class="circle"><img src="assets/images/logo/noodle.png" alt="Noodles"><p>Noodles</p></div>
+        <div class="circle"><img src="assets/images/logo/sub_sandwiches.png" alt="Sandwich"><p>Sandwich</p></div>
+        <div class="circle"><img src="assets/images/logo/chowmain.png" alt="Chowmein"><p>Chowmein</p></div>
+        <div class="circle"><img src="assets/images/logo/steak.png" alt="Steak"><p>Steak</p></div>
+        <div class="circle"><img src="assets/images/logo/salad.png" alt="Salad"><p>Salad</p></div>
+        <div class="circle"><img src="assets/images/logo/soup.png" alt="Soup"><p>Soup</p></div>
+      </div>
+    </div>
+  </div>
+
+<div class="fifth">
+  <div class="deal-card">
+    <div class="deal-text">
+      <h3>Deal hời với <span>Crispy Sandwiches</span></h3>
+      <p>Thưởng thức món sandwich thơm lừng, cảm nhận hương vị tan chảy trong từng lớp giòn rụm.</p>
+      <button class="btn-deal">Đặt hàng ngay</button>
+    </div>
+    <div class="deal-img">
+      <img src="assets/images/logo/sandwich.png" alt="Crispy Sandwich">
+    </div>
+  </div>
+
+  <div class="deal-card reverse">
+    <div class="deal-img">
+      <img src="assets/images/logo/fried.png" alt="Fried Chicken">
+    </div>
+    <div class="deal-text">
+      <h3>Tiệc tùng cùng <span>Fried Chicken</span></h3>
+      <p>Thưởng thức bữa ăn giòn rụm và cay nồng - lựa chọn hoàn hảo cho mọi dịp sum họp!</p>
+      <button class="btn-deal">Đặt hàng ngay</button>
+    </div>
+  </div>
+
+  <div class="deal-card">
+    <div class="deal-text">
+      <h3>Nóng hổi & bùng nổ với <span>Pizza</span></h3>
+      <p>Thưởng thức miếng pizza phủ phô mai tan chảy, kết hợp hương vị khó quên.</p>
+      <button class="btn-deal">Đặt hàng ngay</button>
+    </div>
+    <div class="deal-img">
+      <img src="assets/images/logo/pizza.png" alt="Pizza">
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <h2>Bạn đã sẵn sàng order với những deal hời nhất chưa?</h2>
+  <button class="btn btn-order">Đặt hàng ngay</button>
+  <img src="assets/images/logo/footer.png" alt="Không hiển thị được ảnh">
+</div>

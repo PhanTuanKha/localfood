@@ -70,11 +70,13 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FF8C00;
+  background-color: #FC773E;
   color: #ffffff;
   display: flex;
   z-index: 1;
-  padding: 12px 30px;
+  padding: 12px 20px;
+  width: 300px;
+  justify-content: center;
 }
 
 .btn-order:hover {

@@ -1,0 +1,110 @@
+[
+  {
+    "transaction_id": 1,
+    "order_id": 1001,
+    "method": "MOMO",
+    "amount": 145000,
+    "status": "success",
+    "transaction_time": "2025-11-10T09:31:00",
+    "transaction_code": "MOMO1001A"
+  },
+  {
+    "transaction_id": 2,
+    "order_id": 1002,
+    "method": "COD",
+    "amount": 120000,
+    "status": "pending",
+    "transaction_time": "2025-11-10T11:40:00",
+    "transaction_code": "COD1002"
+  },
+  {
+    "transaction_id": 3,
+    "order_id": 1003,
+    "method": "ZALOPAY",
+    "amount": 98000,
+    "status": "success",
+    "transaction_time": "2025-11-11T08:50:00",
+    "transaction_code": "ZALO1003"
+  },
+  {
+    "transaction_id": 4,
+    "order_id": 1004,
+    "method": "MOMO",
+    "amount": 135000,
+    "status": "success",
+    "transaction_time": "2025-11-11T12:12:00",
+    "transaction_code": "MOMO1004"
+  },
+  {
+    "transaction_id": 5,
+    "order_id": 1005,
+    "method": "COD",
+    "amount": 150000,
+    "status": "pending",
+    "transaction_time": "2025-11-11T19:10:00",
+    "transaction_code": "COD1005"
+  },
+  {
+    "transaction_id": 6,
+    "order_id": 1006,
+    "method": "MOMO",
+    "amount": 110000,
+    "status": "success",
+    "transaction_time": "2025-11-12T07:25:00",
+    "transaction_code": "MOMO1006"
+  },
+  {
+    "transaction_id": 7,
+    "order_id": 1007,
+    "method": "ZALOPAY",
+    "amount": 130000,
+    "status": "success",
+    "transaction_time": "2025-11-12T18:35:00",
+    "transaction_code": "ZALO1007"
+  },
+  {
+    "transaction_id": 8,
+    "order_id": 1008,
+    "method": "MOMO",
+    "amount": 210000,
+    "status": "success",
+    "transaction_time": "2025-11-13T11:05:00",
+    "transaction_code": "MOMO1008"
+  },
+  {
+    "transaction_id": 9,
+    "order_id": 1009,
+    "method": "COD",
+    "amount": 115000,
+    "status": "pending",
+    "transaction_time": "2025-11-13T19:30:00",
+    "transaction_code": "COD1009"
+  },
+  {
+    "transaction_id": 10,
+    "order_id": 1010,
+    "method": "MOMO",
+    "amount": 95000,
+    "status": "success",
+    "transaction_time": "2025-11-13T20:15:00",
+    "transaction_code": "MOMO1010"
+  },
+  {
+    "transaction_id": 11,
+    "order_id": 1011,
+    "method": "ZALOPAY",
+    "amount": 80000,
+    "status": "success",
+    "transaction_time": "2025-11-14T14:35:00",
+    "transaction_code": "ZALO1011"
+  },
+  {
+    "transaction_id": 12,
+    "order_id": 1012,
+    "method": "MOMO",
+    "amount": 160000,
+    "status": "success",
+    "transaction_time": "2025-11-14T19:50:00",
+    "transaction_code": "MOMO1012"
+  }
+]

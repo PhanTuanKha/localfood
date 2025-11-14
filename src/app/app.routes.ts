@@ -6,8 +6,8 @@ import { Mainpage } from './order/mainpage/mainpage';
 import { OrderDetail } from './order/order-detail/order-detail';
 
 export const routes: Routes = [{
-    // path: '', redirectTo: 'mainpage', pathMatch: 'full'},
-    path: '', redirectTo: 'order-detail', pathMatch: 'full'},
+    path: '', redirectTo: 'mainpage', pathMatch: 'full'},
+    // path: '', redirectTo: 'order-detail', pathMatch: 'full'},
     {path: 'signin', component: Signin},
     {path: 'register', component: Register},
     {path: 'forgot-password', component: ForgotPasswordComponent},

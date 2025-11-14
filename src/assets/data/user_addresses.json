@@ -1,0 +1,37 @@
+[
+  {
+    "address_id": 1,
+    "user_id": 1,
+    "text": "12 Nguyễn Văn Cừ, Q1, TP.HCM",
+    "lat": 10.7758,
+    "lng": 106.7004
+  },
+  {
+    "address_id": 2,
+    "user_id": 2,
+    "text": "215 Hai Bà Trưng, Q3, TP.HCM",
+    "lat": 10.7871,
+    "lng": 106.6901
+  },
+  {
+    "address_id": 3,
+    "user_id": 3,
+    "text": "45 Lê Lợi, Đà Nẵng",
+    "lat": 16.0712,
+    "lng": 108.2230
+  },
+  {
+    "address_id": 4,
+    "user_id": 4,
+    "text": "102 Lê Duẩn, Huế",
+    "lat": 16.4637,
+    "lng": 107.5909
+  },
+  {
+    "address_id": 5,
+    "user_id": 5,
+    "text": "128 Lê Văn Sỹ, Q3, TP.HCM",
+    "lat": 10.7842,
+    "lng": 106.6769
+  }
+]

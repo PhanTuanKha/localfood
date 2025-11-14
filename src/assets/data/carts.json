@@ -1,0 +1,56 @@
+[
+  {
+    "cart_id": 1,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "items": [
+      { "dish_id": 101, "size": "Tô thường", "quantity": 1 },
+      { "dish_id": 103, "size": "Đặc biệt", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 2,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "items": [
+      { "dish_id": 501, "size": "1 phần", "quantity": 2 },
+      { "dish_id": 505, "size": "1 phần", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 3,
+    "user_id": 3,
+    "restaurant_id": 3,
+    "items": [
+      { "dish_id": 301, "size": "1 tô", "quantity": 1 },
+      { "dish_id": 303, "size": "1 phần", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 4,
+    "user_id": 4,
+    "restaurant_id": 7,
+    "items": [
+      { "dish_id": 701, "size": "1 tô", "quantity": 1 },
+      { "dish_id": 704, "size": "1 hũ", "quantity": 2 }
+    ]
+  },
+  {
+    "cart_id": 5,
+    "user_id": 5,
+    "restaurant_id": 10,
+    "items": [
+      { "dish_id": 1001, "size": "1 ly", "quantity": 2 },
+      { "dish_id": 1006, "size": "1 ly", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 6,
+    "user_id": 1,
+    "restaurant_id": 6,
+    "items": [
+      { "dish_id": 601, "size": "1 tô", "quantity": 1 },
+      { "dish_id": 603, "size": "1 tô", "quantity": 1 }
+    ]
+  }
+]

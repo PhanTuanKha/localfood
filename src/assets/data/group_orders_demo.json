@@ -1,0 +1,108 @@
+[
+  {
+    "group_id": 1,
+    "leader_id": 1,
+    "restaurant_id": 1,
+    "invite_code": "GRP-PHO123",
+    "deadline": "2025-11-15T11:30:00",
+    "status": "open",
+    "items": [
+      { "user_id": 1, "dish_id": 101, "size": "Đặc biệt", "quantity": 2 },
+      { "user_id": 2, "dish_id": 102, "size": "Tô thường", "quantity": 1 },
+      { "user_id": 3, "dish_id": 105, "size": "1 phần", "quantity": 1 }
+    ],
+    "voucher": { "code": "GIAM20K", "discount_type": "fixed", "discount_value": 20000 },
+    "discount_amount": 20000,
+    "final_amount": 300000,
+    "shipping_fee": 15000
+  },
+
+  {
+    "group_id": 2,
+    "leader_id": 2,
+    "restaurant_id": 5,
+    "invite_code": "GRP-COMTAM",
+    "deadline": "2025-11-15T19:00:00",
+    "status": "completed",
+    "items": [
+      { "user_id": 2, "dish_id": 501, "size": "1 phần", "quantity": 2 },
+      { "user_id": 4, "dish_id": 504, "size": "1 phần", "quantity": 1 },
+      { "user_id": 5, "dish_id": 506, "size": "1 phần", "quantity": 1 }
+    ],
+    "voucher": { "code": "COMTAM10", "discount_type": "percent", "discount_value": 10 },
+    "discount_amount": 45000,
+    "final_amount": 405000,
+    "shipping_fee": 20000
+  },
+
+  {
+    "group_id": 3,
+    "leader_id": 3,
+    "restaurant_id": 3,
+    "invite_code": "GRP-MIQUANG",
+    "deadline": "2025-11-16T12:00:00",
+    "status": "completed",
+    "items": [
+      { "user_id": 3, "dish_id": 301, "size": "1 tô", "quantity": 1 },
+      { "user_id": 4, "dish_id": 302, "size": "1 tô", "quantity": 1 },
+      { "user_id": 5, "dish_id": 303, "size": "1 phần", "quantity": 1 }
+    ],
+    "voucher": null,
+    "discount_amount": 0,
+    "final_amount": 280000,
+    "shipping_fee": 15000
+  },
+
+  {
+    "group_id": 4,
+    "leader_id": 4,
+    "restaurant_id": 7,
+    "invite_code": "GRP-TAYNINH",
+    "deadline": "2025-11-16T18:00:00",
+    "status": "open",
+    "items": [
+      { "user_id": 4, "dish_id": 701, "size": "1 tô", "quantity": 1 },
+      { "user_id": 1, "dish_id": 702, "size": "1 phần", "quantity": 1 },
+      { "user_id": 2, "dish_id": 704, "size": "1 hũ", "quantity": 2 }
+    ],
+    "voucher": { "code": "MUOITOM", "discount_type": "fixed", "discount_value": 30000 },
+    "discount_amount": 30000,
+    "final_amount": 360000,
+    "shipping_fee": 25000
+  },
+
+  {
+    "group_id": 5,
+    "leader_id": 5,
+    "restaurant_id": 10,
+    "invite_code": "GRP-CHEHEHE",
+    "deadline": "2025-11-17T21:00:00",
+    "status": "completed",
+    "items": [
+      { "user_id": 5, "dish_id": 1001, "size": "1 ly", "quantity": 2 },
+      { "user_id": 3, "dish_id": 1005, "size": "1 ly", "quantity": 1 }
+    ],
+    "voucher": null,
+    "discount_amount": 0,
+    "final_amount": 210000,
+    "shipping_fee": 10000
+  },
+
+  {
+    "group_id": 6,
+    "leader_id": 1,
+    "restaurant_id": 2,
+    "invite_code": "GRP-BUNCHA",
+    "deadline": "2025-11-17T13:00:00",
+    "status": "completed",
+    "items": [
+      { "user_id": 1, "dish_id": 201, "size": "1 phần", "quantity": 1 },
+      { "user_id": 2, "dish_id": 205, "size": "1 phần", "quantity": 1 },
+      { "user_id": 4, "dish_id": 203, "size": "5 cái", "quantity": 1 }
+    ],
+    "voucher": { "code": "NOON15", "discount_type": "percent", "discount_value": 15 },
+    "discount_amount": 39000,
+    "final_amount": 221000,
+    "shipping_fee": 15000
+  }
+]

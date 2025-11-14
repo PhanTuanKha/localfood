@@ -21,6 +21,7 @@ hr {
   background-color: #FF8C00;
   border-color: #FF8C00;
   color: #ffffff;
+  width: 30%;
   &:hover {
     background-color: darken(#FF8C00, 8%);
     border-color: darken(#FF8C00, 8%);

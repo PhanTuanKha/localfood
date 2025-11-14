@@ -1,0 +1,35 @@
+{
+  "shipping_fee_per_km": 5000,
+  "auto_cancel_minutes": 15,
+  "max_default_delivery_radius": 10,
+
+  "payment_methods": [
+    { "method": "COD", "active": true },
+    { "method": "MOMO", "active": true },
+    { "method": "ZALOPAY", "active": true }
+  ],
+
+  "vouchers": [
+    {
+      "code": "GIAM20K",
+      "label": "Giảm 20.000đ",
+      "discount_type": "fixed",
+      "discount_value": 20000,
+      "active": true
+    },
+    {
+      "code": "FREESHIP",
+      "label": "Miễn phí vận chuyển",
+      "discount_type": "fixed",
+      "discount_value": 15000,
+      "active": true
+    },
+    {
+      "code": "GIAM10",
+      "label": "Giảm 10%",
+      "discount_type": "percent",
+      "discount_value": 10,
+      "active": false
+    }
+  ]
+}

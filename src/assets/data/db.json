@@ -1,0 +1,2316 @@
+{
+    "group_orders": [],
+    "group_order_items": [],
+    "users":[
+  {
+    "user_id": 1,
+    "username": "NgocAnh",
+    "password": "123456",
+    "role": "customer",
+    "email": "nga@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 2,
+    "username": "MinhThy",
+    "password": "123456",
+    "role": "customer",
+    "email": "thy@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 3,
+    "username": "HoangKhoa",
+    "password": "123456",
+    "role": "customer",
+    "email": "khoa@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 4,
+    "username": "ThanhVy",
+    "password": "123456",
+    "role": "customer",
+    "email": "vy@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 5,
+    "username": "HuuDuy",
+    "password": "123456",
+    "role": "customer",
+    "email": "duy@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 10,
+    "username": "VendorChinh",
+    "password": "123456",
+    "role": "vendor",
+    "email": "vendor@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Nhà hàng chính thức trong hệ thống LocalFood.",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 99,
+    "username": "Admin",
+    "password": "123456",
+    "role": "admin",
+    "email": "admin@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  }
+]
+,
+    "user_addresses":[
+  {
+    "address_id": 1,
+    "user_id": 1,
+    "text": "12 Nguyễn Văn Cừ, Q1, TP.HCM",
+    "lat": 10.7758,
+    "lng": 106.7004
+  },
+  {
+    "address_id": 2,
+    "user_id": 2,
+    "text": "215 Hai Bà Trưng, Q3, TP.HCM",
+    "lat": 10.7871,
+    "lng": 106.6901
+  },
+  {
+    "address_id": 3,
+    "user_id": 3,
+    "text": "45 Lê Lợi, Đà Nẵng",
+    "lat": 16.0712,
+    "lng": 108.2230
+  },
+  {
+    "address_id": 4,
+    "user_id": 4,
+    "text": "102 Lê Duẩn, Huế",
+    "lat": 16.4637,
+    "lng": 107.5909
+  },
+  {
+    "address_id": 5,
+    "user_id": 5,
+    "text": "128 Lê Văn Sỹ, Q3, TP.HCM",
+    "lat": 10.7842,
+    "lng": 106.6769
+  }
+]
+
+,
+  "carts": [
+  {
+    "cart_id": 1,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "items": [
+      { "dish_id": 101, "size": "Tô thường", "quantity": 1 },
+      { "dish_id": 103, "size": "Đặc biệt", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 2,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "items": [
+      { "dish_id": 501, "size": "1 phần", "quantity": 2 },
+      { "dish_id": 505, "size": "1 phần", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 3,
+    "user_id": 3,
+    "restaurant_id": 3,
+    "items": [
+      { "dish_id": 301, "size": "1 tô", "quantity": 1 },
+      { "dish_id": 303, "size": "1 phần", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 4,
+    "user_id": 4,
+    "restaurant_id": 7,
+    "items": [
+      { "dish_id": 701, "size": "1 tô", "quantity": 1 },
+      { "dish_id": 704, "size": "1 hũ", "quantity": 2 }
+    ]
+  },
+  {
+    "cart_id": 5,
+    "user_id": 5,
+    "restaurant_id": 10,
+    "items": [
+      { "dish_id": 1001, "size": "1 ly", "quantity": 2 },
+      { "dish_id": 1006, "size": "1 ly", "quantity": 1 }
+    ]
+  },
+  {
+    "cart_id": 6,
+    "user_id": 1,
+    "restaurant_id": 6,
+    "items": [
+      { "dish_id": 601, "size": "1 tô", "quantity": 1 },
+      { "dish_id": 603, "size": "1 tô", "quantity": 1 }
+    ]
+  }
+]
+,
+  "categories": [
+  { "category_id": 1, "name": "Món nước" },
+  { "category_id": 2, "name": "Đặc sản miền Bắc" },
+  { "category_id": 3, "name": "Đặc sản miền Trung" },
+  { "category_id": 4, "name": "Đặc sản miền Nam" },
+  { "category_id": 5, "name": "Bánh đặc sản & tráng miệng" }
+]
+,
+  "dishes": [
+
+  {
+    "dish_id": 101,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Bò Tái",
+    "description": "Phở bò tái chuẩn Hà Nội, nước trong thanh.",
+    "image": "assets/images/dishes/pho_tai.jpg",
+    "stock": 25,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "Tô thường", "price": 45000 },
+      { "size": "Đặc biệt", "price": 55000 }
+    ]
+  },
+  {
+    "dish_id": 102,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Bò Chín",
+    "description": "Thịt chín mềm, nước dùng ngọt xương.",
+    "image": "assets/images/dishes/pho_chin.jpg",
+    "stock": 22,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "Tô thường", "price": 45000 },
+      { "size": "Đặc biệt", "price": 55000 }
+    ]
+  },
+  {
+    "dish_id": 103,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Gầu",
+    "description": "Gầu bò béo mềm, nước dùng trong thanh.",
+    "image": "assets/images/dishes/pho_gau.jpg",
+    "stock": 20,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "Tô thường", "price": 50000 },
+      { "size": "Đặc biệt", "price": 60000 }
+    ]
+  },
+  {
+    "dish_id": 104,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Tái Nạm",
+    "description": "Thịt tái kết hợp nạm, vị đậm đà.",
+    "image": "assets/images/dishes/pho_tai_nam.jpg",
+    "stock": 21,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "1 tô", "price": 52000 }
+    ]
+  },
+  {
+    "dish_id": 105,
+    "restaurant_id": 1,
+    "category_id": 1,
+    "name": "Bún Thang Hà Nội",
+    "description": "Gà xé – trứng – giò, nước dùng tinh tế.",
+    "image": "assets/images/dishes/bun_thang.jpg",
+    "stock": 16,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 106,
+    "restaurant_id": 1,
+    "category_id": 1,
+    "name": "Miến Lươn",
+    "description": "Lươn giòn tan, miến mềm thơm.",
+    "image": "assets/images/dishes/mien_luon.jpg",
+    "stock": 17,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 107,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Xào Bò",
+    "description": "Phở xào mềm, bò đậm vị.",
+    "image": "assets/images/dishes/pho_xao.jpg",
+    "stock": 23,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 108,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Bò Viên",
+    "description": "Bò viên dai ngon, nước ngọt thanh.",
+    "image": "assets/images/dishes/pho_bo_vien.jpg",
+    "stock": 18,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 tô", "price": 49000 }]
+  },
+  {
+    "dish_id": 109,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Tái Lăn",
+    "description": "Tái lăn thơm mùi gừng.",
+    "image": "assets/images/dishes/pho_tai_lan.jpg",
+    "stock": 14,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "Đặc biệt", "price": 60000 }]
+  },
+  {
+    "dish_id": 110,
+    "restaurant_id": 1,
+    "category_id": 1,
+    "name": "Bún Mọc Hà Nội",
+    "description": "Mọc thịt heo mềm, nước trong.",
+    "image": "assets/images/dishes/bun_moc.jpg",
+    "stock": 24,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 48000 }]
+  },
+
+  {
+    "dish_id": 201,
+    "restaurant_id": 2,
+    "name": "Bún Chả Truyền Thống",
+    "category_id": 2,
+    "description": "Thịt nướng than hoa chuẩn vị.",
+    "image": "assets/images/dishes/bun_cha.jpg",
+    "stock": 40,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 202,
+    "restaurant_id": 2,
+    "name": "Bún Chả Viên",
+    "category_id": 2,
+    "description": "Chả viên thịt heo nướng thơm.",
+    "image": "assets/images/dishes/bun_cha_vien.jpg",
+    "stock": 34,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 203,
+    "restaurant_id": 2,
+    "name": "Nem Rán Hà Nội",
+    "category_id": 2,
+    "description": "Giòn rụm, nhân thịt – miến – mộc nhĩ.",
+    "image": "assets/images/dishes/nem_ran.jpg",
+    "stock": 22,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "5 cái", "price": 45000 }]
+  },
+  {
+    "dish_id": 204,
+    "restaurant_id": 2,
+    "name": "Nem Cua Bể",
+    "category_id": 2,
+    "description": "Đặc sản Hải Phòng, vỏ giòn nhân cua.",
+    "image": "assets/images/dishes/nem_cua_be.jpg",
+    "stock": 16,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "2 cái", "price": 50000 }]
+  },
+  {
+    "dish_id": 205,
+    "restaurant_id": 2,
+    "name": "Bún Đậu Mắm Tôm",
+    "category_id": 2,
+    "description": "Đậu giòn, chả cốm, thịt luộc.",
+    "image": "assets/images/dishes/bun_dau.jpg",
+    "stock": 35,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 206,
+    "restaurant_id": 2,
+    "name": "Thịt Xiên Nướng",
+    "category_id": 2,
+    "description": "Thịt nướng sả, thơm mềm.",
+    "image": "assets/images/dishes/thit_xien.jpg",
+    "stock": 30,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "3 xiên", "price": 35000 }]
+  },
+  {
+    "dish_id": 207,
+    "restaurant_id": 2,
+    "category_id": 5,
+    "name": "Bánh Gối",
+    "description": "Nhân mộc nhĩ, thịt, miến, trứng.",
+    "image": "assets/images/dishes/banh_goi.jpg",
+    "stock": 21,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "5 cái", "price": 40000 }]
+  },
+  {
+    "dish_id": 208,
+    "restaurant_id": 2,
+    "category_id": 1,
+    "name": "Bún Nem Kẹp",
+    "description": "Nem cuốn giòn kẹp bún tươi.",
+    "image": "assets/images/dishes/bun_nem_kep.jpg",
+    "stock": 19,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+
+  {
+    "dish_id": 301,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Mì Quảng Tôm Thịt",
+    "description": "Mì Quảng chuẩn vị, tôm thịt đầy đủ.",
+    "image": "assets/images/dishes/mi_quang.jpg",
+    "stock": 28,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 302,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Mì Quảng Gà",
+    "description": "Gà ta xé, thơm béo.",
+    "image": "assets/images/dishes/mi_quang_ga.jpg",
+    "stock": 26,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 303,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Bánh Tráng Cuốn Thịt Heo",
+    "description": "Thịt heo hai đầu da, rau sống Đại Lộc.",
+    "image": "assets/images/dishes/banh_trang_cuon.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 60000 }]
+  },
+  {
+    "dish_id": 304,
+    "restaurant_id": 3,
+    "category_id": 1,
+    "name": "Bún Mắm Nêm",
+    "description": "Đậm chất Trung, mắm nêm thơm nồng.",
+    "image": "assets/images/dishes/bun_mam_nem.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 45000 }]
+  },
+  {
+    "dish_id": 305,
+    "restaurant_id": 3,
+    "category_id": 1,
+    "name": "Cao Lầu Hội An",
+    "description": "Sợi cao lầu mềm dai, thịt xá xíu.",
+    "image": "assets/images/dishes/cao_lau.jpg",
+    "stock": 15,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 306,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Gỏi Mít Non",
+    "description": "Gỏi mít non đặc sản xứ Quảng.",
+    "image": "assets/images/dishes/goi_mit.jpg",
+    "stock": 17,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 307,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Mì Quảng Ếch",
+    "description": "Ếch kho đậm vị, thơm nồng.",
+    "image": "assets/images/dishes/mi_quang_ech.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 308,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Bánh Xèo Miền Trung",
+    "description": "Vỏ giòn, nhân tôm thịt.",
+    "image": "assets/images/dishes/banh_xeo_trung.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "3 cái", "price": 45000 }]
+  },
+
+
+  {
+    "dish_id": 401,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Huế Đặc Biệt",
+    "description": "Giò heo, chả cua, bò nạm – cay đặc trưng.",
+    "image": "assets/images/dishes/bun_bo_hue.jpg",
+    "stock": 30,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 402,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Gân",
+    "description": "Gân bò giòn dai, nước dùng đậm đà.",
+    "image": "assets/images/dishes/bun_bo_gan.jpg",
+    "stock": 26,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 403,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Giò Heo",
+    "description": "Giò heo béo mềm, nước cay thơm.",
+    "image": "assets/images/dishes/bun_gio_heo.jpg",
+    "stock": 22,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 404,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Tái",
+    "description": "Thịt tái mềm, cay nồng Huế.",
+    "image": "assets/images/dishes/bun_bo_tai.jpg",
+    "stock": 19,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 405,
+    "restaurant_id": 4,
+    "category_id": 1,
+    "name": "Bún Hến Huế",
+    "description": "Hến xào mặn mà, đậm chất Huế.",
+    "image": "assets/images/dishes/bun_hen.jpg",
+    "stock": 14,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 45000 }]
+  },
+  {
+    "dish_id": 406,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Chả Cua",
+    "description": "Chả cua thơm béo, nước cay chuẩn Huế.",
+    "image": "assets/images/dishes/bun_cha_cua.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 407,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Nạm",
+    "description": "Nạm bò mềm, nước đậm đà.",
+    "image": "assets/images/dishes/bun_bo_nam.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 52000 }]
+  },
+  {
+    "dish_id": 408,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Chay",
+    "description": "Nước dùng chay từ rau củ – vị thanh nhẹ.",
+    "image": "assets/images/dishes/bun_bo_chay.jpg",
+    "stock": 12,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+
+  {
+    "dish_id": 501,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Tấm Sườn Bì Chả",
+    "description": "Sườn nướng mật ong – bì – chả trứng.",
+    "image": "assets/images/dishes/com_tam.jpg",
+    "stock": 40,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 502,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Sườn Nướng",
+    "description": "Sườn heo ướp đậm đà.",
+    "image": "assets/images/dishes/com_suon.jpg",
+    "stock": 32,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 52000 }]
+  },
+  {
+    "dish_id": 503,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Ba Chỉ Nướng",
+    "description": "Ba chỉ nướng cháy cạnh, thơm lừng.",
+    "image": "assets/images/dishes/com_ba_chi.jpg",
+    "stock": 28,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 52000 }]
+  },
+  {
+    "dish_id": 504,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Tấm Đặc Biệt",
+    "description": "Sườn – bì – chả – trứng – lạp xưởng.",
+    "image": "assets/images/dishes/com_tam_db.jpg",
+    "stock": 22,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 65000 }]
+  },
+  {
+    "dish_id": 505,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Gà Xối Mỡ",
+    "description": "Gà giòn vàng, mềm bên trong.",
+    "image": "assets/images/dishes/ga_xoi_mo.jpg",
+    "stock": 24,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 52000 }]
+  },
+  {
+    "dish_id": 506,
+    "restaurant_id": 5,
+    "category_id": 1,
+    "name": "Bún Thịt Nướng",
+    "description": "Thịt nướng đậm vị miền Nam.",
+    "image": "assets/images/dishes/bun_thit_nuong.jpg",
+    "stock": 30,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 507,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Sườn Cây",
+    "description": "Sườn cây nướng to, mềm mọng.",
+    "image": "assets/images/dishes/suon_cay.jpg",
+    "stock": 14,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 65000 }]
+  },
+  {
+    "dish_id": 508,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Trứng Ốp La",
+    "description": "Dành cho người ăn nhẹ.",
+    "image": "assets/images/dishes/com_op_la.jpg",
+    "stock": 22,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 35000 }]
+  },
+
+  {
+    "dish_id": 601,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Nam Vang Nước",
+    "description": "Tôm – thịt – lòng – trứng cút.",
+    "image": "assets/images/dishes/hu_tieu.jpg",
+    "stock": 30,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 602,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Khô",
+    "description": "Sợi dai, sốt đậm vị.",
+    "image": "assets/images/dishes/hu_tieu_kho.jpg",
+    "stock": 26,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 603,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Hải Sản",
+    "description": "Mực – tôm – cá – thanh ngọt tự nhiên.",
+    "image": "assets/images/dishes/hu_tieu_hai_san.jpg",
+    "stock": 20,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 60000 }]
+  },
+  {
+    "dish_id": 604,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Bò Viên",
+    "description": "Nước trong, bò viên dai.",
+    "image": "assets/images/dishes/hu_tieu_bo_vien.jpg",
+    "stock": 22,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 605,
+    "restaurant_id": 6,
+    "category_id": 1,
+    "name": "Hủ Tiếu Xào Hải Sản",
+    "description": "Sợi to xào tôm mực.",
+    "image": "assets/images/dishes/hu_tieu_xao.jpg",
+    "stock": 16,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 60000 }]
+  },
+  {
+    "dish_id": 606,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Tôm Thịt",
+    "description": "Tôm sú – thịt heo, nước ngọt thanh.",
+    "image": "assets/images/dishes/hu_tieu_tom_thit.jpg",
+    "stock": 28,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 607,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Sa Tế",
+    "description": "Vị cay nhẹ, thơm đậm đà.",
+    "image": "assets/images/dishes/hu_tieu_sate.jpg",
+    "stock": 18,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 608,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Gà",
+    "description": "Gà ta luộc mềm, nước trong.",
+    "image": "assets/images/dishes/hu_tieu_ga.jpg",
+    "stock": 24,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+
+  {
+    "dish_id": 701,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bánh Canh Trảng Bàng",
+    "description": "Nước trong, thịt heo mềm, rau rừng Tây Ninh.",
+    "image": "assets/images/dishes/banh_canh_trang_bang.jpg",
+    "stock": 25,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 702,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bò Tơ Tây Ninh Nướng",
+    "description": "Bò tơ nướng than, ăn kèm rau rừng.",
+    "image": "assets/images/dishes/bo_to_tay_ninh.jpg",
+    "stock": 22,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 phần", "price": 120000 }]
+  },
+  {
+    "dish_id": 703,
+    "restaurant_id": 7,
+    "category_id": 5,
+    "name": "Bánh Tráng Phơi Sương",
+    "description": "Bánh tráng dẻo, dùng cuốn thịt heo.",
+    "image": "assets/images/dishes/banh_trang_phoi_suong.jpg",
+    "stock": 30,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 xấp", "price": 30000 }]
+  },
+  {
+    "dish_id": 704,
+    "restaurant_id": 7,
+    "category_id": 5,
+    "name": "Muối Tôm Tây Ninh",
+    "description": "Đặc sản trứ danh, cay – mặn – thơm.",
+    "image": "assets/images/dishes/muoi_tom.jpg",
+    "stock": 40,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 hũ", "price": 30000 }]
+  },
+  {
+    "dish_id": 705,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bánh Canh Sườn",
+    "description": "Sườn heo ninh mềm, nước trong.",
+    "image": "assets/images/dishes/banh_canh_suon.jpg",
+    "stock": 18,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 706,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Cháo Bò Tơ",
+    "description": "Cháo nóng, thịt bò tơ mềm ngọt.",
+    "image": "assets/images/dishes/chao_bo_to.jpg",
+    "stock": 20,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 707,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Khô Bò Lá Chanh",
+    "description": "Khô bò Tây Ninh trứ danh.",
+    "image": "assets/images/dishes/kho_bo_la_chanh.jpg",
+    "stock": 15,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "100g", "price": 60000 }]
+  },
+  {
+    "dish_id": 708,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Khô Cá Lóc Tây Ninh",
+    "description": "Cá lóc phơi khô dai ngon.",
+    "image": "assets/images/dishes/kho_ca_loc.jpg",
+    "stock": 17,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "100g", "price": 50000 }]
+  },
+  {
+    "dish_id": 709,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bánh Trang Me",
+    "description": "Bánh tráng trộn me cay nhẹ.",
+    "image": "assets/images/dishes/banh_trang_me.jpg",
+    "stock": 22,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 phần", "price": 25000 }]
+  },
+  {
+    "dish_id": 710,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Thịt Heo Luộc Cuốn Rau Rừng",
+    "description": "Thịt heo mềm cuốn rau rừng độc đáo Tây Ninh.",
+    "image": "assets/images/dishes/thit_heo_luoc_rau_rung.jpg",
+    "stock": 18,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 phần", "price": 75000 }]
+  },
+
+  {
+    "dish_id": 801,
+    "restaurant_id": 8,
+    "category_id": 5,
+    "name": "Bánh Căn Tôm",
+    "description": "Bánh căn giòn, tôm tươi.",
+    "image": "assets/images/dishes/banh_can_tom.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 30000 }]
+  },
+  {
+    "dish_id": 802,
+    "restaurant_id": 8,
+    "category_id": 5,
+    "name": "Bánh Căn Trứng",
+    "description": "Bánh căn trứng béo mềm.",
+    "image": "assets/images/dishes/banh_can_trung.jpg",
+    "stock": 22,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 25000 }]
+  },
+  {
+    "dish_id": 803,
+    "restaurant_id": 8,
+    "category_id": 5,
+    "name": "Bánh Căn Hải Sản",
+    "description": "Tôm – mực – trứng đầy đủ.",
+    "image": "assets/images/dishes/banh_can_hai_san.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 35000 }]
+  },
+  {
+    "dish_id": 804,
+    "restaurant_id": 8,
+    "category_id": 1,
+    "name": "Bún Cá Nha Trang",
+    "description": "Nước trong, cá thu dai.",
+    "image": "assets/images/dishes/bun_ca_nt.jpg",
+    "stock": 24,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 40000 }]
+  },
+  {
+    "dish_id": 805,
+    "restaurant_id": 8,
+    "category_id": 3,
+    "name": "Bánh Xèo Hải Sản",
+    "description": "Bánh xèo mực – tôm.",
+    "image": "assets/images/dishes/banh_xeo_nt.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "3 cái", "price": 50000 }]
+  },
+  {
+    "dish_id": 806,
+    "restaurant_id": 8,
+    "category_id": 3,
+    "name": "Gỏi Cá Mai",
+    "description": "Đặc sản tươi ngon, chấm nước mắm me.",
+    "image": "assets/images/dishes/goi_ca_mai.jpg",
+    "stock": 14,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 60000 }]
+  },
+  {
+    "dish_id": 807,
+    "restaurant_id": 8,
+    "category_id": 1,
+    "name": "Bún Sứa",
+    "description": "Sứa giòn, nước dùng thanh mát.",
+    "image": "assets/images/dishes/bun_sua.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 40000 }]
+  },
+
+
+  {
+    "dish_id": 901,
+    "restaurant_id": 9,
+    "category_id": 5,
+    "name": "Bánh Mì Thịt Hội An",
+    "description": "Thịt xá xíu – pate – đồ chua.",
+    "image": "assets/images/dishes/banh_mi_hoian.jpg",
+    "stock": 25,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 ổ", "price": 30000 }]
+  },
+  {
+    "dish_id": 902,
+    "restaurant_id": 9,
+    "category_id": 5,
+    "name": "Bánh Mì Gà",
+    "description": "Gà xé mềm, sốt bơ tỏi.",
+    "image": "assets/images/dishes/banh_mi_ga.jpg",
+    "stock": 22,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 ổ", "price": 30000 }]
+  },
+  {
+    "dish_id": 903,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Cao Lầu Hội An",
+    "description": "Sợi cao lầu dai, thịt xá xíu đặc trưng.",
+    "image": "assets/images/dishes/cao_lau_hoian.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 904,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Cơm Gà Hội An",
+    "description": "Gà xé, cơm vàng nghệ.",
+    "image": "assets/images/dishes/com_ga_hoian.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 45000 }]
+  },
+  {
+    "dish_id": 905,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Mì Quảng Hội An",
+    "description": "Sợi mì vàng, topping đầy đủ.",
+    "image": "assets/images/dishes/mi_quang_hoian.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 906,
+    "restaurant_id": 9,
+    "category_id": 5,
+    "name": "Bánh Đập",
+    "description": "Bánh tráng – bánh ướt – mắm nêm.",
+    "image": "assets/images/dishes/banh_dap.jpg",
+    "stock": 15,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 25000 }]
+  },
+  {
+    "dish_id": 907,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Hến Xào Hội An",
+    "description": "Hến xào đậm vị, ăn cùng bánh tráng.",
+    "image": "assets/images/dishes/hen_xao.jpg",
+    "stock": 12,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 35000 }]
+  },
+
+
+  {
+    "dish_id": 1001,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Ba Màu",
+    "description": "Đậu xanh – đậu đỏ – thạch – nước cốt.",
+    "image": "assets/images/dishes/che_ba_mau.jpg",
+    "stock": 40,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 25000 }]
+  },
+  {
+    "dish_id": 1002,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Thập Cẩm",
+    "description": "Ngon – mát – đầy topping.",
+    "image": "assets/images/dishes/che_thap_cam.jpg",
+    "stock": 35,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 25000 }]
+  },
+  {
+    "dish_id": 1003,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Đậu Đen",
+    "description": "Đậu đen mềm, nước ngọt thanh.",
+    "image": "assets/images/dishes/che_dau_den.jpg",
+    "stock": 30,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 20000 }]
+  },
+  {
+    "dish_id": 1004,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Đậu Xanh",
+    "description": "Đậu xanh nấu nhuyễn thơm béo.",
+    "image": "assets/images/dishes/che_dau_xanh.jpg",
+    "stock": 28,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 20000 }]
+  },
+  {
+    "dish_id": 1005,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Sương Sa Hạt Lựu",
+    "description": "Nhiều hạt lựu, nước cốt béo.",
+    "image": "assets/images/dishes/che_hat_luu.jpg",
+    "stock": 24,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 25000 }]
+  },
+  {
+    "dish_id": 1006,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Bưởi",
+    "description": "Bưởi dai giòn, nước cốt thơm.",
+    "image": "assets/images/dishes/che_buoi.jpg",
+    "stock": 20,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 30000 }]
+  },
+  {
+    "dish_id": 1007,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Khoai Dẻo",
+    "description": "Khoai nhiều màu – dẻo thơm.",
+    "image": "assets/images/dishes/che_khoai.jpg",
+    "stock": 18,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 30000 }]
+  },
+  {
+    "dish_id": 1008,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Dừa Non",
+    "description": "Dừa non giòn, nước ngọt dịu.",
+    "image": "assets/images/dishes/che_dua_non.jpg",
+    "stock": 18,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 30000 }]
+  }
+]
+,
+  "group_orders": [
+  {
+    "group_id": 1,
+    "leader_id": 1,
+    "restaurant_id": 1,
+    "invite_code": "GRP-PHO123",
+    "deadline": "2025-11-15T11:30:00",
+    "status": "open",
+    "payment_mode": "leader_only",
+    "items": [
+      { "user_id": 1, "dish_id": 101, "size": "Đặc biệt", "quantity": 2 },
+      { "user_id": 2, "dish_id": 102, "size": "Tô thường", "quantity": 1 },
+      { "user_id": 3, "dish_id": 105, "size": "1 phần", "quantity": 1 }
+    ],
+    "voucher": { "code": "GIAM20K", "discount_type": "fixed", "discount_value": 20000 },
+    "discount_amount": 20000,
+    "final_amount": 300000,
+    "shipping_fee": 15000
+  },
+
+  {
+    "group_id": 2,
+    "leader_id": 2,
+    "restaurant_id": 5,
+    "invite_code": "GRP-COMTAM",
+    "deadline": "2025-11-15T19:00:00",
+    "status": "completed",
+    "payment_mode": "split_bill",
+    "items": [
+      { "user_id": 2, "dish_id": 501, "size": "1 phần", "quantity": 2 },
+      { "user_id": 4, "dish_id": 504, "size": "1 phần", "quantity": 1 },
+      { "user_id": 5, "dish_id": 506, "size": "1 phần", "quantity": 1 }
+    ],
+    "voucher": { "code": "COMTAM10", "discount_type": "percent", "discount_value": 10 },
+    "discount_amount": 45000,
+    "final_amount": 405000,
+    "shipping_fee": 20000
+  },
+
+  {
+    "group_id": 3,
+    "leader_id": 3,
+    "restaurant_id": 3,
+    "invite_code": "GRP-MIQUANG",
+    "deadline": "2025-11-16T12:00:00",
+    "status": "completed",
+    "payment_mode": "leader_only",
+    "items": [
+      { "user_id": 3, "dish_id": 301, "size": "1 tô", "quantity": 1 },
+      { "user_id": 4, "dish_id": 302, "size": "1 tô", "quantity": 1 },
+      { "user_id": 5, "dish_id": 303, "size": "1 phần", "quantity": 1 }
+    ],
+    "voucher": null,
+    "discount_amount": 0,
+    "final_amount": 280000,
+    "shipping_fee": 15000
+  },
+
+  {
+    "group_id": 4,
+    "leader_id": 4,
+    "restaurant_id": 7,
+    "invite_code": "GRP-TAYNINH",
+    "deadline": "2025-11-16T18:00:00",
+    "status": "open",
+    "payment_mode": "leader_only",
+    "items": [
+      { "user_id": 4, "dish_id": 701, "size": "1 tô", "quantity": 1 },
+      { "user_id": 1, "dish_id": 702, "size": "1 phần", "quantity": 1 },
+      { "user_id": 2, "dish_id": 704, "size": "1 hũ", "quantity": 2 }
+    ],
+    "voucher": { "code": "MUOITOM", "discount_type": "fixed", "discount_value": 30000 },
+    "discount_amount": 30000,
+    "final_amount": 360000,
+    "shipping_fee": 25000
+  },
+
+  {
+    "group_id": 5,
+    "leader_id": 5,
+    "restaurant_id": 10,
+    "invite_code": "GRP-CHEHEHE",
+    "deadline": "2025-11-17T21:00:00",
+    "status": "completed",
+    "payment_mode": "split_bill",
+    "items": [
+      { "user_id": 5, "dish_id": 1001, "size": "1 ly", "quantity": 2 },
+      { "user_id": 3, "dish_id": 1005, "size": "1 ly", "quantity": 1 }
+    ],
+    "voucher": null,
+    "discount_amount": 0,
+    "final_amount": 210000,
+    "shipping_fee": 10000
+  },
+
+  {
+    "group_id": 6,
+    "leader_id": 1,
+    "restaurant_id": 2,
+    "invite_code": "GRP-BUNCHA",
+    "deadline": "2025-11-17T13:00:00",
+    "status": "completed",
+    "payment_mode": "leader_only",
+    "items": [
+      { "user_id": 1, "dish_id": 201, "size": "1 phần", "quantity": 1 },
+      { "user_id": 2, "dish_id": 205, "size": "1 phần", "quantity": 1 },
+      { "user_id": 4, "dish_id": 203, "size": "5 cái", "quantity": 1 }
+    ],
+    "voucher": { "code": "NOON15", "discount_type": "percent", "discount_value": 15 },
+    "discount_amount": 39000,
+    "final_amount": 221000,
+    "shipping_fee": 15000
+  }
+]
+,
+  "orders": [
+  {
+    "order_id": 1001,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "address_id": 1,
+    "final_price": 145000,
+    "shipping_fee": 15000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-10T09:30:00",
+    "items": [
+      { "dish_id": 101, "size": "Đặc biệt", "quantity": 2, "unit_price": 55000 },
+      { "dish_id": 103, "size": "Tô thường", "quantity": 1, "unit_price": 50000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-10T09:30:00", "changed_by_type": "customer", "changed_by_id": 1 },
+      { "status": "confirmed", "timestamp": "2025-11-10T09:32:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-10T10:10:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1002,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "address_id": 2,
+    "final_price": 120000,
+    "shipping_fee": 10000,
+    "payment_method": "COD",
+    "payment_status": "pending",
+    "order_status": "delivering",
+    "created_at": "2025-11-10T11:15:00",
+    "items": [
+      { "dish_id": 501, "size": "1 phần", "quantity": 1, "unit_price": 55000 },
+      { "dish_id": 505, "size": "1 phần", "quantity": 1, "unit_price": 52000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-10T11:15:00", "changed_by_type": "customer", "changed_by_id": 2 },
+      { "status": "confirmed", "timestamp": "2025-11-10T11:20:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "delivering", "timestamp": "2025-11-10T11:40:00", "changed_by_type": "vendor", "changed_by_id": 10 }
+    ]
+  },
+
+  {
+    "order_id": 1003,
+    "user_id": 3,
+    "restaurant_id": 1,
+    "address_id": 3,
+    "final_price": 98000,
+    "shipping_fee": 15000,
+    "payment_method": "ZALOPAY",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-11T08:45:00",
+    "items": [
+      { "dish_id": 104, "size": "1 tô", "quantity": 1, "unit_price": 52000 },
+      { "dish_id": 110, "size": "1 phần", "quantity": 1, "unit_price": 48000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-11T08:45:00", "changed_by_type": "customer", "changed_by_id": 3 },
+      { "status": "confirmed", "timestamp": "2025-11-11T08:47:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-11T09:20:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1004,
+    "user_id": 4,
+    "restaurant_id": 2,
+    "address_id": 4,
+    "final_price": 135000,
+    "shipping_fee": 15000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-11T12:05:00",
+    "items": [
+      { "dish_id": 201, "size": "1 phần", "quantity": 1, "unit_price": 50000 },
+      { "dish_id": 205, "size": "1 phần", "quantity": 1, "unit_price": 55000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-11T12:05:00", "changed_by_type": "customer", "changed_by_id": 4 },
+      { "status": "confirmed", "timestamp": "2025-11-11T12:10:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-11T12:50:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1005,
+    "user_id": 5,
+    "restaurant_id": 3,
+    "address_id": 5,
+    "final_price": 150000,
+    "shipping_fee": 20000,
+    "payment_method": "COD",
+    "payment_status": "pending",
+    "order_status": "confirmed",
+    "created_at": "2025-11-11T19:00:00",
+    "items": [
+      { "dish_id": 301, "size": "1 tô", "quantity": 1, "unit_price": 45000 },
+      { "dish_id": 303, "size": "1 phần", "quantity": 1, "unit_price": 60000 },
+      { "dish_id": 305, "size": "1 tô", "quantity": 1, "unit_price": 50000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-11T19:00:00", "changed_by_type": "customer", "changed_by_id": 5 },
+      { "status": "confirmed", "timestamp": "2025-11-11T19:05:00", "changed_by_type": "vendor", "changed_by_id": 10 }
+    ]
+  },
+
+  {
+    "order_id": 1006,
+    "user_id": 1,
+    "restaurant_id": 4,
+    "address_id": 1,
+    "final_price": 110000,
+    "shipping_fee": 15000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-12T07:20:00",
+    "items": [
+      { "dish_id": 401, "size": "1 tô", "quantity": 2, "unit_price": 55000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-12T07:20:00", "changed_by_type": "customer", "changed_by_id": 1 },
+      { "status": "confirmed", "timestamp": "2025-11-12T07:23:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-12T08:00:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1007,
+    "user_id": 2,
+    "restaurant_id": 6,
+    "address_id": 2,
+    "final_price": 130000,
+    "shipping_fee": 10000,
+    "payment_method": "ZALOPAY",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-12T18:30:00",
+    "items": [
+      { "dish_id": 601, "size": "1 tô", "quantity": 1, "unit_price": 50000 },
+      { "dish_id": 603, "size": "1 tô", "quantity": 1, "unit_price": 60000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-12T18:30:00", "changed_by_type": "customer", "changed_by_id": 2 },
+      { "status": "confirmed", "timestamp": "2025-11-12T18:33:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-12T19:10:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1008,
+    "user_id": 3,
+    "restaurant_id": 7,
+    "address_id": 3,
+    "final_price": 210000,
+    "shipping_fee": 20000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-13T11:00:00",
+    "items": [
+      { "dish_id": 701, "size": "1 tô", "quantity": 1, "unit_price": 50000 },
+      { "dish_id": 702, "size": "1 phần", "quantity": 1, "unit_price": 120000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-13T11:00:00", "changed_by_type": "customer", "changed_by_id": 3 },
+      { "status": "confirmed", "timestamp": "2025-11-13T11:05:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-13T11:45:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1009,
+    "user_id": 4,
+    "restaurant_id": 8,
+    "address_id": 4,
+    "final_price": 115000,
+    "shipping_fee": 15000,
+    "payment_method": "COD",
+    "payment_status": "pending",
+    "order_status": "delivering",
+    "created_at": "2025-11-13T19:20:00",
+    "items": [
+      { "dish_id": 801, "size": "1 phần", "quantity": 1, "unit_price": 30000 },
+      { "dish_id": 804, "size": "1 tô", "quantity": 1, "unit_price": 40000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-13T19:20:00", "changed_by_type": "customer", "changed_by_id": 4 },
+      { "status": "confirmed", "timestamp": "2025-11-13T19:25:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "delivering", "timestamp": "2025-11-13T19:40:00", "changed_by_type": "vendor", "changed_by_id": 10 }
+    ]
+  },
+
+  {
+    "order_id": 1010,
+    "user_id": 5,
+    "restaurant_id": 9,
+    "address_id": 5,
+    "final_price": 95000,
+    "shipping_fee": 10000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-13T20:10:00",
+    "items": [
+      { "dish_id": 901, "size": "1 ổ", "quantity": 1, "unit_price": 30000 },
+      { "dish_id": 903, "size": "1 tô", "quantity": 1, "unit_price": 45000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-13T20:10:00", "changed_by_type": "customer", "changed_by_id": 5 },
+      { "status": "confirmed", "timestamp": "2025-11-13T20:12:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-13T20:45:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1011,
+    "user_id": 1,
+    "restaurant_id": 10,
+    "address_id": 1,
+    "final_price": 80000,
+    "shipping_fee": 10000,
+    "payment_method": "ZALOPAY",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-14T14:30:00",
+    "items": [
+      { "dish_id": 1001, "size": "1 ly", "quantity": 1, "unit_price": 25000 },
+      { "dish_id": 1006, "size": "1 ly", "quantity": 1, "unit_price": 30000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-14T14:30:00", "changed_by_type": "customer", "changed_by_id": 1 },
+      { "status": "confirmed", "timestamp": "2025-11-14T14:32:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-14T15:00:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1012,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "address_id": 2,
+    "final_price": 160000,
+    "shipping_fee": 10000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-14T19:45:00",
+    "items": [
+      { "dish_id": 502, "size": "1 phần", "quantity": 1, "unit_price": 52000 },
+      { "dish_id": 504, "size": "1 phần", "quantity": 1, "unit_price": 65000 },
+      { "dish_id": 506, "size": "1 phần", "quantity": 1, "unit_price": 50000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-14T19:45:00", "changed_by_type": "customer", "changed_by_id": 2 },
+      { "status": "confirmed", "timestamp": "2025-11-14T19:50:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-14T20:30:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  }
+]
+,
+  "payment_transactions": [
+  {
+    "transaction_id": 1,
+    "order_id": 1001,
+    "method": "MOMO",
+    "amount": 145000,
+    "status": "success",
+    "transaction_time": "2025-11-10T09:31:00",
+    "transaction_code": "MOMO1001A"
+  },
+  {
+    "transaction_id": 2,
+    "order_id": 1002,
+    "method": "COD",
+    "amount": 120000,
+    "status": "pending",
+    "transaction_time": "2025-11-10T11:40:00",
+    "transaction_code": "COD1002"
+  },
+  {
+    "transaction_id": 3,
+    "order_id": 1003,
+    "method": "ZALOPAY",
+    "amount": 98000,
+    "status": "success",
+    "transaction_time": "2025-11-11T08:50:00",
+    "transaction_code": "ZALO1003"
+  },
+  {
+    "transaction_id": 4,
+    "order_id": 1004,
+    "method": "MOMO",
+    "amount": 135000,
+    "status": "success",
+    "transaction_time": "2025-11-11T12:12:00",
+    "transaction_code": "MOMO1004"
+  },
+  {
+    "transaction_id": 5,
+    "order_id": 1005,
+    "method": "COD",
+    "amount": 150000,
+    "status": "pending",
+    "transaction_time": "2025-11-11T19:10:00",
+    "transaction_code": "COD1005"
+  },
+  {
+    "transaction_id": 6,
+    "order_id": 1006,
+    "method": "MOMO",
+    "amount": 110000,
+    "status": "success",
+    "transaction_time": "2025-11-12T07:25:00",
+    "transaction_code": "MOMO1006"
+  },
+  {
+    "transaction_id": 7,
+    "order_id": 1007,
+    "method": "ZALOPAY",
+    "amount": 130000,
+    "status": "success",
+    "transaction_time": "2025-11-12T18:35:00",
+    "transaction_code": "ZALO1007"
+  },
+  {
+    "transaction_id": 8,
+    "order_id": 1008,
+    "method": "MOMO",
+    "amount": 210000,
+    "status": "success",
+    "transaction_time": "2025-11-13T11:05:00",
+    "transaction_code": "MOMO1008"
+  },
+  {
+    "transaction_id": 9,
+    "order_id": 1009,
+    "method": "COD",
+    "amount": 115000,
+    "status": "pending",
+    "transaction_time": "2025-11-13T19:30:00",
+    "transaction_code": "COD1009"
+  },
+  {
+    "transaction_id": 10,
+    "order_id": 1010,
+    "method": "MOMO",
+    "amount": 95000,
+    "status": "success",
+    "transaction_time": "2025-11-13T20:15:00",
+    "transaction_code": "MOMO1010"
+  },
+  {
+    "transaction_id": 11,
+    "order_id": 1011,
+    "method": "ZALOPAY",
+    "amount": 80000,
+    "status": "success",
+    "transaction_time": "2025-11-14T14:35:00",
+    "transaction_code": "ZALO1011"
+  },
+  {
+    "transaction_id": 12,
+    "order_id": 1012,
+    "method": "MOMO",
+    "amount": 160000,
+    "status": "success",
+    "transaction_time": "2025-11-14T19:50:00",
+    "transaction_code": "MOMO1012"
+  }
+]
+,
+  "restaurants": [
+  {
+    "restaurant_id": 1,
+    "owner_id": 10,
+    "name": "Phở Gia Truyền Hà Nội",
+    "address": "215 Hai Bà Trưng, Q3, TP.HCM",
+    "lat": 10.7871,
+    "lng": 106.6901,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 7,
+    "open_time": "06:00",
+    "close_time": "22:00",
+    "regions": ["Miền Bắc"],
+    "type": "Món nước – Phở – Bún",
+    "image": "assets/images/restaurants/pho_gia_truyen.jpg"
+  },
+  {
+    "restaurant_id": 2,
+    "owner_id": 10,
+    "name": "Bún Chả Hồ Tây",
+    "address": "12 Nguyễn Văn Cừ, Q1, TP.HCM",
+    "lat": 10.7758,
+    "lng": 106.7004,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 5,
+    "open_time": "08:00",
+    "close_time": "21:00",
+    "regions": ["Miền Bắc"],
+    "type": "Đặc sản Hà Nội – Thịt nướng",
+    "image": "assets/images/restaurants/bun_cha_ho_tay.jpg"
+  },
+  {
+    "restaurant_id": 3,
+    "owner_id": 10,
+    "name": "Mì Quảng Bà Mua",
+    "address": "45 Lê Lợi, Đà Nẵng",
+    "lat": 16.0712,
+    "lng": 108.223,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 6,
+    "open_time": "07:00",
+    "close_time": "21:00",
+    "regions": ["Miền Trung"],
+    "type": "Đặc sản Quảng – Mì – Bún – Bánh tráng cuốn",
+    "image": "assets/images/restaurants/mi_quang_ba_mua.jpg"
+  },
+  {
+    "restaurant_id": 4,
+    "owner_id": 10,
+    "name": "Bún Bò Huế O Hương",
+    "address": "102 Lê Duẩn, Huế",
+    "lat": 16.4637,
+    "lng": 107.5909,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 5,
+    "open_time": "06:00",
+    "close_time": "20:00",
+    "regions": ["Miền Trung"],
+    "type": "Món nước – cay – đậm vị",
+    "image": "assets/images/restaurants/bun_bo_hue_o_huong.jpg"
+  },
+  {
+    "restaurant_id": 5,
+    "owner_id": 10,
+    "name": "Cơm Tấm Sài Gòn Xịn",
+    "address": "128 Lê Văn Sỹ, Q3, TP.HCM",
+    "lat": 10.7842,
+    "lng": 106.6769,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 8,
+    "open_time": "06:00",
+    "close_time": "23:00",
+    "regions": ["Miền Nam"],
+    "type": "Món khô – Cơm – Đồ nướng",
+    "image": "assets/images/restaurants/com_tam_sai_gon_xin.jpg"
+  },
+  {
+    "restaurant_id": 6,
+    "owner_id": 10,
+    "name": "Hủ Tiếu Nam Vang Sáu Hoài",
+    "address": "22 Võ Văn Tần, Q3, TP.HCM",
+    "lat": 10.7762,
+    "lng": 106.6944,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 7,
+    "open_time": "06:00",
+    "close_time": "21:30",
+    "regions": ["Miền Nam"],
+    "type": "Món nước – Hủ tiếu – Hải sản",
+    "image": "assets/images/restaurants/hu_tieu_sau_hoai.jpg"
+  },
+  {
+    "restaurant_id": 7,
+    "owner_id": 10,
+    "name": "Đặc Sản Tây Ninh Năm Sanh",
+    "address": "66 Nguyễn Chí Thanh, Tây Ninh",
+    "lat": 11.3257,
+    "lng": 106.1051,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 8,
+    "open_time": "07:00",
+    "close_time": "21:00",
+    "regions": ["Tây Ninh", "Miền Nam"],
+    "type": "Mắm chua – bánh canh Trảng Bàng – các loại khô đặc sản",
+    "image": "assets/images/restaurants/dac_san_tay_ninh.jpg"
+  },
+  {
+    "restaurant_id": 8,
+    "owner_id": 10,
+    "name": "Bánh Căn Nha Trang 68",
+    "address": "22 Nguyễn Thiện Thuật, Nha Trang",
+    "lat": 12.2433,
+    "lng": 109.1967,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 4,
+    "open_time": "07:00",
+    "close_time": "20:00",
+    "regions": ["Miền Trung"],
+    "type": "Bánh đặc sản – hải sản",
+    "image": "assets/images/restaurants/banh_can_nha_trang.jpg"
+  },
+  {
+    "restaurant_id": 9,
+    "owner_id": 10,
+    "name": "Bánh Mì Hội An - Cô Phượng",
+    "address": "18 Lý Thường Kiệt, Hội An",
+    "lat": 15.8801,
+    "lng": 108.338,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 3,
+    "open_time": "06:00",
+    "close_time": "20:30",
+    "regions": ["Miền Trung"],
+    "type": "Bánh mì – đặc sản Hội An",
+    "image": "assets/images/restaurants/banh_mi_hoi_an_co_phuong.jpg"
+  },
+  {
+    "restaurant_id": 10,
+    "owner_id": 10,
+    "name": "Chè Ba Miền – Sài Gòn",
+    "address": "77 Nguyễn Thị Minh Khai, Q1, TP.HCM",
+    "lat": 10.7769,
+    "lng": 106.6969,
+    "status": "active",
+    "is_verified": true,
+    "delivery_radius_km": 6,
+    "open_time": "09:00",
+    "close_time": "22:00",
+    "regions": ["Miền Nam", "Miền Tây"],
+    "type": "Các loại chè – món tráng miệng",
+    "image": "assets/images/restaurants/che_ba_mien.jpg"
+  }
+]
+,
+  "reviews": [
+  {
+    "review_id": 1,
+    "order_id": 1001,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Phở bò đỉnh, nước trong mà đậm, giao nhanh.",
+    "images": ["assets/images/review/r1.jpg"],
+    "created_at": "2025-11-10",
+    "votes": [{ "user_id": 2, "type": "useful" }],
+    "vendor_replies": [
+      {
+        "vendor_id": 10,
+        "content": "Cảm ơn bạn đã ủng hộ quán!",
+        "image": null,
+        "created_at": "2025-11-10"
+      }
+    ],
+    "reports": [
+      {
+        "report_id": 1,
+        "user_id": 99,
+        "reason": "Nội dung cần kiểm tra",
+        "created_at": "2025-11-15",
+        "status": "Đang xử lý",
+        "admin_actions": []
+      }
+    ]
+  },
+  {
+    "review_id": 2,
+    "order_id": 1001,
+    "user_id": 2,
+    "restaurant_id": 1,
+    "rating": 4,
+    "content": "Nước dùng ngon nhưng hơi ít rau sống.",
+    "images": [],
+    "created_at": "2025-11-10",
+    "votes": [{ "user_id": 1, "type": "useful" }],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 3,
+    "order_id": 1001,
+    "user_id": 3,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Đặt nhiều lần rồi, lần nào cũng giữ chất lượng.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 4,
+    "order_id": 1002,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "rating": 5,
+    "content": "Cơm tấm ngon, sườn mềm, mỡ vừa phải.",
+    "images": ["assets/images/review/r2.jpg"],
+    "created_at": "2025-11-10",
+    "votes": [{ "user_id": 1, "type": "useful" }],
+    "vendor_replies": [
+      {
+        "vendor_id": 10,
+        "content": "Cảm ơn bạn, hẹn bạn lần sau!",
+        "image": null,
+        "created_at": "2025-11-10"
+      }
+    ],
+    "reports": []
+  },
+  {
+    "review_id": 5,
+    "order_id": 1002,
+    "user_id": 4,
+    "restaurant_id": 5,
+    "rating": 4,
+    "content": "Cơm hơi khô nhẹ nhưng đồ ăn ngon.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 6,
+    "order_id": 1002,
+    "user_id": 5,
+    "restaurant_id": 5,
+    "rating": 3,
+    "content": "Giao hơi trễ giờ trưa, hy vọng cải thiện.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": [
+      {
+        "report_id": 2,
+        "user_id": 99,
+        "reason": "Kiểm tra chất lượng giao hàng",
+        "created_at": "2025-11-12",
+        "status": "Đang xử lý",
+        "admin_actions": []
+      }
+    ]
+  },
+
+  {
+    "review_id": 7,
+    "order_id": 1003,
+    "user_id": 3,
+    "restaurant_id": 1,
+    "rating": 4,
+    "content": "Phở tái nạm ngon, nhưng phần hơi ít.",
+    "images": ["assets/images/review/r7.jpg"],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+       "reports": []
+  },
+  {
+    "review_id": 8,
+    "order_id": 1003,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Lần thứ 2 đặt vẫn ngon như lần đầu.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [{ "user_id": 2, "type": "useful" }],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 9,
+    "order_id": 1003,
+    "user_id": 4,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Đúng kiểu phở gia truyền Hà Nội, rất đáng thử.",
+    "images": ["assets/images/review/r9.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 10,
+    "order_id": 1004,
+    "user_id": 4,
+    "restaurant_id": 2,
+    "rating": 5,
+    "content": "Bún chả nướng than hoa thơm nức mũi.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [{ "user_id": 1, "type": "useful" }],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 11,
+    "order_id": 1004,
+    "user_id": 2,
+    "restaurant_id": 2,
+    "rating": 4,
+    "content": "Nước chấm ngon nhưng hơi mặn với mình.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 12,
+    "order_id": 1004,
+    "user_id": 3,
+    "restaurant_id": 2,
+    "rating": 5,
+    "content": "Thịt nướng mềm, không bị cháy, rất ok.",
+    "images": ["assets/images/review/r12.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 13,
+    "order_id": 1005,
+    "user_id": 5,
+    "restaurant_id": 3,
+    "rating": 5,
+    "content": "Mì Quảng rất chuẩn vị, topping nhiều.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 14,
+    "order_id": 1005,
+    "user_id": 1,
+    "restaurant_id": 3,
+    "rating": 4,
+    "content": "Cao lầu hơi ít rau sống, còn lại ổn.",
+    "images": ["assets/images/review/r14.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 15,
+    "order_id": 1005,
+    "user_id": 2,
+    "restaurant_id": 3,
+    "rating": 5,
+    "content": "Bánh tráng cuốn thịt heo siêu ngon.",
+    "images": [],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 16,
+    "order_id": 1006,
+    "user_id": 1,
+    "restaurant_id": 4,
+    "rating": 5,
+    "content": "Bún bò Huế cay chuẩn, giò heo to.",
+    "images": ["assets/images/review/r16.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 17,
+    "order_id": 1006,
+    "user_id": 3,
+    "restaurant_id": 4,
+    "rating": 4,
+    "content": "Hơi cay so với mình, nhưng ngon.",
+    "images": [],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 18,
+    "order_id": 1006,
+    "user_id": 5,
+    "restaurant_id": 4,
+    "rating": 5,
+    "content": "Chả cua rất chất lượng.",
+    "images": ["assets/images/review/r18.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 19,
+    "order_id": 1007,
+    "user_id": 2,
+    "restaurant_id": 6,
+    "rating": 5,
+    "content": "Hủ tiếu Nam Vang nước ngọt, topping nhiều.",
+    "images": [],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 20,
+    "order_id": 1007,
+    "user_id": 4,
+    "restaurant_id": 6,
+    "rating": 4,
+    "content": "Phần hơi ít so với giá.",
+    "images": ["assets/images/review/r20.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": [
+  {
+    "report_id": 4,
+    "user_id": 1,
+    "reason": "Bình luận gây tranh luận không cần thiết",
+    "created_at": "2025-11-14",
+    "status": "Đang xử lý",
+    "admin_actions": []
+  }
+]
+
+  },
+  {
+    "review_id": 21,
+    "order_id": 1007,
+    "user_id": 1,
+    "restaurant_id": 6,
+    "rating": 5,
+    "content": "Đặt lần 2 vẫn rất ổn.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 22,
+    "order_id": 1008,
+    "user_id": 3,
+    "restaurant_id": 7,
+    "rating": 5,
+    "content": "Bò tơ Tây Ninh nướng rất ngon, rau rừng lạ miệng.",
+    "images": ["assets/images/review/r22.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 23,
+    "order_id": 1008,
+    "user_id": 4,
+    "restaurant_id": 7,
+    "rating": 4,
+    "content": "Muối tôm chuẩn vị, nhưng hơi mặn.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 24,
+    "order_id": 1008,
+    "user_id": 2,
+    "restaurant_id": 7,
+    "rating": 5,
+    "content": "Bánh tráng phơi sương rất ngon, đáng mua.",
+    "images": ["assets/images/review/r24.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 25,
+    "order_id": 1009,
+    "user_id": 4,
+    "restaurant_id": 8,
+    "rating": 5,
+    "content": "Bánh căn tôm nóng giòn, nước chấm ngon.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 26,
+    "order_id": 1009,
+    "user_id": 1,
+    "restaurant_id": 8,
+    "rating": 4,
+    "content": "Bún cá Nha Trang chuẩn vị, hơi ít cá.",
+    "images": ["assets/images/review/r26.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 27,
+    "order_id": 1009,
+    "user_id": 5,
+    "restaurant_id": 8,
+    "rating": 5,
+    "content": "Gỏi cá mai rất tươi.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 28,
+    "order_id": 1010,
+    "user_id": 5,
+    "restaurant_id": 9,
+    "rating": 5,
+    "content": "Bánh mì Hội An rất thơm, nhân đầy.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 29,
+    "order_id": 1010,
+    "user_id": 2,
+    "restaurant_id": 9,
+    "rating": 4,
+    "content": "Cao lầu ngon nhưng hơi nhiều dầu.",
+    "images": ["assets/images/review/r29.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": [
+  {
+    "report_id": 5,
+    "user_id": 10,
+    "reason": "Nghi ngờ đánh giá thiếu khách quan",
+    "created_at": "2025-11-15",
+    "status": "Đang xử lý",
+    "admin_actions": []
+  }
+]
+
+  },
+  {
+    "review_id": 30,
+    "order_id": 1010,
+    "user_id": 3,
+    "restaurant_id": 9,
+    "rating": 5,
+    "content": "Cơm gà Hội An ngon xuất sắc.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 31,
+    "order_id": 1011,
+    "user_id": 1,
+    "restaurant_id": 10,
+    "rating": 5,
+    "content": "Chè ba màu rất mát, topping nhiều.",
+    "images": ["assets/images/review/r31.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 32,
+    "order_id": 1011,
+    "user_id": 4,
+    "restaurant_id": 10,
+    "rating": 4,
+    "content": "Chè bưởi ngon nhưng hơi ngọt.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 33,
+    "order_id": 1011,
+    "user_id": 5,
+    "restaurant_id": 10,
+    "rating": 5,
+    "content": "Chè khoai dẻo cực kỳ thích.",
+    "images": [],
+    "created_at": "2025-11-15",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 34,
+    "order_id": 1012,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "rating": 5,
+    "content": "Cơm sườn cây và cơm đặc biệt đều ngon.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 35,
+    "order_id": 1012,
+    "user_id": 1,
+    "restaurant_id": 5,
+    "rating": 4,
+    "content": "Quán hơi đông nên giao chậm chút.",
+    "images": ["assets/images/review/r35.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 36,
+    "order_id": 1012,
+    "user_id": 3,
+    "restaurant_id": 5,
+    "rating": 5,
+    "content": "Cơm tấm Sài Gòn xịn ăn rất đúng chất.",
+    "images": [],
+    "created_at": "2025-11-15",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  }
+]
+,
+  "system_config": {
+  "shipping_fee_per_km": 5000,
+  "auto_cancel_minutes": 15,
+  "max_default_delivery_radius": 10,
+  "payment_methods": [
+    { "method": "COD", "active": true },
+    { "method": "MOMO", "active": true },
+    { "method": "ZALOPAY", "active": true }
+  ]
+}
+}

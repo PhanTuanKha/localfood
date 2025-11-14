@@ -1,0 +1,928 @@
+[
+
+  {
+    "dish_id": 101,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Bò Tái",
+    "description": "Phở bò tái chuẩn Hà Nội, nước trong thanh.",
+    "image": "assets/images/dishes/pho_tai.jpg",
+    "stock": 25,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "Tô thường", "price": 45000 },
+      { "size": "Đặc biệt", "price": 55000 }
+    ]
+  },
+  {
+    "dish_id": 102,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Bò Chín",
+    "description": "Thịt chín mềm, nước dùng ngọt xương.",
+    "image": "assets/images/dishes/pho_chin.jpg",
+    "stock": 22,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "Tô thường", "price": 45000 },
+      { "size": "Đặc biệt", "price": 55000 }
+    ]
+  },
+  {
+    "dish_id": 103,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Gầu",
+    "description": "Gầu bò béo mềm, nước dùng trong thanh.",
+    "image": "assets/images/dishes/pho_gau.jpg",
+    "stock": 20,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "Tô thường", "price": 50000 },
+      { "size": "Đặc biệt", "price": 60000 }
+    ]
+  },
+  {
+    "dish_id": 104,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Tái Nạm",
+    "description": "Thịt tái kết hợp nạm, vị đậm đà.",
+    "image": "assets/images/dishes/pho_tai_nam.jpg",
+    "stock": 21,
+    "regions": ["Miền Bắc"],
+    "sizes": [
+      { "size": "1 tô", "price": 52000 }
+    ]
+  },
+  {
+    "dish_id": 105,
+    "restaurant_id": 1,
+    "category_id": 1,
+    "name": "Bún Thang Hà Nội",
+    "description": "Gà xé – trứng – giò, nước dùng tinh tế.",
+    "image": "assets/images/dishes/bun_thang.jpg",
+    "stock": 16,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 106,
+    "restaurant_id": 1,
+    "category_id": 1,
+    "name": "Miến Lươn",
+    "description": "Lươn giòn tan, miến mềm thơm.",
+    "image": "assets/images/dishes/mien_luon.jpg",
+    "stock": 17,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 107,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Xào Bò",
+    "description": "Phở xào mềm, bò đậm vị.",
+    "image": "assets/images/dishes/pho_xao.jpg",
+    "stock": 23,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 108,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Bò Viên",
+    "description": "Bò viên dai ngon, nước ngọt thanh.",
+    "image": "assets/images/dishes/pho_bo_vien.jpg",
+    "stock": 18,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 tô", "price": 49000 }]
+  },
+  {
+    "dish_id": 109,
+    "restaurant_id": 1,
+    "category_id": 2,
+    "name": "Phở Tái Lăn",
+    "description": "Tái lăn thơm mùi gừng.",
+    "image": "assets/images/dishes/pho_tai_lan.jpg",
+    "stock": 14,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "Đặc biệt", "price": 60000 }]
+  },
+  {
+    "dish_id": 110,
+    "restaurant_id": 1,
+    "category_id": 1,
+    "name": "Bún Mọc Hà Nội",
+    "description": "Mọc thịt heo mềm, nước trong.",
+    "image": "assets/images/dishes/bun_moc.jpg",
+    "stock": 24,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 48000 }]
+  },
+
+  {
+    "dish_id": 201,
+    "restaurant_id": 2,
+    "name": "Bún Chả Truyền Thống",
+    "category_id": 2,
+    "description": "Thịt nướng than hoa chuẩn vị.",
+    "image": "assets/images/dishes/bun_cha.jpg",
+    "stock": 40,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 202,
+    "restaurant_id": 2,
+    "name": "Bún Chả Viên",
+    "category_id": 2,
+    "description": "Chả viên thịt heo nướng thơm.",
+    "image": "assets/images/dishes/bun_cha_vien.jpg",
+    "stock": 34,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 203,
+    "restaurant_id": 2,
+    "name": "Nem Rán Hà Nội",
+    "category_id": 2,
+    "description": "Giòn rụm, nhân thịt – miến – mộc nhĩ.",
+    "image": "assets/images/dishes/nem_ran.jpg",
+    "stock": 22,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "5 cái", "price": 45000 }]
+  },
+  {
+    "dish_id": 204,
+    "restaurant_id": 2,
+    "name": "Nem Cua Bể",
+    "category_id": 2,
+    "description": "Đặc sản Hải Phòng, vỏ giòn nhân cua.",
+    "image": "assets/images/dishes/nem_cua_be.jpg",
+    "stock": 16,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "2 cái", "price": 50000 }]
+  },
+  {
+    "dish_id": 205,
+    "restaurant_id": 2,
+    "name": "Bún Đậu Mắm Tôm",
+    "category_id": 2,
+    "description": "Đậu giòn, chả cốm, thịt luộc.",
+    "image": "assets/images/dishes/bun_dau.jpg",
+    "stock": 35,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 206,
+    "restaurant_id": 2,
+    "name": "Thịt Xiên Nướng",
+    "category_id": 2,
+    "description": "Thịt nướng sả, thơm mềm.",
+    "image": "assets/images/dishes/thit_xien.jpg",
+    "stock": 30,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "3 xiên", "price": 35000 }]
+  },
+  {
+    "dish_id": 207,
+    "restaurant_id": 2,
+    "category_id": 5,
+    "name": "Bánh Gối",
+    "description": "Nhân mộc nhĩ, thịt, miến, trứng.",
+    "image": "assets/images/dishes/banh_goi.jpg",
+    "stock": 21,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "5 cái", "price": 40000 }]
+  },
+  {
+    "dish_id": 208,
+    "restaurant_id": 2,
+    "category_id": 1,
+    "name": "Bún Nem Kẹp",
+    "description": "Nem cuốn giòn kẹp bún tươi.",
+    "image": "assets/images/dishes/bun_nem_kep.jpg",
+    "stock": 19,
+    "regions": ["Miền Bắc"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+
+  {
+    "dish_id": 301,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Mì Quảng Tôm Thịt",
+    "description": "Mì Quảng chuẩn vị, tôm thịt đầy đủ.",
+    "image": "assets/images/dishes/mi_quang.jpg",
+    "stock": 28,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 302,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Mì Quảng Gà",
+    "description": "Gà ta xé, thơm béo.",
+    "image": "assets/images/dishes/mi_quang_ga.jpg",
+    "stock": 26,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 303,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Bánh Tráng Cuốn Thịt Heo",
+    "description": "Thịt heo hai đầu da, rau sống Đại Lộc.",
+    "image": "assets/images/dishes/banh_trang_cuon.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 60000 }]
+  },
+  {
+    "dish_id": 304,
+    "restaurant_id": 3,
+    "category_id": 1,
+    "name": "Bún Mắm Nêm",
+    "description": "Đậm chất Trung, mắm nêm thơm nồng.",
+    "image": "assets/images/dishes/bun_mam_nem.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 45000 }]
+  },
+  {
+    "dish_id": 305,
+    "restaurant_id": 3,
+    "category_id": 1,
+    "name": "Cao Lầu Hội An",
+    "description": "Sợi cao lầu mềm dai, thịt xá xíu.",
+    "image": "assets/images/dishes/cao_lau.jpg",
+    "stock": 15,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 306,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Gỏi Mít Non",
+    "description": "Gỏi mít non đặc sản xứ Quảng.",
+    "image": "assets/images/dishes/goi_mit.jpg",
+    "stock": 17,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 307,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Mì Quảng Ếch",
+    "description": "Ếch kho đậm vị, thơm nồng.",
+    "image": "assets/images/dishes/mi_quang_ech.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 308,
+    "restaurant_id": 3,
+    "category_id": 3,
+    "name": "Bánh Xèo Miền Trung",
+    "description": "Vỏ giòn, nhân tôm thịt.",
+    "image": "assets/images/dishes/banh_xeo_trung.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "3 cái", "price": 45000 }]
+  },
+
+
+  {
+    "dish_id": 401,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Huế Đặc Biệt",
+    "description": "Giò heo, chả cua, bò nạm – cay đặc trưng.",
+    "image": "assets/images/dishes/bun_bo_hue.jpg",
+    "stock": 30,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 402,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Gân",
+    "description": "Gân bò giòn dai, nước dùng đậm đà.",
+    "image": "assets/images/dishes/bun_bo_gan.jpg",
+    "stock": 26,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 403,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Giò Heo",
+    "description": "Giò heo béo mềm, nước cay thơm.",
+    "image": "assets/images/dishes/bun_gio_heo.jpg",
+    "stock": 22,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 404,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Tái",
+    "description": "Thịt tái mềm, cay nồng Huế.",
+    "image": "assets/images/dishes/bun_bo_tai.jpg",
+    "stock": 19,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 405,
+    "restaurant_id": 4,
+    "category_id": 1,
+    "name": "Bún Hến Huế",
+    "description": "Hến xào mặn mà, đậm chất Huế.",
+    "image": "assets/images/dishes/bun_hen.jpg",
+    "stock": 14,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 45000 }]
+  },
+  {
+    "dish_id": 406,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Chả Cua",
+    "description": "Chả cua thơm béo, nước cay chuẩn Huế.",
+    "image": "assets/images/dishes/bun_cha_cua.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 407,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Nạm",
+    "description": "Nạm bò mềm, nước đậm đà.",
+    "image": "assets/images/dishes/bun_bo_nam.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 52000 }]
+  },
+  {
+    "dish_id": 408,
+    "restaurant_id": 4,
+    "category_id": 3,
+    "name": "Bún Bò Chay",
+    "description": "Nước dùng chay từ rau củ – vị thanh nhẹ.",
+    "image": "assets/images/dishes/bun_bo_chay.jpg",
+    "stock": 12,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+
+  {
+    "dish_id": 501,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Tấm Sườn Bì Chả",
+    "description": "Sườn nướng mật ong – bì – chả trứng.",
+    "image": "assets/images/dishes/com_tam.jpg",
+    "stock": 40,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 55000 }]
+  },
+  {
+    "dish_id": 502,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Sườn Nướng",
+    "description": "Sườn heo ướp đậm đà.",
+    "image": "assets/images/dishes/com_suon.jpg",
+    "stock": 32,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 52000 }]
+  },
+  {
+    "dish_id": 503,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Ba Chỉ Nướng",
+    "description": "Ba chỉ nướng cháy cạnh, thơm lừng.",
+    "image": "assets/images/dishes/com_ba_chi.jpg",
+    "stock": 28,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 52000 }]
+  },
+  {
+    "dish_id": 504,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Tấm Đặc Biệt",
+    "description": "Sườn – bì – chả – trứng – lạp xưởng.",
+    "image": "assets/images/dishes/com_tam_db.jpg",
+    "stock": 22,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 65000 }]
+  },
+  {
+    "dish_id": 505,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Gà Xối Mỡ",
+    "description": "Gà giòn vàng, mềm bên trong.",
+    "image": "assets/images/dishes/ga_xoi_mo.jpg",
+    "stock": 24,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 52000 }]
+  },
+  {
+    "dish_id": 506,
+    "restaurant_id": 5,
+    "category_id": 1,
+    "name": "Bún Thịt Nướng",
+    "description": "Thịt nướng đậm vị miền Nam.",
+    "image": "assets/images/dishes/bun_thit_nuong.jpg",
+    "stock": 30,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 50000 }]
+  },
+  {
+    "dish_id": 507,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Sườn Cây",
+    "description": "Sườn cây nướng to, mềm mọng.",
+    "image": "assets/images/dishes/suon_cay.jpg",
+    "stock": 14,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 65000 }]
+  },
+  {
+    "dish_id": 508,
+    "restaurant_id": 5,
+    "category_id": 4,
+    "name": "Cơm Trứng Ốp La",
+    "description": "Dành cho người ăn nhẹ.",
+    "image": "assets/images/dishes/com_op_la.jpg",
+    "stock": 22,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 35000 }]
+  },
+
+  {
+    "dish_id": 601,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Nam Vang Nước",
+    "description": "Tôm – thịt – lòng – trứng cút.",
+    "image": "assets/images/dishes/hu_tieu.jpg",
+    "stock": 30,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 602,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Khô",
+    "description": "Sợi dai, sốt đậm vị.",
+    "image": "assets/images/dishes/hu_tieu_kho.jpg",
+    "stock": 26,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 603,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Hải Sản",
+    "description": "Mực – tôm – cá – thanh ngọt tự nhiên.",
+    "image": "assets/images/dishes/hu_tieu_hai_san.jpg",
+    "stock": 20,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 60000 }]
+  },
+  {
+    "dish_id": 604,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Bò Viên",
+    "description": "Nước trong, bò viên dai.",
+    "image": "assets/images/dishes/hu_tieu_bo_vien.jpg",
+    "stock": 22,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 605,
+    "restaurant_id": 6,
+    "category_id": 1,
+    "name": "Hủ Tiếu Xào Hải Sản",
+    "description": "Sợi to xào tôm mực.",
+    "image": "assets/images/dishes/hu_tieu_xao.jpg",
+    "stock": 16,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 phần", "price": 60000 }]
+  },
+  {
+    "dish_id": 606,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Tôm Thịt",
+    "description": "Tôm sú – thịt heo, nước ngọt thanh.",
+    "image": "assets/images/dishes/hu_tieu_tom_thit.jpg",
+    "stock": 28,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 607,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Sa Tế",
+    "description": "Vị cay nhẹ, thơm đậm đà.",
+    "image": "assets/images/dishes/hu_tieu_sate.jpg",
+    "stock": 18,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 608,
+    "restaurant_id": 6,
+    "category_id": 4,
+    "name": "Hủ Tiếu Gà",
+    "description": "Gà ta luộc mềm, nước trong.",
+    "image": "assets/images/dishes/hu_tieu_ga.jpg",
+    "stock": 24,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+
+  {
+    "dish_id": 701,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bánh Canh Trảng Bàng",
+    "description": "Nước trong, thịt heo mềm, rau rừng Tây Ninh.",
+    "image": "assets/images/dishes/banh_canh_trang_bang.jpg",
+    "stock": 25,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 702,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bò Tơ Tây Ninh Nướng",
+    "description": "Bò tơ nướng than, ăn kèm rau rừng.",
+    "image": "assets/images/dishes/bo_to_tay_ninh.jpg",
+    "stock": 22,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 phần", "price": 120000 }]
+  },
+  {
+    "dish_id": 703,
+    "restaurant_id": 7,
+    "category_id": 5,
+    "name": "Bánh Tráng Phơi Sương",
+    "description": "Bánh tráng dẻo, dùng cuốn thịt heo.",
+    "image": "assets/images/dishes/banh_trang_phoi_suong.jpg",
+    "stock": 30,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 xấp", "price": 30000 }]
+  },
+  {
+    "dish_id": 704,
+    "restaurant_id": 7,
+    "category_id": 5,
+    "name": "Muối Tôm Tây Ninh",
+    "description": "Đặc sản trứ danh, cay – mặn – thơm.",
+    "image": "assets/images/dishes/muoi_tom.jpg",
+    "stock": 40,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 hũ", "price": 30000 }]
+  },
+  {
+    "dish_id": 705,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bánh Canh Sườn",
+    "description": "Sườn heo ninh mềm, nước trong.",
+    "image": "assets/images/dishes/banh_canh_suon.jpg",
+    "stock": 18,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 tô", "price": 50000 }]
+  },
+  {
+    "dish_id": 706,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Cháo Bò Tơ",
+    "description": "Cháo nóng, thịt bò tơ mềm ngọt.",
+    "image": "assets/images/dishes/chao_bo_to.jpg",
+    "stock": 20,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 tô", "price": 55000 }]
+  },
+  {
+    "dish_id": 707,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Khô Bò Lá Chanh",
+    "description": "Khô bò Tây Ninh trứ danh.",
+    "image": "assets/images/dishes/kho_bo_la_chanh.jpg",
+    "stock": 15,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "100g", "price": 60000 }]
+  },
+  {
+    "dish_id": 708,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Khô Cá Lóc Tây Ninh",
+    "description": "Cá lóc phơi khô dai ngon.",
+    "image": "assets/images/dishes/kho_ca_loc.jpg",
+    "stock": 17,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "100g", "price": 50000 }]
+  },
+  {
+    "dish_id": 709,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Bánh Trang Me",
+    "description": "Bánh tráng trộn me cay nhẹ.",
+    "image": "assets/images/dishes/banh_trang_me.jpg",
+    "stock": 22,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 phần", "price": 25000 }]
+  },
+  {
+    "dish_id": 710,
+    "restaurant_id": 7,
+    "category_id": 4,
+    "name": "Thịt Heo Luộc Cuốn Rau Rừng",
+    "description": "Thịt heo mềm cuốn rau rừng độc đáo Tây Ninh.",
+    "image": "assets/images/dishes/thit_heo_luoc_rau_rung.jpg",
+    "stock": 18,
+    "regions": ["Tây Ninh"],
+    "sizes": [{ "size": "1 phần", "price": 75000 }]
+  },
+
+  {
+    "dish_id": 801,
+    "restaurant_id": 8,
+    "category_id": 5,
+    "name": "Bánh Căn Tôm",
+    "description": "Bánh căn giòn, tôm tươi.",
+    "image": "assets/images/dishes/banh_can_tom.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 30000 }]
+  },
+  {
+    "dish_id": 802,
+    "restaurant_id": 8,
+    "category_id": 5,
+    "name": "Bánh Căn Trứng",
+    "description": "Bánh căn trứng béo mềm.",
+    "image": "assets/images/dishes/banh_can_trung.jpg",
+    "stock": 22,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 25000 }]
+  },
+  {
+    "dish_id": 803,
+    "restaurant_id": 8,
+    "category_id": 5,
+    "name": "Bánh Căn Hải Sản",
+    "description": "Tôm – mực – trứng đầy đủ.",
+    "image": "assets/images/dishes/banh_can_hai_san.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 35000 }]
+  },
+  {
+    "dish_id": 804,
+    "restaurant_id": 8,
+    "category_id": 1,
+    "name": "Bún Cá Nha Trang",
+    "description": "Nước trong, cá thu dai.",
+    "image": "assets/images/dishes/bun_ca_nt.jpg",
+    "stock": 24,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 40000 }]
+  },
+  {
+    "dish_id": 805,
+    "restaurant_id": 8,
+    "category_id": 3,
+    "name": "Bánh Xèo Hải Sản",
+    "description": "Bánh xèo mực – tôm.",
+    "image": "assets/images/dishes/banh_xeo_nt.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "3 cái", "price": 50000 }]
+  },
+  {
+    "dish_id": 806,
+    "restaurant_id": 8,
+    "category_id": 3,
+    "name": "Gỏi Cá Mai",
+    "description": "Đặc sản tươi ngon, chấm nước mắm me.",
+    "image": "assets/images/dishes/goi_ca_mai.jpg",
+    "stock": 14,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 60000 }]
+  },
+  {
+    "dish_id": 807,
+    "restaurant_id": 8,
+    "category_id": 1,
+    "name": "Bún Sứa",
+    "description": "Sứa giòn, nước dùng thanh mát.",
+    "image": "assets/images/dishes/bun_sua.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 40000 }]
+  },
+
+
+  {
+    "dish_id": 901,
+    "restaurant_id": 9,
+    "category_id": 5,
+    "name": "Bánh Mì Thịt Hội An",
+    "description": "Thịt xá xíu – pate – đồ chua.",
+    "image": "assets/images/dishes/banh_mi_hoian.jpg",
+    "stock": 25,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 ổ", "price": 30000 }]
+  },
+  {
+    "dish_id": 902,
+    "restaurant_id": 9,
+    "category_id": 5,
+    "name": "Bánh Mì Gà",
+    "description": "Gà xé mềm, sốt bơ tỏi.",
+    "image": "assets/images/dishes/banh_mi_ga.jpg",
+    "stock": 22,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 ổ", "price": 30000 }]
+  },
+  {
+    "dish_id": 903,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Cao Lầu Hội An",
+    "description": "Sợi cao lầu dai, thịt xá xíu đặc trưng.",
+    "image": "assets/images/dishes/cao_lau_hoian.jpg",
+    "stock": 20,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 904,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Cơm Gà Hội An",
+    "description": "Gà xé, cơm vàng nghệ.",
+    "image": "assets/images/dishes/com_ga_hoian.jpg",
+    "stock": 18,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 45000 }]
+  },
+  {
+    "dish_id": 905,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Mì Quảng Hội An",
+    "description": "Sợi mì vàng, topping đầy đủ.",
+    "image": "assets/images/dishes/mi_quang_hoian.jpg",
+    "stock": 16,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 tô", "price": 45000 }]
+  },
+  {
+    "dish_id": 906,
+    "restaurant_id": 9,
+    "category_id": 5,
+    "name": "Bánh Đập",
+    "description": "Bánh tráng – bánh ướt – mắm nêm.",
+    "image": "assets/images/dishes/banh_dap.jpg",
+    "stock": 15,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 25000 }]
+  },
+  {
+    "dish_id": 907,
+    "restaurant_id": 9,
+    "category_id": 3,
+    "name": "Hến Xào Hội An",
+    "description": "Hến xào đậm vị, ăn cùng bánh tráng.",
+    "image": "assets/images/dishes/hen_xao.jpg",
+    "stock": 12,
+    "regions": ["Miền Trung"],
+    "sizes": [{ "size": "1 phần", "price": 35000 }]
+  },
+
+
+  {
+    "dish_id": 1001,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Ba Màu",
+    "description": "Đậu xanh – đậu đỏ – thạch – nước cốt.",
+    "image": "assets/images/dishes/che_ba_mau.jpg",
+    "stock": 40,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 25000 }]
+  },
+  {
+    "dish_id": 1002,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Thập Cẩm",
+    "description": "Ngon – mát – đầy topping.",
+    "image": "assets/images/dishes/che_thap_cam.jpg",
+    "stock": 35,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 25000 }]
+  },
+  {
+    "dish_id": 1003,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Đậu Đen",
+    "description": "Đậu đen mềm, nước ngọt thanh.",
+    "image": "assets/images/dishes/che_dau_den.jpg",
+    "stock": 30,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 20000 }]
+  },
+  {
+    "dish_id": 1004,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Đậu Xanh",
+    "description": "Đậu xanh nấu nhuyễn thơm béo.",
+    "image": "assets/images/dishes/che_dau_xanh.jpg",
+    "stock": 28,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 20000 }]
+  },
+  {
+    "dish_id": 1005,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Sương Sa Hạt Lựu",
+    "description": "Nhiều hạt lựu, nước cốt béo.",
+    "image": "assets/images/dishes/che_hat_luu.jpg",
+    "stock": 24,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 25000 }]
+  },
+  {
+    "dish_id": 1006,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Bưởi",
+    "description": "Bưởi dai giòn, nước cốt thơm.",
+    "image": "assets/images/dishes/che_buoi.jpg",
+    "stock": 20,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 30000 }]
+  },
+  {
+    "dish_id": 1007,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Khoai Dẻo",
+    "description": "Khoai nhiều màu – dẻo thơm.",
+    "image": "assets/images/dishes/che_khoai.jpg",
+    "stock": 18,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 30000 }]
+  },
+  {
+    "dish_id": 1008,
+    "restaurant_id": 10,
+    "category_id": 5,
+    "name": "Chè Dừa Non",
+    "description": "Dừa non giòn, nước ngọt dịu.",
+    "image": "assets/images/dishes/che_dua_non.jpg",
+    "stock": 18,
+    "regions": ["Miền Nam"],
+    "sizes": [{ "size": "1 ly", "price": 30000 }]
+  }
+]

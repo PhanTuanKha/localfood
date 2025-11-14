@@ -1,0 +1,265 @@
+[
+  {
+    "order_id": 1001,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "address_id": 1,
+    "final_price": 145000,
+    "shipping_fee": 15000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-10T09:30:00",
+    "items": [
+      { "dish_id": 101, "size": "Đặc biệt", "quantity": 2, "unit_price": 55000 },
+      { "dish_id": 103, "size": "Tô thường", "quantity": 1, "unit_price": 50000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-10T09:30:00", "changed_by_type": "customer", "changed_by_id": 1 },
+      { "status": "confirmed", "timestamp": "2025-11-10T09:32:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-10T10:10:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1002,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "address_id": 2,
+    "final_price": 120000,
+    "shipping_fee": 10000,
+    "payment_method": "COD",
+    "payment_status": "pending",
+    "order_status": "delivering",
+    "created_at": "2025-11-10T11:15:00",
+    "items": [
+      { "dish_id": 501, "size": "1 phần", "quantity": 1, "unit_price": 55000 },
+      { "dish_id": 505, "size": "1 phần", "quantity": 1, "unit_price": 52000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-10T11:15:00", "changed_by_type": "customer", "changed_by_id": 2 },
+      { "status": "confirmed", "timestamp": "2025-11-10T11:20:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "delivering", "timestamp": "2025-11-10T11:40:00", "changed_by_type": "vendor", "changed_by_id": 10 }
+    ]
+  },
+
+  {
+    "order_id": 1003,
+    "user_id": 3,
+    "restaurant_id": 1,
+    "address_id": 3,
+    "final_price": 98000,
+    "shipping_fee": 15000,
+    "payment_method": "ZALOPAY",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-11T08:45:00",
+    "items": [
+      { "dish_id": 104, "size": "1 tô", "quantity": 1, "unit_price": 52000 },
+      { "dish_id": 110, "size": "1 phần", "quantity": 1, "unit_price": 48000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-11T08:45:00", "changed_by_type": "customer", "changed_by_id": 3 },
+      { "status": "confirmed", "timestamp": "2025-11-11T08:47:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-11T09:20:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1004,
+    "user_id": 4,
+    "restaurant_id": 2,
+    "address_id": 4,
+    "final_price": 135000,
+    "shipping_fee": 15000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-11T12:05:00",
+    "items": [
+      { "dish_id": 201, "size": "1 phần", "quantity": 1, "unit_price": 50000 },
+      { "dish_id": 205, "size": "1 phần", "quantity": 1, "unit_price": 55000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-11T12:05:00", "changed_by_type": "customer", "changed_by_id": 4 },
+      { "status": "confirmed", "timestamp": "2025-11-11T12:10:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-11T12:50:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1005,
+    "user_id": 5,
+    "restaurant_id": 3,
+    "address_id": 5,
+    "final_price": 150000,
+    "shipping_fee": 20000,
+    "payment_method": "COD",
+    "payment_status": "pending",
+    "order_status": "confirmed",
+    "created_at": "2025-11-11T19:00:00",
+    "items": [
+      { "dish_id": 301, "size": "1 tô", "quantity": 1, "unit_price": 45000 },
+      { "dish_id": 303, "size": "1 phần", "quantity": 1, "unit_price": 60000 },
+      { "dish_id": 305, "size": "1 tô", "quantity": 1, "unit_price": 50000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-11T19:00:00", "changed_by_type": "customer", "changed_by_id": 5 },
+      { "status": "confirmed", "timestamp": "2025-11-11T19:05:00", "changed_by_type": "vendor", "changed_by_id": 10 }
+    ]
+  },
+
+  {
+    "order_id": 1006,
+    "user_id": 1,
+    "restaurant_id": 4,
+    "address_id": 1,
+    "final_price": 110000,
+    "shipping_fee": 15000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-12T07:20:00",
+    "items": [
+      { "dish_id": 401, "size": "1 tô", "quantity": 2, "unit_price": 55000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-12T07:20:00", "changed_by_type": "customer", "changed_by_id": 1 },
+      { "status": "confirmed", "timestamp": "2025-11-12T07:23:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-12T08:00:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1007,
+    "user_id": 2,
+    "restaurant_id": 6,
+    "address_id": 2,
+    "final_price": 130000,
+    "shipping_fee": 10000,
+    "payment_method": "ZALOPAY",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-12T18:30:00",
+    "items": [
+      { "dish_id": 601, "size": "1 tô", "quantity": 1, "unit_price": 50000 },
+      { "dish_id": 603, "size": "1 tô", "quantity": 1, "unit_price": 60000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-12T18:30:00", "changed_by_type": "customer", "changed_by_id": 2 },
+      { "status": "confirmed", "timestamp": "2025-11-12T18:33:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-12T19:10:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1008,
+    "user_id": 3,
+    "restaurant_id": 7,
+    "address_id": 3,
+    "final_price": 210000,
+    "shipping_fee": 20000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-13T11:00:00",
+    "items": [
+      { "dish_id": 701, "size": "1 tô", "quantity": 1, "unit_price": 50000 },
+      { "dish_id": 702, "size": "1 phần", "quantity": 1, "unit_price": 120000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-13T11:00:00", "changed_by_type": "customer", "changed_by_id": 3 },
+      { "status": "confirmed", "timestamp": "2025-11-13T11:05:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-13T11:45:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1009,
+    "user_id": 4,
+    "restaurant_id": 8,
+    "address_id": 4,
+    "final_price": 115000,
+    "shipping_fee": 15000,
+    "payment_method": "COD",
+    "payment_status": "pending",
+    "order_status": "delivering",
+    "created_at": "2025-11-13T19:20:00",
+    "items": [
+      { "dish_id": 801, "size": "1 phần", "quantity": 1, "unit_price": 30000 },
+      { "dish_id": 804, "size": "1 tô", "quantity": 1, "unit_price": 40000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-13T19:20:00", "changed_by_type": "customer", "changed_by_id": 4 },
+      { "status": "confirmed", "timestamp": "2025-11-13T19:25:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "delivering", "timestamp": "2025-11-13T19:40:00", "changed_by_type": "vendor", "changed_by_id": 10 }
+    ]
+  },
+
+  {
+    "order_id": 1010,
+    "user_id": 5,
+    "restaurant_id": 9,
+    "address_id": 5,
+    "final_price": 95000,
+    "shipping_fee": 10000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-13T20:10:00",
+    "items": [
+      { "dish_id": 901, "size": "1 ổ", "quantity": 1, "unit_price": 30000 },
+      { "dish_id": 903, "size": "1 tô", "quantity": 1, "unit_price": 45000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-13T20:10:00", "changed_by_type": "customer", "changed_by_id": 5 },
+      { "status": "confirmed", "timestamp": "2025-11-13T20:12:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-13T20:45:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1011,
+    "user_id": 1,
+    "restaurant_id": 10,
+    "address_id": 1,
+    "final_price": 80000,
+    "shipping_fee": 10000,
+    "payment_method": "ZALOPAY",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-14T14:30:00",
+    "items": [
+      { "dish_id": 1001, "size": "1 ly", "quantity": 1, "unit_price": 25000 },
+      { "dish_id": 1006, "size": "1 ly", "quantity": 1, "unit_price": 30000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-14T14:30:00", "changed_by_type": "customer", "changed_by_id": 1 },
+      { "status": "confirmed", "timestamp": "2025-11-14T14:32:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-14T15:00:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  },
+
+  {
+    "order_id": 1012,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "address_id": 2,
+    "final_price": 160000,
+    "shipping_fee": 10000,
+    "payment_method": "MOMO",
+    "payment_status": "success",
+    "order_status": "completed",
+    "created_at": "2025-11-14T19:45:00",
+    "items": [
+      { "dish_id": 502, "size": "1 phần", "quantity": 1, "unit_price": 52000 },
+      { "dish_id": 504, "size": "1 phần", "quantity": 1, "unit_price": 65000 },
+      { "dish_id": 506, "size": "1 phần", "quantity": 1, "unit_price": 50000 }
+    ],
+    "status_history": [
+      { "status": "pending", "timestamp": "2025-11-14T19:45:00", "changed_by_type": "customer", "changed_by_id": 2 },
+      { "status": "confirmed", "timestamp": "2025-11-14T19:50:00", "changed_by_type": "vendor", "changed_by_id": 10 },
+      { "status": "completed", "timestamp": "2025-11-14T20:30:00", "changed_by_type": "system", "changed_by_id": null }
+    ]
+  }
+]

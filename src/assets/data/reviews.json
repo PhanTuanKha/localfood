@@ -1,0 +1,533 @@
+[
+  {
+    "review_id": 1,
+    "order_id": 1001,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Phở bò đỉnh, nước trong mà đậm, giao nhanh.",
+    "images": ["assets/images/review/r1.jpg"],
+    "created_at": "2025-11-10",
+    "votes": [{ "user_id": 2, "type": "useful" }],
+    "vendor_replies": [
+      {
+        "vendor_id": 10,
+        "content": "Cảm ơn bạn đã ủng hộ quán!",
+        "image": null,
+        "created_at": "2025-11-10"
+      }
+    ],
+    "reports": [
+      {
+        "report_id": 1,
+        "user_id": 99,
+        "reason": "Nội dung cần kiểm tra",
+        "created_at": "2025-11-15",
+        "status": "Đang xử lý",
+        "admin_actions": []
+      }
+    ]
+  },
+  {
+    "review_id": 2,
+    "order_id": 1001,
+    "user_id": 2,
+    "restaurant_id": 1,
+    "rating": 4,
+    "content": "Nước dùng ngon nhưng hơi ít rau sống.",
+    "images": [],
+    "created_at": "2025-11-10",
+    "votes": [{ "user_id": 1, "type": "useful" }],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 3,
+    "order_id": 1001,
+    "user_id": 3,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Đặt nhiều lần rồi, lần nào cũng giữ chất lượng.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 4,
+    "order_id": 1002,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "rating": 5,
+    "content": "Cơm tấm ngon, sườn mềm, mỡ vừa phải.",
+    "images": ["assets/images/review/r2.jpg"],
+    "created_at": "2025-11-10",
+    "votes": [{ "user_id": 1, "type": "useful" }],
+    "vendor_replies": [
+      {
+        "vendor_id": 10,
+        "content": "Cảm ơn bạn, hẹn bạn lần sau!",
+        "image": null,
+        "created_at": "2025-11-10"
+      }
+    ],
+    "reports": []
+  },
+  {
+    "review_id": 5,
+    "order_id": 1002,
+    "user_id": 4,
+    "restaurant_id": 5,
+    "rating": 4,
+    "content": "Cơm hơi khô nhẹ nhưng đồ ăn ngon.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 6,
+    "order_id": 1002,
+    "user_id": 5,
+    "restaurant_id": 5,
+    "rating": 3,
+    "content": "Giao hơi trễ giờ trưa, hy vọng cải thiện.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": [
+      {
+        "report_id": 2,
+        "user_id": 99,
+        "reason": "Kiểm tra chất lượng giao hàng",
+        "created_at": "2025-11-12",
+        "status": "Đang xử lý",
+        "admin_actions": []
+      }
+    ]
+  },
+
+  {
+    "review_id": 7,
+    "order_id": 1003,
+    "user_id": 3,
+    "restaurant_id": 1,
+    "rating": 4,
+    "content": "Phở tái nạm ngon, nhưng phần hơi ít.",
+    "images": ["assets/images/review/r7.jpg"],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+       "reports": []
+  },
+  {
+    "review_id": 8,
+    "order_id": 1003,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Lần thứ 2 đặt vẫn ngon như lần đầu.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [{ "user_id": 2, "type": "useful" }],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 9,
+    "order_id": 1003,
+    "user_id": 4,
+    "restaurant_id": 1,
+    "rating": 5,
+    "content": "Đúng kiểu phở gia truyền Hà Nội, rất đáng thử.",
+    "images": ["assets/images/review/r9.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 10,
+    "order_id": 1004,
+    "user_id": 4,
+    "restaurant_id": 2,
+    "rating": 5,
+    "content": "Bún chả nướng than hoa thơm nức mũi.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [{ "user_id": 1, "type": "useful" }],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 11,
+    "order_id": 1004,
+    "user_id": 2,
+    "restaurant_id": 2,
+    "rating": 4,
+    "content": "Nước chấm ngon nhưng hơi mặn với mình.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 12,
+    "order_id": 1004,
+    "user_id": 3,
+    "restaurant_id": 2,
+    "rating": 5,
+    "content": "Thịt nướng mềm, không bị cháy, rất ok.",
+    "images": ["assets/images/review/r12.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 13,
+    "order_id": 1005,
+    "user_id": 5,
+    "restaurant_id": 3,
+    "rating": 5,
+    "content": "Mì Quảng rất chuẩn vị, topping nhiều.",
+    "images": [],
+    "created_at": "2025-11-11",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 14,
+    "order_id": 1005,
+    "user_id": 1,
+    "restaurant_id": 3,
+    "rating": 4,
+    "content": "Cao lầu hơi ít rau sống, còn lại ổn.",
+    "images": ["assets/images/review/r14.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 15,
+    "order_id": 1005,
+    "user_id": 2,
+    "restaurant_id": 3,
+    "rating": 5,
+    "content": "Bánh tráng cuốn thịt heo siêu ngon.",
+    "images": [],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 16,
+    "order_id": 1006,
+    "user_id": 1,
+    "restaurant_id": 4,
+    "rating": 5,
+    "content": "Bún bò Huế cay chuẩn, giò heo to.",
+    "images": ["assets/images/review/r16.jpg"],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 17,
+    "order_id": 1006,
+    "user_id": 3,
+    "restaurant_id": 4,
+    "rating": 4,
+    "content": "Hơi cay so với mình, nhưng ngon.",
+    "images": [],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 18,
+    "order_id": 1006,
+    "user_id": 5,
+    "restaurant_id": 4,
+    "rating": 5,
+    "content": "Chả cua rất chất lượng.",
+    "images": ["assets/images/review/r18.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 19,
+    "order_id": 1007,
+    "user_id": 2,
+    "restaurant_id": 6,
+    "rating": 5,
+    "content": "Hủ tiếu Nam Vang nước ngọt, topping nhiều.",
+    "images": [],
+    "created_at": "2025-11-12",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 20,
+    "order_id": 1007,
+    "user_id": 4,
+    "restaurant_id": 6,
+    "rating": 4,
+    "content": "Phần hơi ít so với giá.",
+    "images": ["assets/images/review/r20.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": [
+  {
+    "report_id": 4,
+    "user_id": 1,
+    "reason": "Bình luận gây tranh luận không cần thiết",
+    "created_at": "2025-11-14",
+    "status": "Đang xử lý",
+    "admin_actions": []
+  }
+]
+
+  },
+  {
+    "review_id": 21,
+    "order_id": 1007,
+    "user_id": 1,
+    "restaurant_id": 6,
+    "rating": 5,
+    "content": "Đặt lần 2 vẫn rất ổn.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 22,
+    "order_id": 1008,
+    "user_id": 3,
+    "restaurant_id": 7,
+    "rating": 5,
+    "content": "Bò tơ Tây Ninh nướng rất ngon, rau rừng lạ miệng.",
+    "images": ["assets/images/review/r22.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 23,
+    "order_id": 1008,
+    "user_id": 4,
+    "restaurant_id": 7,
+    "rating": 4,
+    "content": "Muối tôm chuẩn vị, nhưng hơi mặn.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 24,
+    "order_id": 1008,
+    "user_id": 2,
+    "restaurant_id": 7,
+    "rating": 5,
+    "content": "Bánh tráng phơi sương rất ngon, đáng mua.",
+    "images": ["assets/images/review/r24.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 25,
+    "order_id": 1009,
+    "user_id": 4,
+    "restaurant_id": 8,
+    "rating": 5,
+    "content": "Bánh căn tôm nóng giòn, nước chấm ngon.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 26,
+    "order_id": 1009,
+    "user_id": 1,
+    "restaurant_id": 8,
+    "rating": 4,
+    "content": "Bún cá Nha Trang chuẩn vị, hơi ít cá.",
+    "images": ["assets/images/review/r26.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 27,
+    "order_id": 1009,
+    "user_id": 5,
+    "restaurant_id": 8,
+    "rating": 5,
+    "content": "Gỏi cá mai rất tươi.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 28,
+    "order_id": 1010,
+    "user_id": 5,
+    "restaurant_id": 9,
+    "rating": 5,
+    "content": "Bánh mì Hội An rất thơm, nhân đầy.",
+    "images": [],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 29,
+    "order_id": 1010,
+    "user_id": 2,
+    "restaurant_id": 9,
+    "rating": 4,
+    "content": "Cao lầu ngon nhưng hơi nhiều dầu.",
+    "images": ["assets/images/review/r29.jpg"],
+    "created_at": "2025-11-13",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": [
+  {
+    "report_id": 5,
+    "user_id": 10,
+    "reason": "Nghi ngờ đánh giá thiếu khách quan",
+    "created_at": "2025-11-15",
+    "status": "Đang xử lý",
+    "admin_actions": []
+  }
+]
+
+  },
+  {
+    "review_id": 30,
+    "order_id": 1010,
+    "user_id": 3,
+    "restaurant_id": 9,
+    "rating": 5,
+    "content": "Cơm gà Hội An ngon xuất sắc.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 31,
+    "order_id": 1011,
+    "user_id": 1,
+    "restaurant_id": 10,
+    "rating": 5,
+    "content": "Chè ba màu rất mát, topping nhiều.",
+    "images": ["assets/images/review/r31.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 32,
+    "order_id": 1011,
+    "user_id": 4,
+    "restaurant_id": 10,
+    "rating": 4,
+    "content": "Chè bưởi ngon nhưng hơi ngọt.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 33,
+    "order_id": 1011,
+    "user_id": 5,
+    "restaurant_id": 10,
+    "rating": 5,
+    "content": "Chè khoai dẻo cực kỳ thích.",
+    "images": [],
+    "created_at": "2025-11-15",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+
+  {
+    "review_id": 34,
+    "order_id": 1012,
+    "user_id": 2,
+    "restaurant_id": 5,
+    "rating": 5,
+    "content": "Cơm sườn cây và cơm đặc biệt đều ngon.",
+    "images": [],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 35,
+    "order_id": 1012,
+    "user_id": 1,
+    "restaurant_id": 5,
+    "rating": 4,
+    "content": "Quán hơi đông nên giao chậm chút.",
+    "images": ["assets/images/review/r35.jpg"],
+    "created_at": "2025-11-14",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  },
+  {
+    "review_id": 36,
+    "order_id": 1012,
+    "user_id": 3,
+    "restaurant_id": 5,
+    "rating": 5,
+    "content": "Cơm tấm Sài Gòn xịn ăn rất đúng chất.",
+    "images": [],
+    "created_at": "2025-11-15",
+    "votes": [],
+    "vendor_replies": [],
+    "reports": []
+  }
+]

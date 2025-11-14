@@ -1,0 +1,79 @@
+[
+  {
+    "user_id": 1,
+    "username": "NgocAnh",
+    "password": "123456",
+    "role": "customer",
+    "email": "nga@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 2,
+    "username": "MinhThy",
+    "password": "123456",
+    "role": "customer",
+    "email": "thy@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 3,
+    "username": "HoangKhoa",
+    "password": "123456",
+    "role": "customer",
+    "email": "khoa@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 4,
+    "username": "ThanhVy",
+    "password": "123456",
+    "role": "customer",
+    "email": "vy@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 5,
+    "username": "HuuDuy",
+    "password": "123456",
+    "role": "customer",
+    "email": "duy@example.com",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  },
+  {
+    "user_id": 10,
+    "username": "VendorChinh",
+    "password": "123456",
+    "role": "vendor",
+    "email": "vendor@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Nhà hàng chính thức trong hệ thống LocalFood.",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 99,
+    "username": "Admin",
+    "password": "123456",
+    "role": "admin",
+    "email": "admin@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "",
+    "image": ""
+  }
+]

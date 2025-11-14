@@ -1,0 +1,112 @@
+<section id="hero" class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1>Are you starving?</h1>
+      <p>Within a few clicks, find meals thatare accessible near you</p>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="assets/images/noodles.png" alt="A delicious bowl of noodles" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<section id="reviews-section">
+    <div class="reviews-container">
+        <div class="reviews-column">
+            <h2 class="main-title">BÌNH LUẬN</h2>
+            <button type="button" class="sort-button">
+                  <svg class="sort-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.50001 17C4.35801 17 4.23934 16.952 4.14401 16.856C4.04867 16.76 4.00067 16.641 4.00001 16.499C3.99934 16.357 4.04734 16.2383 4.14401 16.143C4.24067 16.0477 4.35934 16 4.50001 16H8.25001C8.39201 16 8.51067 16.048 8.60601 16.144C8.70134 16.24 8.74934 16.359 8.75001 16.501C8.75067 16.643 8.70267 16.7617 8.60601 16.857C8.50934 16.9523 8.39067 17 8.25001 17H4.50001ZM4.50001 12.5C4.35801 12.5 4.23934 12.452 4.14401 12.356C4.04867 12.26 4.00067 12.141 4.00001 11.999C3.99934 11.857 4.04734 11.7383 4.14401 11.643C4.24067 11.5477 4.35934 11.5 4.50001 11.5H13.866C14.0073 11.5 14.126 11.548 14.222 11.644C14.318 11.74 14.366 11.859 14.366 12.001C14.366 12.143 14.318 12.2617 14.222 12.357C14.126 12.4523 14.0073 12.5 13.866 12.5H4.50001ZM4.50001 8C4.35801 8 4.23934 7.952 4.14401 7.856C4.04867 7.76 4.00067 7.641 4.00001 7.499C3.99934 7.357 4.04734 7.23833 4.14401 7.143C4.24067 7.04767 4.35934 7 4.50001 7H19.5C19.642 7 19.7607 7.048 19.856 7.144C19.9513 7.24 19.9993 7.359 20 7.501C20.0007 7.643 19.9527 7.76167 19.856 7.857C19.7593 7.95233 19.6407 8 19.5 8H4.50001Z" fill="black"/>
+                  </svg>
+                <span>Hữu ích nhất</span>
+            </button>
+            <div class="reviews-list" *ngIf="reviews.length">
+  <article class="review-card" *ngFor="let r of reviews">
+      <div class="review-card-background"></div>
+      <div class="review-content">
+          <header class="review-header">
+              <div class="user-details">
+                <svg class="avatar" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="45" height="45" rx="22.5" fill="#90D3CA"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M29.25 18C29.25 21.7279 26.228 24.75 22.5 24.75C18.7721 24.75 15.75 21.7279 15.75 18C15.75 14.2721 18.7721 11.25 22.5 11.25C26.228 11.25 29.25 14.2721 29.25 18ZM27 18C27 20.4853 24.9853 22.5 22.5 22.5C20.0147 22.5 18 20.4853 18 18C18 15.5147 20.0147 13.5 22.5 13.5C24.9853 13.5 27 15.5147 27 18Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+                  <path d="M22.5 28.125C15.2163 28.125 9.01046 32.432 6.64648 38.466C7.22237 39.0379 7.82902 39.5788 8.46373 40.0861C10.2241 34.5462 15.7463 30.375 22.5 30.375C29.2537 30.375 34.776 34.5462 36.5363 40.0861C37.1711 39.5788 37.7777 39.0379 38.3536 38.4661C35.9896 32.432 29.7837 28.125 22.5 28.125Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+                </svg>
+                  <h3 class="user-name">User {{ r.user_id }}</h3>
+              </div>
+
+              <div class="rating">
+                  <div *ngFor="let star of [1,2,3,4,5]"
+                    class="star"
+                    [ngClass]="{ 'star-filled': star <= r.rating, 'star-empty': star > r.rating }">
+                  </div>
+              </div>
+          </header>
+
+          <p class="review-text">{{ r.content }}</p>
+
+          <img *ngIf="r.images && r.images.length > 0"
+                [src]="r.images[0]"
+                alt="Review image"
+                class="review-image">
+
+          <footer class="review-footer">
+              <button type="button" class="action-button">
+                <svg class="action-icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 11.6C20 10.55 19.15 10 18 10H14.65C14.9 9.1 15 8.25 15 7.5C15 4.6 14.2 4 13.5 4C13.05 4 12.7 4.05 12.25 4.3C12.1 4.4 12.05 4.5 12 4.65L11.5 7.35C10.95 8.75 9.6 10 8.5 10.85V18C8.9 18 9.3 18.2 9.8 18.45C10.35 18.7 10.9 19 11.5 19H16.25C17.25 19 18 18.2 18 17.5C18 17.35 18 17.25 17.95 17.15C18.55 16.9 19 16.4 19 15.75C19 15.45 18.95 15.2 18.85 14.95C19.25 14.7 19.6 14.25 19.6 13.75C19.6 13.45 19.45 13.15 19.3 12.9C19.7 12.6 20 12.1 20 11.6ZM18.95 11.6C18.95 12.25 18.3 12.3 18.2 12.6C18.1 12.95 18.6 13.05 18.6 13.65C18.6 14.25 17.85 14.25 17.75 14.6C17.65 15 18 15.1 18 15.7V15.8C17.9 16.3 17.15 16.35 17 16.55C16.85 16.8 17 16.9 17 17.45C17 17.75 16.65 17.95 16.25 17.95H11.5C11.1 17.95 10.7 17.75 10.2 17.5C9.8 17.3 9.4 17.1 9 17V11.75C10.25 10.8 11.85 9.4 12.45 7.65V7.55L12.9 5.05C13.1 5 13.25 5 13.5 5C13.6 5 14 5.6 14 7.5C14 8.25 13.85 9.05 13.6 10H13.5C13.2 10 13 10.2 13 10.5C13 10.8 13.2 11 13.5 11H18C18.5 11 18.95 11.25 18.95 11.6Z" fill="black"/>
+                  <path d="M8 19H5C4.45 19 4 18.55 4 18V11C4 10.45 4.45 10 5 10H8C8.55 10 9 10.45 9 11V18C9 18.55 8.55 19 8 19ZM5 11V18H8V11H5Z" fill="black"/>
+                </svg>
+                  <span>Hữu ích ({{ r.votes?.length || 0 }})</span>
+              </button>
+
+              <button type="button" class="action-button">
+                <svg class="action-icon" width="25" height="25" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 12.423C8.17467 12.423 8.321 12.364 8.439 12.246C8.55633 12.128 8.615 11.982 8.615 11.808C8.615 11.634 8.556 11.4877 8.438 11.369C8.32 11.2503 8.174 11.1913 8 11.192C7.826 11.1927 7.68 11.2517 7.562 11.369C7.444 11.4863 7.385 11.6327 7.385 11.808C7.385 11.9833 7.444 12.1293 7.562 12.246C7.68 12.3627 7.826 12.4217 8 12.423ZM7.5 9.462H8.5V3.384H7.5V9.462ZM4.673 16L0 11.336V4.673L4.664 0H11.327L16 4.664V11.327L11.336 16H4.673ZM5.1 15H10.9L15 10.9V5.1L10.9 1H5.1L1 5.1V10.9L5.1 15Z" fill="black"/>
+                </svg>
+                  <span>Báo cáo</span>
+              </button>
+          </footer>
+      </div>
+  </article>
+</div>
+
+        </div>
+
+        <aside class="product-column">
+            <div class="product-card">
+                <img src="${ASSET_PATH}/6266c208bb64d73cc0bf9f1274847fe36e8df9d8.png" alt="Trà Ô Long Lài Sữa" class="product-image">
+                <h2 class="product-title">TRÀ OLONG LÀI SỮA</h2>
+                <div class="product-stats">
+                    <div class="stat-item">
+                          <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="black"/>
+                          </svg>
+                        <span>52K lượt yêu thích</span>
+                    </div>
+                    <div class="stat-item">
+                          <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.41828 3.25C8.69828 2.66 9.30228 2.25 10.0003 2.25H14.0003C14.6983 2.25 15.3013 2.66 15.5823 3.25C16.2653 3.256 16.7983 3.287 17.2743 3.473C17.8425 3.69527 18.3367 4.07301 18.7003 4.563C19.0673 5.057 19.2403 5.69 19.4763 6.561L20.2183 9.283L20.4983 10.124L20.5223 10.154C21.4233 11.308 20.9943 13.024 20.1363 16.455C19.5903 18.638 19.3183 19.729 18.5043 20.365C17.6903 21 16.5653 21 14.3153 21H9.68528C7.43528 21 6.31028 21 5.49628 20.365C4.68228 19.729 4.40928 18.638 3.86428 16.455C3.00628 13.024 2.57728 11.308 3.47828 10.154L3.50228 10.124L3.78228 9.283L4.52428 6.561C4.76128 5.69 4.93428 5.056 5.30028 4.562C5.664 4.07238 6.15817 3.695 6.72628 3.473C7.20228 3.287 7.73428 3.255 8.41828 3.25ZM8.42028 4.753C7.75828 4.76 7.49228 4.785 7.27228 4.871C6.96624 4.99068 6.70009 5.19411 6.50428 5.458C6.32828 5.695 6.22428 6.026 5.93428 7.093L5.36428 9.182C6.38428 9 7.77828 9 9.68428 9H14.3153C16.2223 9 17.6153 9 18.6353 9.18L18.0663 7.091C17.7763 6.024 17.6723 5.693 17.4963 5.456C17.3005 5.19211 17.0343 4.98868 16.7283 4.869C16.5083 4.783 16.2423 4.758 15.5803 4.751C15.4383 5.04985 15.2145 5.30232 14.9348 5.47914C14.6552 5.65596 14.3311 5.74987 14.0003 5.75H10.0003C9.66952 5.74996 9.34555 5.6562 9.06591 5.47956C8.78627 5.30293 8.56241 5.05166 8.42028 4.753Z" fill="black"/>
+                          </svg>
+                        <span>1,8K lượt mua</span>
+                    </div>
+                    <div class="stat-item">
+                          <svg class="stat-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21C13.78 21 15.5201 20.4722 17.0001 19.4832C18.4802 18.4943 19.6337 17.0887 20.3149 15.4442C20.9961 13.7996 21.1743 11.99 20.8271 10.2442C20.4798 8.49836 19.6226 6.89472 18.364 5.63604C17.1053 4.37737 15.5016 3.5202 13.7558 3.17294C12.01 2.82567 10.2004 3.0039 8.55585 3.68509C6.91131 4.36628 5.50571 5.51983 4.51677 6.99987C3.52784 8.47991 3 10.22 3 12C3 13.488 3.36 14.89 4 16.127L3 21L7.873 20C9.109 20.639 10.513 21 12 21Z" fill="black" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        <span>753 lượt bình luận</span>
+                    </div>
+                </div>
+                <button type="button" class="favorite-button">
+                      <svg class="favorite-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.24 12.25C3.84461 11.8572 3.53134 11.3897 3.31845 10.8747C3.10556 10.3596 2.99731 9.80733 3 9.25002C3 8.12285 3.44777 7.04184 4.2448 6.24481C5.04183 5.44778 6.12283 5.00002 7.25 5.00002C8.83 5.00002 10.21 5.86002 10.94 7.14002H12.06C12.4311 6.48908 12.9681 5.94811 13.6163 5.57219C14.2645 5.19628 15.0007 4.99886 15.75 5.00002C16.8772 5.00002 17.9582 5.44778 18.7552 6.24481C19.5522 7.04184 20 8.12285 20 9.25002C20 10.42 19.5 11.5 18.76 12.25L11.5 19.5L4.24 12.25ZM19.46 12.96C20.41 12 21 10.7 21 9.25002C21 7.85763 20.4469 6.52227 19.4623 5.53771C18.4777 4.55314 17.1424 4.00002 15.75 4.00002C14 4.00002 12.45 4.85002 11.5 6.17002C11.0151 5.49652 10.3766 4.94834 9.63748 4.57095C8.89835 4.19356 8.0799 3.99784 7.25 4.00002C5.85761 4.00002 4.52226 4.55314 3.53769 5.53771C2.55312 6.52227 2 7.85763 2 9.25002C2 10.7 2.59 12 3.54 12.96L11.5 20.92L19.46 12.96Z" fill="black"/>
+                      </svg>
+                    <span>Thêm vào yêu thích</span>
+                </button>
+                <p class="product-description">Trà Ô Long Lài Sữa là sự kết hợp hài hòa giữa vị trà Ô Long đậm đà và hương hoa lài thanh nhẹ. Thêm chút béo ngậy của sữa tạo nên ly trà sữa thơm ngon, mát lành, uống là mê! Trà Ô Long Lài Sữa là sự kết hợp hài hòa giữa vị trà Ô Long đậm đà và hương hoa lài thanh nhẹ. Thêm chút béo ngậy của sữa tạo nên ly trà sữa thơm ngon, mát lành, uống là mê!</p>
+                <div class="product-actions">
+                    <a routerLink="/review-detail"><button type="button" class="action-btn add-to-cart-btn">Thêm vào giỏ hàng</button></a>
+                    <a routerLink="/gps"><button type="button" class="action-btn buy-now-btn">Mua ngay</button></a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>

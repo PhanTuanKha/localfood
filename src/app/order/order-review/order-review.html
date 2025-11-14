@@ -1,0 +1,126 @@
+<section id="hero" class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1>Bạn đang đói?</h1>
+      <p>Hãy khám phá những món ăn ngon gần bạn chỉ với vài nhấp chuột!</p>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="assets/images/noodles.png" alt="A delicious bowl of noodles" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<main class="review-page-container">
+    <h1 class="page-title">ĐÁNH GIÁ ĐƠN HÀNG</h1>
+
+    <section class="order-section">
+        <div class="order-card-wrapper">
+            <div class="order-card">
+                <div class="order-card-content">
+                    <span class="order-status status-success">HOÀN THÀNH</span>
+                    <h3>Quán Cô Ba Quận 12 <span class="restaurant-type">SANDWICHES</span></h3>
+                    <p>Enjoy the large size of sandwiches. Complete your meal with the perfect slice of sandwiches.</p>
+                    <div class="order-actions">
+                        <a routerLink="/404" class="btn btn-secondary">ĐẶT LẠI
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.9213 8.53031L2.84805 14.6035C2.55514 14.8964 2.08027 14.8964 1.78739 14.6035L1.07905 13.8952C0.786641 13.6028 0.786079 13.1289 1.0778 12.8358L5.89095 7.99997L1.0778 3.16419C0.786079 2.87109 0.786641 2.39719 1.07905 2.10478L1.78739 1.39644C2.0803 1.10353 2.55517 1.10353 2.84805 1.39644L8.92127 7.46966C9.21417 7.76253 9.21417 8.23741 8.9213 8.53031Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a routerLink="/404" class="btn btn-secondary">CHI TIẾT
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.9213 8.53031L2.84805 14.6035C2.55514 14.8964 2.08027 14.8964 1.78739 14.6035L1.07905 13.8952C0.786641 13.6028 0.786079 13.1289 1.0778 12.8358L5.89095 7.99997L1.0778 3.16419C0.786079 2.87109 0.786641 2.39719 1.07905 2.10478L1.78739 1.39644C2.0803 1.10353 2.55517 1.10353 2.84805 1.39644L8.92127 7.46966C9.21417 7.76253 9.21417 8.23741 8.9213 8.53031Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                        <a routerLink="/404" class="btn btn-primary btn-full-width">XEM QUÁN
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.9213 8.53031L2.84805 14.6035C2.55514 14.8964 2.08027 14.8964 1.78739 14.6035L1.07905 13.8952C0.786641 13.6028 0.786079 13.1289 1.0778 12.8358L5.89095 7.99997L1.0778 3.16419C0.786079 2.87109 0.786641 2.39719 1.07905 2.10478L1.78739 1.39644C2.0803 1.10353 2.55517 1.10353 2.84805 1.39644L8.92127 7.46966C9.21417 7.76253 9.21417 8.23741 8.9213 8.53031Z" fill="#FFFEFE"/>
+                            </svg>
+                        </a>
+                </div>
+                <div class="order-card-image-wrapper">
+                    <img src="assets/images/sandwich.png" alt="Sandwiches">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="review-form-section">
+  <form class="review-form" (submit)="onSubmit($event)">
+    <!-- Rating -->
+    <div class="form-group">
+      <label for="quality-rating">Chất lượng sản phẩm</label>
+      <div id="quality-rating" class="rating-stars">
+        <div
+          *ngFor="let star of stars; let i = index"
+          class="star"
+          [class.filled]="i < selectedRating"
+          (click)="setRating(i + 1)"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Media Upload -->
+    <div class="form-group">
+      <label for="media-upload">Hình ảnh/Video</label>
+      <div id="media-upload" class="upload-area">
+        <!-- Nút upload -->
+        <button type="button" class="upload-button" (click)="triggerFileInput()">
+          <img src="assets/images/upload.png" alt="Upload icon" />
+        </button>
+        <p>Upload Media</p>
+
+        <!-- Hiển thị nhiều ảnh/video -->
+        <ng-container *ngFor="let media of selectedMedia; let i = index">
+          <img
+            *ngIf="isImage(media)"
+            [src]="media.url"
+            alt="Preview"
+            width="80"
+            height="80"
+            style="object-fit: cover; border-radius: 8px; margin-left: 8px; cursor: pointer;"
+            (click)="$event.stopPropagation(); editMedia(i)"
+          />
+          <video
+            *ngIf="isVideo(media)"
+            [src]="media.url"
+            width="100"
+            height="80"
+            style="margin-left: 8px; border-radius: 8px;"
+            controls
+          ></video>
+        </ng-container>
+
+        <!-- Input file ẩn -->
+        <input
+          type="file"
+          #fileInput
+          (change)="onFileSelected($event)"
+          accept="image/*,video/*"
+          multiple
+          style="display: none;"
+        />
+      </div>
+    </div>
+
+    <!-- Mô tả -->
+    <div class="form-group">
+      <label for="review-description">Mô tả</label>
+      <textarea
+        id="review-description"
+        class="description-input"
+        [(ngModel)]="description"
+        name="description"
+        placeholder="Hãy chia sẻ cảm nhận của bạn về đơn hàng này nhé"
+      ></textarea>
+    </div>
+
+    <!-- Submit -->
+    <div class="form-group submit-group">
+      <div></div>
+      <button type="submit" class="submit-btn">Gửi đánh giá</button>
+    </div>
+  </form>
+</section>
+
+</main>

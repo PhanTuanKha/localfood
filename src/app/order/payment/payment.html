@@ -1,0 +1,23 @@
+<section id="payment-methods" class="payment-methods-section">
+  <div class="payment-card">
+    <div class="payment-card__header-bg"></div>
+    <div class="payment-card__content">
+      <!-- Nút dropdown -->
+      <button class="dropdown-toggle" (click)="toggleDropdown()">
+        Chọn phương thức thanh toán 
+        <span>{{ isOpen ? '▴' : '▾' }}</span>
+      </button>
+
+      <!-- Menu dropdown -->
+      <div class="dropdown-menu" [class.open]="isOpen">
+        <p class="payment-list">
+          <span class="payment-list__item--highlight">Tiền mặt</span><br>
+          Chuyển khoản<br>
+          Momo<br>
+          ZaloPay
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

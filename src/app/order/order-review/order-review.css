@@ -1,0 +1,413 @@
+body {
+    margin: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: var(--background-dark);
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p, a, span, label, button, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+    .hero-section {
+        background-color: #90d3ca;
+        padding: 48px 0;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    .hero-content {
+        flex: 1;
+        max-width: 540px;
+        color: #ffffff;
+        padding: 70px 0;
+    }
+
+    .hero-content h1 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 900;
+        font-size: 68.8px;
+        line-height: 1;
+        color: #f9fafd;
+        margin-bottom: 7px;
+    }
+
+    .hero-content p {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 700;
+        font-size: 33.2px !important;
+        line-height: 1.2;
+        color: #616161;
+    }
+
+    .hero-image-wrapper {
+        flex: 1;
+        max-width: 538px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    @media (max-width: 992px) {
+        .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        }
+        .hero-content {
+        padding: 20px 0;
+        }
+    }
+
+    .review-page-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 138px;
+    }
+
+    .page-title {
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 700;
+        font-size: 68.8px;
+        color: #fc773e;
+        text-align: center;
+    }
+
+    .order-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .order-card-wrapper {
+        position: relative;
+        max-width: 1108px;
+        width: 100%;
+    }
+
+    .order-card {
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 16px 64px 0px rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+    }
+    .order-card-content {
+        flex: 1;
+        padding: 48px;
+        padding-top: 95px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .order-status {
+        position: absolute;
+        top: 31px;
+        right: 48px;
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .status-success { color: #00a43c; }
+    .status-danger { color: #ff0000; }
+
+    .order-card-content h3 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 39.8px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .restaurant-type {
+        color: #fc773e;
+    }
+    .order-card-content p {
+        font-size: 19.2px;
+        color: #616161;
+        line-height: 1.5;
+    }
+    .order-actions {
+        display: flex;
+        gap: 30px;
+    }
+    .order-actions .btn {
+        flex: 1;
+    }
+    .btn-full-width {
+        width: 100%;
+    }
+    .btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 9px 18px;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid transparent;
+        gap: 8px;
+    }
+
+    .btn-primary {
+        background-color: #fc773e;
+        color: #ffffff;
+        border-color: #fc773e;
+    }
+
+    .btn-secondary {
+        background-color: #90d3ca;
+        color: #000000;
+        border-color: #90d3ca;
+    }
+
+    .review-form-section {
+        width: 100%;
+        max-width: 1108px;
+        padding: 0 48px;
+    }
+
+    .review-form {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        row-gap: 60px;
+        column-gap: 57px;
+        align-items: start;
+    }
+
+    .form-group {
+        display: contents;
+    }
+
+    .review-form label {
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        color: #fc773e;
+        padding-top: 20px;
+    }
+
+    .rating-stars {
+        display: flex;
+        gap: 47px;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .star {
+        width: 94px;
+        height: 84px;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        background-color:#d4d4d4;
+        cursor:pointer;
+    }
+
+    .star.filled {
+        background-color: #ffd700;
+    }
+
+    .star.empty {
+        background-color: #d4d4d4;
+    }
+
+    .upload-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-top: 20px;
+    }
+
+    .upload-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .upload-area p {
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 15px;
+        color: #212121;
+        letter-spacing: 0.5px;
+    }
+
+    .description-input {
+        background-color: rgba(144, 211, 202, 0.3);
+        border-radius: 10px;
+        box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+        width: 100%;
+        height: 382px;
+        border: none;
+        padding: 23px 32px;
+        font-family: 'Source Sans 3', sans-serif;
+        font-size: 15px;
+        color: #212121;
+        resize: vertical;
+    }
+
+    .description-input::placeholder {
+        color: #212121;
+    }
+
+    .submit-group {
+        grid-column: 2 / 3;
+    }
+
+    .submit-btn {
+        background-color: #15878d;
+        opacity: 0.85;
+        color: #fffefe;
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 600;
+        font-size: 17px;
+        padding: 0;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        width: 156px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .order-card-image-wrapper {
+        flex-basis: 58%;
+        min-width: 58%;
+    }
+
+    .order-card-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @media (max-width: 1200px) {
+        .review-form-section {
+            padding: 0 20px;
+        }
+        .review-form {
+            grid-template-columns: 220px 1fr;
+            column-gap: 30px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .review-page-container {
+            gap: 80px;
+            padding: 40px 20px;
+        }
+        .page-title {
+            font-size: 48px;
+        }
+        .order-card {
+            flex-direction: column;
+        }
+        .order-card:nth-child(even) {
+            flex-direction: column-reverse;
+        }
+        .order-card-image-wrapper {
+        flex-basis: auto;
+        min-width: auto;
+        max-height: 300px;
+        }
+        .review-form {
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+        }
+        .review-form label {
+            padding-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .rating-stars, .upload-area, .description-input {
+            padding-top: 0;
+        }
+        .submit-group {
+            grid-column: 1 / 2;
+            margin-top: 20px;
+        }
+        .submit-btn {
+            width: 20%;
+            margin: 0 auto;
+            display: block;
+        }
+        .description-input::placeholder {
+            padding-top: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .page-title {
+            font-size: 36px;
+        }
+        .btn-secondary {
+            width: 100%;
+        }
+        .rating-stars {
+            gap: 15px;
+            justify-content: space-between;
+        }
+        .star {
+            width: 40px;
+            height: 38px;
+        }
+        .description-input {
+            height: 200px;
+        }
+        .order-card-content {
+            padding: 24px;
+            padding-top: 60px;
+        }
+        .order-status {
+            top: 24px;
+            right: 24px;
+        }
+        .order-actions {
+            flex-direction: row;
+            gap: 60px;
+        }
+        .page-title {
+        font-size: 32px;
+        }
+        .order-status {
+        font-size: 15px !important;
+        }
+        h3, span {
+        font-size: 25px !important;
+        }
+        p {
+        font-size: 15px !important;
+        }
+        .submit-btn {
+            width: 40%;
+            margin: 0 auto;
+            display: block;
+        }
+        .description-input::placeholder {
+            padding-top: 10px;
+        }
+        .description-input {
+            padding-top: 15px;
+        }
+    }
+
+    

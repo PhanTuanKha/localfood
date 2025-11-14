@@ -1,0 +1,24 @@
+<section id="promotion">
+  <div class="promo-container">
+    <div class="promo-card">
+
+      <div class="promo-card__header"></div>
+
+      <!-- Dropdown button -->
+      <button class="promo-dropdown-toggle" (click)="togglePromo()">
+        Khuyến mãi <span>{{ isPromoOpen ? '▴' : '▾' }}</span>
+      </button>
+
+      <!-- Dropdown menu -->
+      <div class="promo-dropdown" [class.open]="isPromoOpen">
+        <p class="promo-card__text">
+          <span class="promo-card__text--highlight">5%</span><br>
+          10%<br>
+          15%<br>
+          20%
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

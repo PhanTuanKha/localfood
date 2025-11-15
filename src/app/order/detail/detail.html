@@ -1,0 +1,39 @@
+<div class="order-container container-fluid">
+  <h2 class="title">Tình trạng đơn hàng của bạn</h2>
+
+
+  <div class="timeline-wrapper">
+
+
+    <div
+      class="timeline-step"
+      *ngFor="let step of steps; let i = index"
+      [class.active]="i === currentStep"
+    >
+      <div class="dot-line">
+        <div class="dot" [class.done]="i <= currentStep"></div>
+        <div class="line" *ngIf="i < steps.length - 1" [class.done]="i < currentStep"></div>
+      </div>
+
+
+      <div class="step-box" [class.active]="i === currentStep">
+        <i [class]="step.icon"></i>
+        <p class="step-text" [innerHTML]="step.text"></p>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="description mt-4">
+    {{ steps[currentStep].description }}
+  </div>
+
+
+</div>
+
+
+

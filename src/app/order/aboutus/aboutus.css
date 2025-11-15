@@ -1,0 +1,214 @@
+.main-page{
+    background-color: #FFFFFF;
+  }
+  .main-page-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    background-color: #e2e2e2;
+    padding: 20px;
+  }
+
+  .main-page-img .content {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+
+  .main-page-img .content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .main-page-img .content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FF8C00;
+    margin-bottom: 15px;
+  }
+
+  .main-page-img > img.rounded {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .main-page-img .content img {
+    width: 160px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .find{
+      text-align: center;
+      color: #FF8C00;
+  }
+
+  .btn-search {
+    background-color: #FF8C00;
+    border: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-search i { color: #000000; font-size: 1rem; }
+
+  .btn.btn-outline-primary{ background-color: #FF8C00; color: white }
+  h2{ color: #FF8C00 }
+
+.metrics-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.banner-text {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.banner-text h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+    margin: 0;
+    padding: 6px 14px;
+}
+
+.metrics-section {
+    background: #C6EFEA;
+    padding: 36px 20px;
+    text-align: center;
+    position: relative;
+}
+.metrics-title {
+    color: #E57E25;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.metric-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.metric-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.metric-info h4 {
+    margin: 10px 0 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+}
+.metric-info p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.foot {
+    position: relative;
+    margin-top: 26px;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 220px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.foot-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 100%);
+    z-index: 1;
+}
+
+.foot-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 28px 18px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    margin: 0 auto;         /* canh giữa */
+    padding: 28px 18px; 
+}
+
+.foot-content h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+.foot-content h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+.why-list {
+    margin: 0;
+    padding-left: 25px;
+    color: #f1f1f1;
+    line-height: 1.5;
+}
+.why-list li {
+    margin-bottom: 25px;
+    font-size: 13.5px;
+}
+
+@media (min-width: 992px) {
+    .metrics-grid { grid-template-columns: repeat(3, 1fr); max-width: 1100px; gap: 34px; }
+    .metric-card img { height: 100px; }
+}
+
+@media (max-width: 768px) {
+    .banner-text h2 { font-size: 22px; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); max-width: 680px; gap: 20px; }
+}
+
+@media (max-width: 576px) {
+    .foot-content { padding: 20px 12px; }
+    .foot { min-height: 280px; }
+}

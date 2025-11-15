@@ -20,8 +20,13 @@
   <div class="block">
     <i class="bi bi-bell-fill"></i>
     <i class="bi bi-chat-dots-fill"></i>
+    <i class="bi bi-cart-fill" (click)="toggleCart()"></i>
+      <app-cart-sidebar 
+  [isOpen]="isCartOpen" 
+  (close)="toggleCart()">
+</app-cart-sidebar>
   <div class="dropdown-wrapper">
-  <i class="bi bi-border-width" (click)="toggleDropdown()"></i>
+    <i class="bi bi-border-width" (click)="toggleDropdown()"></i>
   <div class="dropdown-menu" [class.show]="dropdownOpen">
     <div class="dropdown-item" (click)="handleMenuClick('Tài khoản')" [class.active]="activeMenu === 'Tài khoản'">Tài khoản</div>
     <div class="dropdown-item" (click)="handleMenuClick('Đơn hàng')" [class.active]="activeMenu === 'Đơn hàng'">Đơn hàng</div>

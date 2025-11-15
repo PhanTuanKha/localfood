@@ -1,0 +1,96 @@
+<div class="cart-sidebar" [class.open]="isOpen">
+    <div class="header">
+        <i class="bi bi-bag-check-fill cart-icon"></i>
+        <h4>Giỏ hàng</h4>
+        <i class="bi bi-x-lg close-btn" (click)="close.emit()"></i>
+    </div>
+
+    <div class="items">
+        <div class="item-container" *ngFor="let item of cartItems">
+            <div class="item">
+                <div class="qty-indicator">
+                    <span>{{ item.qty }}x</span>
+                </div>
+                <div class="item-details">
+                    <div class="price-line">
+                        <div class="price">{{ item.price * item.qty | currency:'GBP' }}</div>
+                        <div class="qty-control">
+                            <button (click)="decrease(item)">-</button>
+                            <span>{{ item.qty }}</span>
+                            <button (click)="increase(item)">+</button>
+                        </div>
+                    </div>
+                    <div class="item-name">{{ item.name }}</div>
+                    <div class="item-desc">{{ item.desc }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary">
+        <div class="summary-line">
+            <span>Tổng:</span>
+            <span>{{ total | currency:'GBP' }}</span>
+        </div>
+        <div class="summary-line">
+            <span>Giảm giá:</span>
+            <span class="discount-amount">{{ calculatedDiscount | currency:'GBP' }}</span>
+        </div>
+        <div class="summary-line">
+            <span>Phí vận chuyển:</span>
+            <span>{{ 2.50 | currency:'GBP' }}</span>
+        </div>
+        <div class="summary-line">
+            <span>Phí dịch vụ:</span>
+            <span>{{ 2.50 | currency:'GBP' }}</span>
+        </div>
+        <div class="total-to-pay">
+            <span class="label">Tổng thanh toán</span>
+            <span class="final-total">{{ finalTotal | currency:'GBP' }}</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="styled-form-row mb-3">
+        <label class="form-label fw-semibold">Khuyến mãi:</label>
+        <div class="select-wrapper">
+            <select class="form-select custom-select" id="discount-select">
+                <option>Không</option>
+                <option selected>5%</option>
+                <option>10%</option>
+                <option>15%</option>
+                <option>20%</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="styled-form-row mb-3">
+        <label class="form-label fw-semibold">Phương thức thanh toán:</label>
+        <div class="select-wrapper">
+            <select class="form-select custom-select" id="payment-select">
+                <option>Tiền mặt</option>
+                <option selected>Chuyển khoản</option>
+                <option>Momo</option>
+                <option>ZaloPay</option>
+            </select>
+        </div>
+    </div>
+
+        <div class="delivery-box">
+            <div class="delivery-left">
+                <i class="bi bi-truck"></i>
+            </div>
+            <div class="delivery-right">
+                <p class="delivery-title">Giao hàng</p>
+                <p class="delivery-time">
+                    {{ deliveryTime }}
+                </p>
+            </div>
+        </div>
+
+        <button class="checkout-btn">
+            Thanh toán
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+</div>

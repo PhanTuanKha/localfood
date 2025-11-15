@@ -1,5 +1,6 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order-detail',
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class OrderDetail {
 selectedSize: any = null;
+activeTab: string = 'personal';
 
 sizes = [
   { label: 'Nhỏ', price: 40000 },
@@ -16,7 +18,20 @@ sizes = [
   { label: 'Lớn', price: 70000 },
   { label: 'XL', price: 80000 },
 ];
+constructor(private router: Router) {}
 
+// Tab
+goToPersonal() {
+  this.activeTab = 'personal';
+  this.router.navigate(['/order-detail']);
+}
+
+goToGroupOrder() {
+  this.activeTab = 'group';
+  this.router.navigate(['/group-order']);
+}
+
+// Chọn size
 selectSize(size: any) {
   this.selectedSize = size;
 }

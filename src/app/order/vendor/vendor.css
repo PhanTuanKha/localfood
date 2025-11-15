@@ -309,9 +309,14 @@ button.btn-outline-success.btn-success {
   background-color: #e67e00;
   color: white;
 }
-table.thead {
-  table-layout: fixed;
+
+.table thead.table-dark {
+  display: table-header-group;
   width: 100%;
+}
+
+.table thead.table-dark th {
+  width: auto;
 }
 
 .table img {

@@ -63,7 +63,7 @@
     </form>
   </div>
 
-  <div class="card shadow-sm rounded-4 p-0">
+    <div class="card shadow-sm rounded-4 p-0">
     <div class="table-responsive">
       <table class="table table-hover align-middle mb-0">
         <thead class="table-dark">
@@ -81,41 +81,43 @@
           <tr *ngFor="let item of foodList">
             <td><img [src]="item.img" class="rounded" width="60"></td>
 
-            <td class="fw-semibold">{{ item.name }}</td>
-            <td>{{ item.price | currency:'VND':'' }}</td>
+            <td class="fw-semibold">
+                {{ item.name }}
                 <div class="mt-1 d-flex gap-2 flex-wrap">
-                    <button class="btn btn-outline-dark btn-sm rounded-pill"
-                    *ngFor="let s of sizes"
+                <button class="btn btn-outline-dark btn-sm rounded-pill"
+                        *ngFor="let s of sizes"
                         [ngClass]="{ 'btn-dark text-white': selectedSize?.label === s.label }"
                         (click)="selectSize(s)">
-                            {{ s.label }} - {{ s.price | currency:'VND':'' }}
-                    </button>
-                </div> 
+                    {{ s.label }} - {{ s.price | currency:'VND':'' }}
+                </button>
+                </div>
+            </td>
+
+            <td>{{ item.price | currency:'VND':'' }}</td>
+
             <td>
-              <input type="number"
-                     class="form-control form-control-sm"
-                     [(ngModel)]="item.quantity">
+                <input type="number" class="form-control form-control-sm" [(ngModel)]="item.quantity">
             </td>
 
             <td>
-              <span class="badge"
-                [ngClass]="{
-                  'bg-success': item.status === 'available',
-                  'bg-secondary': item.status === 'out'
-                }">
+                <span class="badge"
+                    [ngClass]="{
+                        'bg-success': item.status === 'available',
+                        'bg-secondary': item.status === 'out'
+                    }">
                 {{ item.status === 'available' ? 'Đang bán' : 'Hết món' }}
-              </span>
+                </span>
             </td>
 
             <td class="text-center">
-              <button class="btn btn-outline-dark btn-sm me-2">
+                <button class="btn btn-outline-dark btn-sm me-2">
                 <i class="bi bi-pencil"></i>
-              </button>
-              <button class="btn btn-outline-danger btn-sm">
+                </button>
+                <button class="btn btn-outline-danger btn-sm">
                 <i class="bi bi-trash"></i>
-              </button>
+                </button>
             </td>
-          </tr>
+            </tr>
         </tbody>
       </table>
     </div>

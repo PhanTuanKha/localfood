@@ -24,6 +24,9 @@
     <button class="btn btn-orange px-4" (click)="openAddForm = !openAddForm">
       <i class="bi bi-plus-circle"></i> Thêm món mới
     </button>
+    <button class="btn btn-outline-success px-4" (click)="goToMyReply()">
+      <i class="bi bi-chat-left-text"></i> Xem phản hồi
+    </button>
   </div>
 
   <div *ngIf="openAddForm" class="card shadow-sm rounded-4 p-4 mb-4">

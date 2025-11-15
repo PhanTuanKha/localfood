@@ -1,4 +1,85 @@
-  .hero-section {
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #ffffff;
+  color: #212121;
+}
+
+.page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 36px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: #fc773e;
+  color: #fffefe;
+  border-color: #fc773e;
+}
+
+.btn-secondary {
+  background-color: #90d3ca;
+  color: #000;
+  border-color: #90d3ca;
+}
+
+.btn-alt {
+    background-color: #fc773e;
+    color: #fffefe;
+    border-color: #ffb30e;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+.hero-section {
     background-color: #90d3ca;
     padding: 48px 0;
     overflow: hidden;

@@ -1,0 +1,60 @@
+<section id="hero" class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1>Are you starving?</h1>
+      <p>Within a few clicks, find meals thatare accessible near you</p>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="assets/images/noodles.png" alt="A delicious bowl of noodles" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <h2 class="reviews-title">PHẢN HỒI CỦA BẠN</h2>
+      <div class="reviews-list">
+        
+        <article class="review-card">
+            <svg class="review-avatar" class="avatar" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="45" height="45" rx="22.5" fill="#90D3CA"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M29.25 18C29.25 21.7279 26.228 24.75 22.5 24.75C18.7721 24.75 15.75 21.7279 15.75 18C15.75 14.2721 18.7721 11.25 22.5 11.25C26.228 11.25 29.25 14.2721 29.25 18ZM27 18C27 20.4853 24.9853 22.5 22.5 22.5C20.0147 22.5 18 20.4853 18 18C18 15.5147 20.0147 13.5 22.5 13.5C24.9853 13.5 27 15.5147 27 18Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+                <path d="M22.5 28.125C15.2163 28.125 9.01046 32.432 6.64648 38.466C7.22237 39.0379 7.82902 39.5788 8.46373 40.0861C10.2241 34.5462 15.7463 30.375 22.5 30.375C29.2537 30.375 34.776 34.5462 36.5363 40.0861C37.1711 39.5788 37.7777 39.0379 38.3536 38.4661C35.9896 32.432 29.7837 28.125 22.5 28.125Z" fill="var(--Schemes-On-Primary-Container, #4F378A)"/>
+            </svg>
+          <div class="review-content">
+            <div class="review-header">
+              <h3 class="review-author">NGUYỄN VĂN A</h3>
+              <div class="review-rating">
+                <span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span><span class="star filled"></span>
+              </div>
+            </div>
+            <p class="review-text">Trà Ô Long Lài thơm dịu, vị trà rõ mà vẫn béo nhẹ của sữa, không bị gắt. Mùi lài thoang thoảng rất dễ chịu. Mình đặt ít đá, ít đường uống là vừa luôn, topping trân châu dẻo và không quá ngọt.</p>
+          </div>
+        </article>
+
+<div class="vendor-reply-card">
+  <svg class="avatar" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="45" height="45" rx="22.5" fill="#90D3CA"/>
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M29.25 18C29.25 21.7279 26.228 24.75 22.5 24.75C18.7721 24.75 15.75 21.7279 15.75 18C15.75 14.2721 18.7721 11.25 22.5 11.25C26.228 11.25 29.25 14.2721 29.25 18ZM27 18C27 20.4853 24.9853 22.5 22.5 22.5C20.0147 22.5 18 20.4853 18 18C18 15.5147 20.0147 13.5 22.5 13.5C24.9853 13.5 27 15.5147 27 18Z"
+      fill="var(--Schemes-On-Primary-Container, #4F378A)" />
+    <path
+      d="M22.5 28.125C15.2163 28.125 9.01046 32.432 6.64648 38.466C7.22237 39.0379 7.82902 39.5788 8.46373 40.0861C10.2241 34.5462 15.7463 30.375 22.5 30.375C29.2537 30.375 34.776 34.5462 36.5363 40.0861C37.1711 39.5788 37.7777 39.0379 38.3536 38.4661C35.9896 32.432 29.7837 28.125 22.5 28.125Z"
+      fill="var(--Schemes-On-Primary-Container, #4F378A)" />
+  </svg>
+  <div class="vendor-info">
+    <p class="vendor-name">VENDOR</p>
+    <p class="reply-text">{{ replyText }}</p>
+  </div>
+</div>
+
+        <div class="action-buttons">
+            <a routerLink="/reply-detail"><button class="btn btn-edit">Chỉnh sửa</button></a>
+            <a ><button class="btn btn-delete">Xóa</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+

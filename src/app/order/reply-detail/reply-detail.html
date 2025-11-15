@@ -1,0 +1,58 @@
+<section id="hero" class="hero-section">
+  <div class="container hero-container">
+    <div class="hero-content">
+      <h1>Are you starving?</h1>
+      <p>Within a few clicks, find meals thatare accessible near you</p>
+    </div>
+    <div class="hero-image-wrapper">
+      <img src="assets/images/noodles.png" alt="A delicious bowl of noodles" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<section id="feedback" class="feedback-section">
+  <div class="container">
+    <h2 class="feedback-title">CHI TIẾT PHẢN HỒI</h2>
+    <form class="feedback-form" (submit)="onSubmit($event)">
+      <div class="form-row">
+        <label for="media-upload" class="form-label">Hình ảnh/Video</label>
+        <div class="upload-area">
+          <div class="upload-icon-wrapper" (click)="triggerUpload()">
+            <img src="assets/images/upload.png" alt="Upload icon" />
+          </div>
+          <span>Upload Media</span>
+
+          <ng-container *ngFor="let img of selectedImages; let i = index">
+            <img
+              [src]="img"
+              alt="Preview"
+              class="preview-img"
+              (click)="$event.stopPropagation(); editImage(i)" />
+          </ng-container>
+
+          <input
+            type="file"
+            #mediaUpload
+            class="visually-hidden"
+            (change)="onFileSelected($event)"
+            multiple />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="description" class="form-label">Mô tả</label>
+        <textarea
+          id="description"
+          class="form-textarea"
+          placeholder="Nhập mô tả"
+          [(ngModel)]="description"
+          name="description">
+        </textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">Gửi phản hồi</button>
+      </div>
+    </form>
+  </div>
+</section>

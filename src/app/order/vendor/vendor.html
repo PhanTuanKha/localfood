@@ -70,7 +70,6 @@
           <tr>
             <th>Ảnh</th>
             <th>Món ăn</th>
-            <th>Giá (VNĐ)</th>
             <th>Số lượng</th>
             <th>Trạng thái</th>
             <th class="text-center">Hành động</th>
@@ -92,9 +91,6 @@
                 </button>
                 </div>
             </td>
-
-            <td>{{ item.price | currency:'VND':'' }}</td>
-
             <td>
                 <input type="number" class="form-control form-control-sm" [(ngModel)]="item.quantity">
             </td>

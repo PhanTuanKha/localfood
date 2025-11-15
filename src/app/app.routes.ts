@@ -13,4 +13,16 @@ export const routes: Routes = [{
     {path: 'forgot-password', component: ForgotPasswordComponent},
     {path: 'mainpage', component: Mainpage},
     {path: 'order-detail', component: OrderDetail}
+
+
+    { path: '', component: OrderHistory },
+    { path: 'order-review', component: OrderReview },
+    { path: 'my-review', component: MyReview },
+    { path: 'reviews', component: Reviews },
+    { path: 'review-detail', component: ReviewDetail },
+    { path: 'reply-detail', component: ReplyDetail },
+    { path: 'search', component: SearchDistance},
+    { path: 'my-reply', component: MyReply},
+    { path: 'gps', component: Gps},
+    { path: '', redirectTo: 'reviews', pathMatch: 'full' } 
 ];

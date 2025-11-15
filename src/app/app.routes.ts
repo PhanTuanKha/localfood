@@ -10,8 +10,7 @@ import { Aboutus } from './order/aboutus/aboutus';
 import { Vendor } from './order/vendor/vendor';
 
 export const routes: Routes = [{
-    // path: '', redirectTo: 'mainpage', pathMatch: 'full'},
-    path: '', redirectTo: 'vendor', pathMatch: 'full'},
+    path: '', redirectTo: 'mainpage', pathMatch: 'full'},
     {path: 'signin', component: Signin},
     {path: 'register', component: Register},
     {path: 'forgot-password', component: ForgotPasswordComponent},

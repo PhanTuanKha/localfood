@@ -59,25 +59,113 @@
   },
   {
     "user_id": 10,
-    "username": "VendorChinh",
+    "username": "phogiatruyenhanoi./vendor_1",
     "password": "123456",
     "role": "vendor",
-    "email": "vendor@localfood.vn",
+    "email": "phogiatruyenhanoi@localfood.vn",
     "phone": "",
     "address": "",
-    "description": "Nhà hàng chính thức trong hệ thống LocalFood.",
+    "description": "Vendor của Phở Gia Truyền Hà Nội",
     "image": "assets/images/vendors/default_vendor.png"
   },
   {
-    "user_id": 99,
-    "username": "Admin",
+    "user_id": 11,
+    "username": "bunchahotay./vendor_2",
     "password": "123456",
-    "role": "admin",
-    "email": "admin@localfood.vn",
+    "role": "vendor",
+    "email": "bunchahotay@localfood.vn",
     "phone": "",
     "address": "",
-    "description": "",
-    "image": ""
+    "description": "Vendor của Bún Chả Hồ Tây",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 12,
+    "username": "miquangbamua./vendor_3",
+    "password": "123456",
+    "role": "vendor",
+    "email": "miquangbamua@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Mì Quảng Bà Mua",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 13,
+    "username": "bunbohueohuong./vendor_4",
+    "password": "123456",
+    "role": "vendor",
+    "email": "bunbohueohuong@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Bún Bò Huế O Hương",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 14,
+    "username": "comtamsaigonxin./vendor_5",
+    "password": "123456",
+    "role": "vendor",
+    "email": "comtamsaigonxin@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Cơm Tấm Sài Gòn Xịn",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 15,
+    "username": "hutieusauhoai./vendor_6",
+    "password": "123456",
+    "role": "vendor",
+    "email": "hutieusauhoai@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Hủ Tiếu Nam Vang Sáu Hoài",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 16,
+    "username": "dacsantayninhnamsanh./vendor_7",
+    "password": "123456",
+    "role": "vendor",
+    "email": "dacsantayninhnamsanh@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Đặc Sản Tây Ninh Năm Sanh",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 17,
+    "username": "banhcannhatrang68./vendor_8",
+    "password": "123456",
+    "role": "vendor",
+    "email": "banhcannhatrang68@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Bánh Căn Nha Trang 68",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 18,
+    "username": "banhmihoianphuong./vendor_9",
+    "password": "123456",
+    "role": "vendor",
+    "email": "banhmihoianphuong@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Bánh Mì Hội An – Cô Phượng",
+    "image": "assets/images/vendors/default_vendor.png"
+  },
+  {
+    "user_id": 19,
+    "username": "chebamien./vendor_10",
+    "password": "123456",
+    "role": "vendor",
+    "email": "chebamien@localfood.vn",
+    "phone": "",
+    "address": "",
+    "description": "Vendor của Chè Ba Miền – Sài Gòn",
+    "image": "assets/images/vendors/default_vendor.png"
   }
 ]
 ,
@@ -1114,7 +1202,7 @@
   }
 ]
 ,
-  "group_orders": [
+  "group_orders_demo": [
   {
     "group_id": 1,
     "leader_id": 1,

@@ -176,7 +176,16 @@ button.btn-outline-success.btn-success {
 .map-section .map-info a:hover {
   text-decoration: underline;
 }
-
+.view-all-btn {
+    background-color: #fc773e;
+    color: #ffffff;
+    padding: 7px 19px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    float: right;
+    margin-right: 40px;
+}
 .reviews {
   background-color: #f5f5f5;
   padding-top: 60px;

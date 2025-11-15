@@ -1,24 +1,39 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ReviewService } from '../../review';
 
 @Component({
   selector: 'app-reviews',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, FormsModule],
   templateUrl: './reviews.html',
   styleUrl: './reviews.css',
 })
-export class Reviews implements OnInit {
-  reviews: any[] = [];
+export class Reviews {
+showReportPopup = false;
+selectedReason: string = '';
+otherReason: string = '';
 
-  constructor(private reviewService: ReviewService) {}
+openReportPopup() {
+  this.showReportPopup = true;
+}
 
-  ngOnInit() {
-    this.reviewService.getReviews().subscribe({
-      next: (data) => this.reviews = data,
-      error: (err) => console.error(err)
-    });
+closeReportPopup() {
+  this.showReportPopup = false;
+  this.selectedReason = '';
+  this.otherReason = '';
+}
+
+submitReport() {
+  let reason = this.selectedReason;
+
+  if (reason === 'other') {
+    reason = this.otherReason;
   }
+
+  console.log("Lý do báo cáo:", reason);
+
+  this.closeReportPopup();
+}
 }

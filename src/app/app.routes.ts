@@ -18,8 +18,9 @@ import { SearchDistance } from './order/search-distance/search-distance';
 import { MyReply } from './order/my-reply/my-reply';
 import { Gps } from './order/gps/gps';
 import { Detail } from './order/detail/detail';
+import { CartSidebar } from './order/cart-sidebar/cart-sidebar';
 export const routes: Routes = [
-  { path: '', redirectTo: 'detail', pathMatch: 'full' },
+  { path: '', redirectTo: 'group-order-detail', pathMatch: 'full' },
   { path: 'signin', component: Signin },
   { path: 'register', component: Register },
   { path: 'forgot-password', component: ForgotPasswordComponent },
@@ -40,5 +41,6 @@ export const routes: Routes = [
   { path: 'group-order-detail', component: GroupOrderDetail },
   { path: 'aboutus', component: Aboutus },
   { path: 'vendor', component: Vendor },
-  {path: 'detail', component: Detail}
+  {path: 'detail', component: Detail},
+  {path: 'cart-sidebar', component: CartSidebar}
 ];

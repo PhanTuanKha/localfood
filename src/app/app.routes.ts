@@ -19,8 +19,13 @@ import { MyReply } from './order/my-reply/my-reply';
 import { Gps } from './order/gps/gps';
 import { Detail } from './order/detail/detail';
 import { CartSidebar } from './order/cart-sidebar/cart-sidebar';
+import { Account } from './pages/account/account';
+import { Settings } from './pages/settings/settings';
+import { Support } from './pages/support/support';
+import { Help } from './pages/help/help';
+import { FavoritesComponent } from './pages/favorites/favorites';
 export const routes: Routes = [
-  { path: '', redirectTo: 'group-order-detail', pathMatch: 'full' },
+  { path: '', redirectTo: 'reply-detail', pathMatch: 'full' },
   { path: 'signin', component: Signin },
   { path: 'register', component: Register },
   { path: 'forgot-password', component: ForgotPasswordComponent },
@@ -42,5 +47,11 @@ export const routes: Routes = [
   { path: 'aboutus', component: Aboutus },
   { path: 'vendor', component: Vendor },
   {path: 'detail', component: Detail},
-  {path: 'cart-sidebar', component: CartSidebar}
+  {path: 'cart-sidebar', component: CartSidebar},
+  { path: 'account', component: Account },
+  { path: 'settings', component: Settings },
+  { path: 'support', component: Support },
+  { path: 'help', component: Help },
+  { path: 'signin', component: Signin },
+  {path: 'favorites', component: FavoritesComponent}
 ];

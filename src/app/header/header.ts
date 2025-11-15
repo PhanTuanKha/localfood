@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { Subscription } from 'rxjs';
 import { CartSidebar } from '../order/cart-sidebar/cart-sidebar';
-
 @Component({
   selector: 'app-header',
   imports: [CommonModule, CartSidebar],
@@ -62,26 +61,35 @@ export class Header implements OnInit, OnDestroy {
 }
 
   handleMenuClick(menu: string) {
-    this.activeMenu = menu;
+  this.activeMenu = menu;
+  this.dropdownOpen = false; // đóng dropdown sau khi click
 
-    if (menu === 'Đơn hàng') {
+  switch (menu) {
+    case 'Đơn hàng':
       this.toggleCart();
-      this.dropdownOpen = false;
-      return;
-    }
-
-    if (menu === 'Đăng nhập') {
+      break;
+    case 'Tài khoản':
+      this.router.navigate(['/account']);
+      break;
+    case 'Cài đặt':
+      this.router.navigate(['/settings']);
+      break;
+    case 'Hỗ trợ':
+      this.router.navigate(['/support']);
+      break;
+    case 'Trợ giúp':
+      this.router.navigate(['/help']);
+      break;
+    case 'Đăng nhập':
       this.router.navigate(['/signin']);
-      return;
-    }
-
-    if (menu === 'Đăng xuất') {
+      break;
+    case 'Đăng xuất':
       this.authService.logout();
       alert('Đã đăng xuất');
       this.router.navigate(['/signin']);
-      return;
-    }
+      break;
   }
+}
 
   getUserLocation(): void {
     if (!navigator.geolocation) {

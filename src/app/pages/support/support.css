@@ -1,0 +1,162 @@
+.support-page {
+  background: linear-gradient(135deg, #fff8f0 0%, #fff 100%);
+  min-height: 100vh;
+}
+
+.support-header {
+  border-bottom: 2px solid #ffc107;
+  padding-bottom: 1rem;
+}
+
+.contact-item {
+  background: linear-gradient(135deg, #fff 0%, #fffdf5 100%);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.15) !important;
+  border-color: #ffc107 !important;
+}
+
+.contact-icon {
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.support-form {
+  background: linear-gradient(135deg, #fff 0%, #fffdf5 100%);
+  border-radius: 15px;
+}
+
+.support-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff8c00, #ffc107);
+  border-radius: 15px 15px 0 0;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.form-label {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-text {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert-success {
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+}
+
+.accordion-button {
+  border-radius: 8px !important;
+  font-weight: 500;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff9e6;
+  color: #ff8c00;
+  border-color: #ffc107;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  border-color: #ffc107;
+}
+
+.accordion-body {
+  background-color: #fafafa;
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 768px) {
+  .support-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-methods {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+}
+
+.alert-success {
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+.support-toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #ffc107, #ff8c00);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.support-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}

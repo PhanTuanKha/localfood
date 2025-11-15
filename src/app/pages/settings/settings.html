@@ -1,0 +1,164 @@
+<div class="settings-page container py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="settings-header text-center mb-5">
+        <h2 class="text-warning fw-bold">
+          <i class="fas fa-cog me-2"></i>Cài đặt
+        </h2>
+        <p class="text-muted">Tùy chỉnh ứng dụng theo ý thích của bạn</p>
+      </div>
+
+      <div class="settings-cards">
+        <div class="settings-section card border-0 shadow-sm mb-4">
+          <div class="card-header bg-transparent border-0 py-3">
+            <h5 class="text-warning mb-0">
+              <i class="fas fa-palette me-2"></i>Giao diện
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="setting-item d-flex justify-content-between align-items-center py-3 border-bottom">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Chế độ tối</h6>
+                <p class="text-muted small mb-0">Bật chế độ tối để bảo vệ mắt</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="darkMode" (change)="toggleDarkMode()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="setting-item d-flex justify-content-between align-items-center py-3 border-bottom">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Ngôn ngữ</h6>
+                <p class="text-muted small mb-0">Chọn ngôn ngữ hiển thị</p>
+              </div>
+              <select class="form-select form-select-sm" style="width: 140px;" [(ngModel)]="selectedLanguage">
+                <option value="vi">Tiếng Việt</option>
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+              </select>
+            </div>
+
+            <div class="setting-item d-flex justify-content-between align-items-center py-3">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Màu chủ đề</h6>
+                <p class="text-muted small mb-0">Tùy chỉnh màu sắc ứng dụng</p>
+              </div>
+              <div class="theme-colors d-flex gap-2">
+                <div class="theme-color orange active" (click)="setTheme('orange')" title="Cam"></div>
+                <div class="theme-color blue" (click)="setTheme('blue')" title="Xanh dương"></div>
+                <div class="theme-color green" (click)="setTheme('green')" title="Xanh lá"></div>
+                <div class="theme-color purple" (click)="setTheme('purple')" title="Tím"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section card border-0 shadow-sm mb-4">
+          <div class="card-header bg-transparent border-0 py-3">
+            <h5 class="text-warning mb-0">
+              <i class="fas fa-bell me-2"></i>Thông báo
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="setting-item d-flex justify-content-between align-items-center py-3 border-bottom">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Thông báo đẩy</h6>
+                <p class="text-muted small mb-0">Nhận thông báo về đơn hàng</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="pushNotifications" (change)="togglePushNotifications()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="setting-item d-flex justify-content-between align-items-center py-3 border-bottom">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Thông báo email</h6>
+                <p class="text-muted small mb-0">Nhận tin khuyến mãi qua email</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="emailNotifications" (change)="toggleEmailNotifications()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="setting-item d-flex justify-content-between align-items-center py-3">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Âm thanh thông báo</h6>
+                <p class="text-muted small mb-0">Phát âm thanh khi có thông báo</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="soundNotifications" (change)="toggleSoundNotifications()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section card border-0 shadow-sm mb-4">
+          <div class="card-header bg-transparent border-0 py-3">
+            <h5 class="text-warning mb-0">
+              <i class="fas fa-shield-alt me-2"></i>Bảo mật & Quyền riêng tư
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="setting-item d-flex justify-content-between align-items-center py-3 border-bottom">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Dịch vụ vị trí</h6>
+                <p class="text-muted small mb-0">Cho phép truy cập vị trí</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="locationServices" (change)="toggleLocationServices()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="setting-item d-flex justify-content-between align-items-center py-3 border-bottom">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Tiết kiệm dữ liệu</h6>
+                <p class="text-muted small mb-0">Giảm chất lượng ảnh khi dùng 3G/4G</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="dataSaving" (change)="toggleDataSaving()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div class="setting-item d-flex justify-content-between align-items-center py-3">
+              <div class="setting-info">
+                <h6 class="fw-semibold mb-1">Tự động đăng xuất</h6>
+                <p class="text-muted small mb-0">Đăng xuất sau 30 phút không hoạt động</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" [(ngModel)]="autoLogout" (change)="toggleAutoLogout()">
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section card border-0 shadow-sm">
+          <div class="card-header bg-transparent border-0 py-3">
+            <h5 class="text-warning mb-0">
+              <i class="fas fa-user-cog me-2"></i>Hành động tài khoản
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="action-buttons">
+              <button class="btn btn-outline-warning w-100 mb-3" (click)="changePassword()">
+                <i class="fas fa-key me-2"></i>Đổi mật khẩu
+              </button>
+              <button class="btn btn-outline-secondary w-100 mb-3" (click)="exportData()">
+                <i class="fas fa-download me-2"></i>Xuất dữ liệu
+              </button>
+              <button class="btn btn-outline-danger w-100" (click)="deleteAccount()">
+                <i class="fas fa-trash me-2"></i>Xóa tài khoản
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

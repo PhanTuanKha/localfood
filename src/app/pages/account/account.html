@@ -1,0 +1,168 @@
+<div class="account-page container py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="account-header text-center mb-4">
+        <h2 class="text-warning fw-bold">
+          <i class="fas fa-user-circle me-2"></i>Tài khoản của tôi
+        </h2>
+        <p class="text-muted">Quản lý thông tin cá nhân và tài khoản của bạn</p>
+      </div>
+
+      <div class="profile-card card border-0 shadow-sm mb-4">
+        <div class="card-body p-4">
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+              <div class="avatar-section">
+                <div class="avatar-container position-relative">
+                  <img [src]="user.avatar || 'assets/images/user.png'" 
+                       class="avatar rounded-circle img-fluid mb-3" 
+                       alt="Avatar"
+                       (error)="user.avatar = 'assets/images/user.png'">
+                  <div class="avatar-overlay">
+                    <label for="avatarUpload" class="avatar-upload-btn">
+                      <i class="fas fa-camera"></i>
+                    </label>
+                    <input type="file" 
+                           id="avatarUpload" 
+                           class="d-none" 
+                           accept="image/*"
+                           (change)="onAvatarUpload($event)">
+                  </div>
+                </div>
+                <div class="user-status">
+                  <span class="badge bg-success">
+                    <i class="fas fa-circle me-1 small"></i>Đang hoạt động
+                  </span>
+                </div>
+                <small class="text-muted d-block mt-2">Click vào camera để đổi ảnh</small>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="info-section">
+                <div class="mb-4">
+                  <h5 class="text-warning mb-3">
+                    <i class="fas fa-id-card me-2"></i>Thông tin cá nhân
+                  </h5>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="info-item">
+                        <label class="form-label text-muted small mb-1">
+                          <i class="fas fa-user me-1 text-warning"></i>Họ tên
+                        </label>
+                        <p class="mb-0 fw-semibold">{{ user.name }}</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="info-item">
+                        <label class="form-label text-muted small mb-1">
+                          <i class="fas fa-at me-1 text-warning"></i>Tài khoản
+                        </label>
+                        <p class="mb-0 fw-semibold">{{ user.username }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <h5 class="text-warning mb-3">
+                    <i class="fas fa-address-book me-2"></i>Thông tin liên hệ
+                  </h5>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <div class="info-item">
+                        <label class="form-label text-muted small mb-1">
+                          <i class="fas fa-phone me-1 text-warning"></i>Số điện thoại
+                        </label>
+                        <p class="mb-0 fw-semibold">{{ user.phone }}</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="info-item">
+                        <label class="form-label text-muted small mb-1">
+                          <i class="fas fa-envelope me-1 text-warning"></i>Email
+                        </label>
+                        <p class="mb-0 fw-semibold">{{ user.email }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-card card border-0 shadow-sm mb-4">
+        <div class="card-body p-4">
+          <h5 class="text-warning mb-4">
+            <i class="fas fa-chart-line me-2"></i>Thống kê đơn hàng
+          </h5>
+          <div class="row text-center">
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-value text-warning fw-bold fs-3">{{ orderStats.total }}</div>
+                <div class="stat-label text-muted small">Tổng đơn</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-value text-success fw-bold fs-3">{{ orderStats.delivered }}</div>
+                <div class="stat-label text-muted small">Đã giao</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="stat-item">
+                <div class="stat-value text-info fw-bold fs-3">{{ orderStats.processing }}</div>
+                <div class="stat-label text-muted small">Đang xử lý</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-actions mt-5">
+        <h5 class="text-warning mb-4">
+          <i class="fas fa-bolt me-2"></i>Thao tác nhanh
+        </h5>
+        <div class="row g-4 justify-content-center">
+          <div class="col-6 col-md-4 col-lg-3">
+            <a class="quick-action-item card text-decoration-none h-100 border-0 shadow-sm text-center p-4" 
+               (click)="goToOrder()">
+              <div class="text-warning mb-3">
+                <i class="fas fa-utensils fs-2"></i>
+              </div>
+              <span class="fw-semibold">Đặt món</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a class="quick-action-item card text-decoration-none h-100 border-0 shadow-sm text-center p-4" 
+               (click)="goToFavorites()">
+              <div class="text-warning mb-3">
+                <i class="fas fa-heart fs-2"></i>
+              </div>
+              <span class="fw-semibold">Yêu thích</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a class="quick-action-item card text-decoration-none h-100 border-0 shadow-sm text-center p-4" 
+               (click)="goToOrderHistory()">
+              <div class="text-warning mb-3">
+                <i class="fas fa-history fs-2"></i>
+              </div>
+              <span class="fw-semibold">Lịch sử đơn</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-3">
+            <a class="quick-action-item card text-decoration-none h-100 border-0 shadow-sm text-center p-4" 
+               (click)="goToSupport()">
+              <div class="text-warning mb-3">
+                <i class="fas fa-question-circle fs-2"></i>
+              </div>
+              <span class="fw-semibold">Trợ giúp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

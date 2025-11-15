@@ -1,10 +1,10 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-order-detail',
-  imports: [NgClass, CommonModule],
+  imports: [NgClass, CommonModule, RouterModule],
   templateUrl: './order-detail.html',
   styleUrl: './order-detail.css',
 })

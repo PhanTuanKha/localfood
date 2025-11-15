@@ -8,9 +8,9 @@ import { GroupOrder } from './order/group-order/group-order';
 import { GroupOrderDetail } from './order/group-order-detail/group-order-detail';
 import { Aboutus } from './order/aboutus/aboutus';
 import { Vendor } from './order/vendor/vendor';
-
+import { DetailComponent } from './order/detail/detail';
 export const routes: Routes = [{
-    path: '', redirectTo: 'mainpage', pathMatch: 'full'},
+    path: '', redirectTo: 'detail', pathMatch: 'full'},
     {path: 'signin', component: Signin},
     {path: 'register', component: Register},
     {path: 'forgot-password', component: ForgotPasswordComponent},
@@ -19,5 +19,6 @@ export const routes: Routes = [{
     {path: 'group-order', component: GroupOrder},
     {path: 'group-order-detail', component: GroupOrderDetail},
     {path: 'aboutus', component: Aboutus},
-    {path:'vendor', component: Vendor}
+    {path:'vendor', component: Vendor},
+    {path: 'detail', component: DetailComponent}
 ];

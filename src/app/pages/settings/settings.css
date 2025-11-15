@@ -1,0 +1,344 @@
+.settings-page {
+  background: linear-gradient(135deg, #fff8f0 0%, #fff 100%);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .settings-page {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #ffffff;
+}
+
+.dark-mode .settings-section {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%);
+  color: #ffffff;
+}
+
+.dark-mode .setting-info h6 {
+  color: #ffffff;
+}
+
+.dark-mode .setting-info p {
+  color: #cccccc;
+}
+
+.dark-mode .form-select {
+  background-color: #3d3d3d;
+  border-color: #555555;
+  color: #ffffff;
+}
+
+.dark-mode .form-select:focus {
+  background-color: #3d3d3d;
+  border-color: #ffc107;
+  color: #ffffff;
+}
+
+.dark-mode .card-header {
+  color: #ffc107 !important;
+}
+
+.theme-orange .settings-page {
+  --primary-color: #ff8c00;
+  --primary-gradient: linear-gradient(135deg, #ff8c00, #ffc107);
+}
+
+.theme-blue .settings-page {
+  --primary-color: #2196F3;
+  --primary-gradient: linear-gradient(135deg, #2196F3, #03A9F4);
+}
+
+.theme-green .settings-page {
+  --primary-color: #4CAF50;
+  --primary-gradient: linear-gradient(135deg, #4CAF50, #8BC34A);
+}
+
+.theme-purple .settings-page {
+  --primary-color: #9C27B0;
+  --primary-gradient: linear-gradient(135deg, #9C27B0, #E91E63);
+}
+
+.theme-blue .settings-header,
+.theme-blue .settings-section::before {
+  border-color: var(--primary-color);
+  background: var(--primary-gradient);
+}
+
+.theme-blue .text-warning {
+  color: var(--primary-color) !important;
+}
+
+.theme-blue input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+.theme-blue .btn-outline-warning {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.theme-blue .btn-outline-warning:hover {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+.theme-green .settings-header,
+.theme-green .settings-section::before {
+  border-color: var(--primary-color);
+  background: var(--primary-gradient);
+}
+
+.theme-green .text-warning {
+  color: var(--primary-color) !important;
+}
+
+.theme-green input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+.theme-green .btn-outline-warning {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.theme-purple .settings-header,
+.theme-purple .settings-section::before {
+  border-color: var(--primary-color);
+  background: var(--primary-gradient);
+}
+
+.theme-purple .text-warning {
+  color: var(--primary-color) !important;
+}
+
+.theme-purple input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+.theme-purple .btn-outline-warning {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.settings-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.settings-header {
+  border-bottom: 2px solid #ffc107;
+  padding-bottom: 1rem;
+}
+
+.settings-section {
+  background: linear-gradient(135deg, #fff 0%, #fffdf5 100%);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.settings-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff8c00, #ffc107);
+  transition: all 0.3s ease;
+}
+
+.setting-item {
+  transition: all 0.3s ease;
+}
+
+.setting-item:hover {
+  background-color: rgba(255, 193, 7, 0.05);
+  border-radius: 8px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff8c00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff8c00;
+}
+
+.theme-colors {
+  display: flex;
+  gap: 8px;
+}
+
+.theme-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.theme-color:hover {
+  transform: scale(1.1);
+}
+
+.theme-color.active {
+  border-color: #333;
+  transform: scale(1.1);
+}
+
+.theme-color.orange {
+  background: linear-gradient(135deg, #ff8c00, #ffc107);
+}
+
+.theme-color.blue {
+  background: linear-gradient(135deg, #2196F3, #03A9F4);
+}
+
+.theme-color.green {
+  background: linear-gradient(135deg, #4CAF50, #8BC34A);
+}
+
+.theme-color.purple {
+  background: linear-gradient(135deg, #9C27B0, #E91E63);
+}
+
+.theme-color.active::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-select {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 6px 12px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 10px 16px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-warning:hover {
+  background: linear-gradient(135deg, #ff8c00, #ffc107);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .settings-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .setting-info h6 {
+    font-size: 0.9rem;
+  }
+  
+  .setting-info p {
+    font-size: 0.8rem;
+  }
+  
+  .theme-color {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.setting-item {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

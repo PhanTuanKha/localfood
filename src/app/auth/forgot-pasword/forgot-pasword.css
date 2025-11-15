@@ -1,46 +1,55 @@
-.forgot-page {
+.settings-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff8f0 0%, #fff 100%);
 }
 
-.forgot-container {
+
+.settings-container {
   max-width: 500px;
   width: 100%;
-  padding: 1.8rem;
-  border: 1px solid #dddddd;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 12px;
   background-color: #ffffff;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }
 
-.register-image img {
-  max-width: 420px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
 
-h2 {
+.settings-container h2 {
   text-align: center;
-  margin-bottom: 1.2rem;
-  color: #90D3CA;
+  margin-bottom: 1.5rem;
+  color: #ff8c00;
   font-weight: 600;
 }
 
+
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
 
 input, select, textarea {
   width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border-radius: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
   border: 1px solid #cccccc;
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
 }
 
 textarea {
@@ -48,35 +57,92 @@ textarea {
   resize: vertical;
 }
 
-label {
-  font-weight: bold;
+
+.form-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
 }
 
-button {
+.form-switch .form-check-input {
+  cursor: pointer;
+  width: 48px;
+  height: 24px;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #ff9800;
+  border-color: #ff9800;
+}
+
+
+button, .settings-btn {
   width: 100%;
   padding: 12px;
-  background-color: #FF8C00;
-  color: #ffffff;
+  background-color: #ff8c00;
+  color: #fff;
   border: none;
   border-radius: 25px;
-  cursor: pointer;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-button:hover {
+button:hover, .settings-btn:hover {
   background-color: #e07a00;
 }
 
-.error {
-  color: red;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+button:disabled, .settings-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
+
+.delete-btn {
+  background: #ff4d4d !important;
+}
+
+.delete-btn:hover {
+  background: #ff1a1a !important;
+}
+
+
+.settings-toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #ffc107, #ff8c00);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.settings-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .image-preview img {
   width: 100%;
   margin-top: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
+}
+
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 1.5rem;
+  }
+
+  .settings-container h2 {
+    font-size: 1.5rem;
+  }
 }

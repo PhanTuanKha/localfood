@@ -1,0 +1,14 @@
+<div class="help-page">
+  <h2>Trợ giúp & FAQ</h2>
+
+  <div class="faq" *ngFor="let item of faqs; let i=index">
+    <div class="question" (click)="toggleFAQ(i)">
+      {{ item.q }}
+      <span>{{ openIndex === i ? '-' : '+' }}</span>
+    </div>
+
+    <div class="answer" *ngIf="openIndex === i">
+      {{ item.a }}
+    </div>
+  </div>
+</div>

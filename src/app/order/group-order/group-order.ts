@@ -10,8 +10,20 @@ import { Router } from '@angular/router';
 })
 export class GroupOrder {
 selectedSize: any = null;
+activeTab: string = 'group';
 
 constructor(private router: Router) {}
+
+  // Tab
+  goToPersonal() {
+    this.activeTab = 'personal';
+    this.router.navigate(['/order-detail']);
+  }
+
+  goToGroupOrder() {
+    this.activeTab = 'group';
+    this.router.navigate(['/group-order']);
+  }
 
 sizes = [
   { label: 'Nhỏ', price: 40000 },

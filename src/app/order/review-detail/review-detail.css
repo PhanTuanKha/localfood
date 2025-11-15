@@ -1,5 +1,5 @@
   .hero-section {
-    background-color: var(--secondary-color);
+    background-color: #90d3ca;
     padding: 48px 0;
     overflow: hidden;
   }
@@ -14,7 +14,7 @@
   .hero-content {
     flex: 1;
     max-width: 540px;
-    color: var(--white);
+    color: #ffffff;
     padding: 70px 0;
   }
 
@@ -32,7 +32,7 @@
     font-weight: 700;
     font-size: 33.2px;
     line-height: 1.2;
-    color: var(--text-muted);
+    color: #616161;
   }
 
   .hero-image-wrapper {

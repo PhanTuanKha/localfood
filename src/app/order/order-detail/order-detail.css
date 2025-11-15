@@ -98,7 +98,23 @@
 h2{
     color: #FF8C00
 }
-
+.menu-tabs {
+    display: flex;
+    position: relative;
+}
+.tab-btn {
+    background-color: transparent;
+    border: none;
+    padding: 9px 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    color: #f17228;
+}
+.tab-btn.active {
+    background-color: rgba(241, 114, 40, 0.15);
+    border-radius: 8px 8px 0 0;
+}
 .bi.bi-arrow-right-circle-fill,
 .bi.bi-arrow-left-circle-fill {
   color: #FF8C00;

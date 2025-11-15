@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-group-order',
@@ -10,6 +11,8 @@ import { Component } from '@angular/core';
 export class GroupOrder {
 selectedSize: any = null;
 
+constructor(private router: Router) {}
+
 sizes = [
   { label: 'Nhỏ', price: 40000 },
   { label: 'Vừa', price: 60000 },
@@ -19,5 +22,8 @@ sizes = [
 
 selectSize(size: any) {
   this.selectedSize = size;
+}
+goToDetail() {
+  this.router.navigate(['/group-order-detail']);
 }
 }

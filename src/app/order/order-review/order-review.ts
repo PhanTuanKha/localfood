@@ -70,7 +70,7 @@ export class OrderReview {
 
   constructor(private reviewService: ReviewService, private router: Router) {}
 
-  // Gửi đánh giá: lưu dữ liệu vào service và chuyển sang trang my-review
+  // Gửi đánh giá
   onSubmit(event: Event) {
     event.preventDefault();
 
@@ -83,4 +83,5 @@ export class OrderReview {
     this.router.navigate(['/my-review']);
   }
 }
+
 

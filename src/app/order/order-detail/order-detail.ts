@@ -1,26 +1,40 @@
 import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-order-detail',
-  imports: [NgClass, CommonModule],
+  imports: [NgClass, CommonModule, RouterModule],
   templateUrl: './order-detail.html',
   styleUrl: './order-detail.css',
 })
 export class OrderDetail {
-  selectedSize: any = null;
+selectedSize: any = null;
+activeTab: string = 'personal';
 
-  sizes = [
-    { label: 'Nhỏ', price: 40000, quantity: 0 },
-    { label: 'Vừa', price: 60000, quantity: 0 },
-    { label: 'Lớn', price: 70000, quantity: 0 },
-    { label: 'XL', price: 80000, quantity: 0 },
-  ];
+sizes = [
+  { label: 'Nhỏ', price: 40000 },
+  { label: 'Vừa', price: 60000 },
+  { label: 'Lớn', price: 70000 },
+  { label: 'XL', price: 80000 },
+];
+constructor(private router: Router) {}
 
-  selectSize(size: any) {
-    this.selectedSize = size;
-  }
+// Tab
+goToPersonal() {
+  this.activeTab = 'personal';
+  this.router.navigate(['/order-detail']);
+}
 
+goToGroupOrder() {
+  this.activeTab = 'group';
+  this.router.navigate(['/group-order']);
+}
+
+// Chọn size
+selectSize(size: any) {
+  this.selectedSize = size;
+}
   addQuantity(size: any) {
     size.quantity++;
     this.selectedSize = size;

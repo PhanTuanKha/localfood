@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: 'Source Sans 3', sans-serif;
-    background-color: var(--background-dark);
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -82,6 +81,7 @@ h1, h2, h3, p, a, span, label, button, textarea {
         flex-direction: column;
         align-items: center;
         gap: 138px;
+        background-color: #ffffff;
     }
 
     .page-title {

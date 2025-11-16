@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { Subscription } from 'rxjs';
-
+import { CartSidebar } from '../order/cart-sidebar/cart-sidebar';
 @Component({
   selector: 'app-header',
-  imports: [CommonModule],
+  imports: [CommonModule, CartSidebar],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
@@ -16,50 +16,88 @@ export class Header implements OnInit, OnDestroy {
   dropdownOpen: boolean = false;
   activeMenu: string = '';
   isLoggedIn: boolean = false;
+
+  isCartOpen: boolean = false;
   private authSubscription!: Subscription;
+  private clickListener!: (event: any) => void;
 
-  constructor(private ngZone: NgZone, private router: Router, private authService: AuthService) {}
-  ngOnDestroy(): void {
-    if (this.authSubscription) {
-      this.authSubscription.unsubscribe();
-    }
-  }
-  toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
-  }
+  constructor(
+    private ngZone: NgZone,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
-  handleMenuClick(menu: string) {
-    this.activeMenu = menu;
-    if (menu === 'Đăng nhập') {
-      this.router.navigate(['/signin']);
-    }
-    if (menu === 'Đăng xuất') {
-      this.authService.logout();
-      alert('Đã đăng xuất');
-      this.router.navigate(['/signin']);
-    }
-  }
   ngOnInit(): void {
-    this.authSubscription = this.authService.isLoggedIn$.subscribe(status => {
-      this.isLoggedIn = status;
-    });
+    this.authSubscription = this.authService.isLoggedIn$.subscribe(
+      (status) => {
+        this.isLoggedIn = status;
+      }
+    );
+
     this.getUserLocation();
-    document.addEventListener('click', (event: any) => {
+
+    this.clickListener = (event: any) => {
       const inside = event.target.closest('.dropdown-wrapper');
       if (!inside) {
         this.ngZone.run(() => (this.dropdownOpen = false));
       }
-    });
-    this.authSubscription = this.authService.isLoggedIn$.subscribe(status => {
-      this.isLoggedIn = status;
-    });
+    };
+
+    document.addEventListener('click', this.clickListener);
   }
+
+  ngOnDestroy(): void {
+    if (this.authSubscription) this.authSubscription.unsubscribe();
+    if (this.clickListener) document.removeEventListener('click', this.clickListener);
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  toggleCart() {
+  console.log('Cart clicked')
+  this.isCartOpen = !this.isCartOpen;
+}
+
+  handleMenuClick(menu: string) {
+  this.activeMenu = menu;
+  this.dropdownOpen = false; // đóng dropdown sau khi click
+
+  switch (menu) {
+    case 'Đơn hàng':
+      this.toggleCart();
+      break;
+    case 'Tài khoản':
+      this.router.navigate(['/account']);
+      break;
+    case 'Cài đặt':
+      this.router.navigate(['/settings']);
+      break;
+    case 'Hỗ trợ':
+      this.router.navigate(['/support']);
+      break;
+    case 'Trợ giúp':
+      this.router.navigate(['/help']);
+      break;
+    case 'Đăng nhập':
+      this.router.navigate(['/signin']);
+      break;
+    case 'Đăng xuất':
+      this.authService.logout();
+      alert('Đã đăng xuất');
+      this.router.navigate(['/signin']);
+      break;
+  }
+}
+
   getUserLocation(): void {
     if (!navigator.geolocation) {
       this.location = 'Trình duyệt không hỗ trợ định vị';
       this.loading = false;
       return;
     }
+
     let timeoutReached = false;
     const timeout = setTimeout(() => {
       timeoutReached = true;
@@ -68,12 +106,14 @@ export class Header implements OnInit, OnDestroy {
         this.loading = false;
       });
     }, 15000);
+
     navigator.geolocation.getCurrentPosition(
       (position) => {
         if (timeoutReached) return;
         clearTimeout(timeout);
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
+
         fetch(
           `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`,
           {
@@ -103,7 +143,6 @@ export class Header implements OnInit, OnDestroy {
       },
       (error) => {
         clearTimeout(timeout);
-        console.error('Lỗi định vị:', error);
         this.ngZone.run(() => {
           this.location = 'Quyền truy cập vị trí bị từ chối';
           this.loading = false;

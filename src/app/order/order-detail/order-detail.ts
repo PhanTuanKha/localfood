@@ -35,4 +35,17 @@ goToGroupOrder() {
 selectSize(size: any) {
   this.selectedSize = size;
 }
+  addQuantity(size: any) {
+    size.quantity++;
+    this.selectedSize = size;
+  }
+
+  removeQuantity(size: any) {
+    if (size.quantity > 0) {
+      size.quantity--;
+      if (size.quantity === 0 && this.selectedSize === size) {
+        this.selectedSize = null;
+      }
+    }
+  }
 }

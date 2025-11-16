@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { NgClass,CurrencyPipe, CommonModule} from '@angular/common';
+import { NgClass, CurrencyPipe, CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-vendor',
-  imports: [CommonModule,
-    NgClass,
-    FormsModule,
-    CurrencyPipe],
+  imports: [CommonModule, NgClass, FormsModule, CurrencyPipe],
   templateUrl: './vendor.html',
-  styleUrl: './vendor.css',
+  styleUrls: ['./vendor.css'],
 })
 export class Vendor {
   openAddForm = false;
+  showFeedback = false;
 
   sizes = [
     { label: 'Nhỏ', price: 40000 },
@@ -21,10 +21,6 @@ export class Vendor {
   ];
 
   selectedSize: any = null;
-
-  selectSize(size: any) {
-    this.selectedSize = size;
-  };
 
   foodList = [
     {
@@ -42,4 +38,18 @@ export class Vendor {
       status: 'out'
     }
   ];
+
+  constructor(private router: Router) {}
+
+  selectSize(size: any) {
+    this.selectedSize = size;
+  }
+
+  toggleFeedback() { 
+    this.showFeedback = !this.showFeedback; 
+  }
+
+  goToMyReply() {
+    this.router.navigate(['/my-reply']);
+  }
 }

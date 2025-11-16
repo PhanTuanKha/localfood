@@ -50,10 +50,14 @@ export class ReplyDetail {
     input.click();
   }
 
-  // Hàm gửi phản hồi, lưu mô tả và chuyển trang
   onSubmit(event: Event) {
     event.preventDefault();
     this.feedbackService.setDescription(this.description);
+    this.feedbackService.setMedia(this.selectedImages);
     this.router.navigate(['/my-reply']);
+  }
+
+  goBack() {
+    this.router.navigate(['/vendor']);
   }
 }

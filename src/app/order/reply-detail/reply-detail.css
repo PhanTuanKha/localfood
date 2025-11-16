@@ -197,6 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 .form-actions {
     display: flex;
     justify-content: center;
+    gap: 16px;
     margin-top: 60px;
 }
 .submit-btn {
@@ -215,6 +216,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .submit-btn:hover {
     opacity: 1;
+}
+
+.btn-back {
+    background-color: #fc773e;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 8px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #e0662c;
 }
 
 @media (max-width: 992px) {

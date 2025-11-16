@@ -11,9 +11,6 @@
     <div class="d-flex justify-content-between align-items-center flex-wrap">
       <h2 class="fw-bold text-orange mb-3">Đơn hàng từ Tandoori Pizza London</h2>
       <form class="d-flex" role="search">
-        <button class="btn btn-orange rounded-circle" type="submit">
-            <i class="bi bi-search text-white"></i>
-        </button>
         <input class="form-control me-2 rounded-pill" type="search" placeholder="Tìm kiếm món ăn" aria-label="Search">
       </form>
     </div>
@@ -26,6 +23,9 @@
 
     <button class="btn btn-orange px-4" (click)="openAddForm = !openAddForm">
       <i class="bi bi-plus-circle"></i> Thêm món mới
+    </button>
+    <button class="btn btn-outline-success px-4" (click)="goToMyReply()">
+      <i class="bi bi-chat-left-text"></i> Xem phản hồi
     </button>
   </div>
 

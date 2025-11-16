@@ -27,9 +27,6 @@
             </div>
         </div>
       <form class="d-flex" role="search">
-        <button class="btn btn-orange rounded-circle" type="submit">
-            <i class="bi bi-search text-white"></i>
-        </button>
         <input class="form-control me-2 rounded-pill" type="search" placeholder="Tìm kiếm món ăn" aria-label="Search">
       </form>
     </div>
@@ -62,117 +59,135 @@
     <div class="col-lg-9 col-md-8">
     <h3 class="fw-bold mb-4 text-dark">Pizzas</h3>
         <div class="card mb-4 shadow-sm rounded-4 hover-card">
-            <div class="row g-0 align-items-center p-3">
+        <div class="row g-0 align-items-center p-3">
             <div class="col-md-8">
-                <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
-                    <p class="mb-2 text-warning">
-                        <i class="bi bi-fire"></i>
-                        <i class="bi bi-fire"></i>
-                        <i class="bi bi-fire" style="color: grey"></i>
-                        <i class="bi bi-fire" style="color: grey"></i>
-                        <i class="bi bi-fire" style="color: grey"></i>
-                    </p>
-                <p class="text-muted mb-3">
-        1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
-                </p> 
-                <div class="d-flex gap-2 flex-wrap">
+            <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
+            <p class="mb-2 text-warning">
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire" style="color: grey"></i>
+                <i class="bi bi-fire" style="color: grey"></i>
+            </p>
+            <p class="text-muted mb-3">
+                1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium French Fries, 3 cold drinks
+            </p> 
+            <div class="d-flex gap-2 flex-wrap mb-3">
                 <button
-          *ngFor="let size of sizes"
-          (click)="selectSize(size)"
-          [ngClass]="{
-            'btn btn-sm rounded': true,
-            'btn-dark': selectedSize === size,
-            'btn-outline-dark': selectedSize !== size}">
+                *ngFor="let size of sizes"
+                (click)="selectSize(size)"
+                [ngClass]="{
+                    'btn btn-sm rounded': true,
+                    'btn-dark': selectedSize === size,
+                    'btn-outline-dark': selectedSize !== size
+                }">
                 <div class="fw-semibold">{{ size.label }}</div>
-                <div>{{ size.price | currency: 'VND' : '' : '1.0-0' }}đ</div>
-            </button>
-                </div>
-                </div>
-
-                <div class="col-md-4 text-center position-relative">
-                <img    src="assets/images/logo/pizza1.png"
-        class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
-            <button class="btn btn-outline-success position-absolute top-0 end-0 m-2 rounded-circle" [ngClass]="{ 'btn-success text-white': selectedSize }">
-                <i class="bi bi-plus-lg"></i>
-            </button>
+                <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
+                </button>
             </div>
             </div>
+            <div class="col-md-4 text-center">
+            <img src="assets/images/logo/pizza1.png"
+                class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
+            <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
+                <button class="btn btn-sm btn-outline-danger" (click)="removeQuantity(selectedSize)" [disabled]="!selectedSize || selectedSize.quantity === 0">
+                <i class="bi bi-dash"></i>
+                </button>
+                <span class="fw-bold">{{ selectedSize?.quantity || 0 }}</span>
+                <button class="btn btn-sm btn-outline-success" (click)="addQuantity(selectedSize)" [disabled]="!selectedSize">
+                <i class="bi bi-plus"></i>
+                </button>
             </div>
-            <div class="card mb-4 shadow-sm rounded-4 hover-card">
-            <div class="row g-0 align-items-center p-3">
+            </div>
+        </div>
+        </div>
+        <div class="card mb-4 shadow-sm rounded-4 hover-card">
+        <div class="row g-0 align-items-center p-3">
             <div class="col-md-8">
-                <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
-                    <p class="mb-2 text-warning">
-                        <i class="bi bi-fire"></i>
-                        <i class="bi bi-fire"></i>
-                        <i class="bi bi-fire"></i>
-                        <i class="bi bi-fire" style="color: grey"></i>
-                        <i class="bi bi-fire" style="color: grey"></i>
-                    </p>
-                <p class="text-muted mb-3">
-        1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
-                </p> 
-                <div class="d-flex gap-2 flex-wrap">
+            <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
+            <p class="mb-2 text-warning">
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire" style="color: grey"></i>
+                <i class="bi bi-fire" style="color: grey"></i>
+            </p>
+            <p class="text-muted mb-3">
+                1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium French Fries, 3 cold drinks
+            </p> 
+            <div class="d-flex gap-2 flex-wrap mb-3">
                 <button
-          *ngFor="let size of sizes"
-          (click)="selectSize(size)"
-          [ngClass]="{
-            'btn btn-sm rounded': true,
-            'btn-dark': selectedSize === size,
-            'btn-outline-dark': selectedSize !== size}">
+                *ngFor="let size of sizes"
+                (click)="selectSize(size)"
+                [ngClass]="{
+                    'btn btn-sm rounded': true,
+                    'btn-dark': selectedSize === size,
+                    'btn-outline-dark': selectedSize !== size
+                }">
                 <div class="fw-semibold">{{ size.label }}</div>
-                <div>{{ size.price | currency: 'VND' : '' : '1.0-0' }}đ</div>
-            </button>
-                </div>
-                </div>
+                <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
+                </button>
+            </div>
+            </div>
+            <div class="col-md-4 text-center">
+            <img src="assets/images/logo/pizza1.png"
+                class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
+            <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
+                <button class="btn btn-sm btn-outline-danger" (click)="removeQuantity(selectedSize)" [disabled]="!selectedSize || selectedSize.quantity === 0">
+                <i class="bi bi-dash"></i>
+                </button>
+                <span class="fw-bold">{{ selectedSize?.quantity || 0 }}</span>
+                <button class="btn btn-sm btn-outline-success" (click)="addQuantity(selectedSize)" [disabled]="!selectedSize">
+                <i class="bi bi-plus"></i>
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
 
-                <div class="col-md-4 text-center position-relative">
-                <img    src="assets/images/logo/pizza2.png"
-        class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
-            <button class="btn btn-outline-success position-absolute top-0 end-0 m-2 rounded-circle" [ngClass]="{ 'btn-success text-white': selectedSize }">
-                <i class="bi bi-plus-lg"></i>
-            </button>
-            </div>
-            </div>
-            </div>
-
-            <div class="card mb-4 shadow-sm rounded-4 hover-card">
-            <div class="row g-0 align-items-center p-3">
+        <div class="card mb-4 shadow-sm rounded-4 hover-card">
+        <div class="row g-0 align-items-center p-3">
             <div class="col-md-8">
-                <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
-                    <p class="mb-2 text-warning">
-                        <i class="bi bi-fire"></i>
-                        <i class="bi bi-fire"></i>
-                        <i class="bi bi-fire" ></i>
-                        <i class="bi bi-fire" ></i>
-                        <i class="bi bi-fire" style="color: grey"></i>
-                    </p>
-                <p class="text-muted mb-3">
-        1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium sized French Fries, 3 cold drinks
-                </p> 
-                <div class="d-flex gap-2 flex-wrap">
+            <h5 class="fw-bold mb-2">Farm House Xtreme Pizza</h5>
+            <p class="mb-2 text-warning">
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire"></i>
+                <i class="bi bi-fire" style="color: grey"></i>
+                <i class="bi bi-fire" style="color: grey"></i>
+            </p>
+            <p class="text-muted mb-3">
+                1 McChicken™, 1 Big Mac™, 1 Royal Cheeseburger, 3 medium French Fries, 3 cold drinks
+            </p> 
+            <div class="d-flex gap-2 flex-wrap mb-3">
                 <button
-          *ngFor="let size of sizes"
-          (click)="selectSize(size)"
-          [ngClass]="{
-            'btn btn-sm rounded': true,
-            'btn-dark': selectedSize === size,
-            'btn-outline-dark': selectedSize !== size}">
+                *ngFor="let size of sizes"
+                (click)="selectSize(size)"
+                [ngClass]="{
+                    'btn btn-sm rounded': true,
+                    'btn-dark': selectedSize === size,
+                    'btn-outline-dark': selectedSize !== size
+                }">
                 <div class="fw-semibold">{{ size.label }}</div>
-                <div>{{ size.price | currency: 'VND' : '' : '1.0-0' }}đ</div>
-            </button>
-                </div>
-                </div>
-
-                <div class="col-md-4 text-center position-relative">
-                <img    src="assets/images/logo/pizza3.png"
-        class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
-            <button class="btn btn-outline-success position-absolute top-0 end-0 m-2 rounded-circle" [ngClass]="{ 'btn-success text-white': selectedSize }">
-                <i class="bi bi-plus-lg"></i>
-            </button>
+                <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
+                </button>
             </div>
             </div>
+            <div class="col-md-4 text-center">
+            <img src="assets/images/logo/pizza1.png"
+                class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
+            <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
+                <button class="btn btn-sm btn-outline-danger" (click)="removeQuantity(selectedSize)" [disabled]="!selectedSize || selectedSize.quantity === 0">
+                <i class="bi bi-dash"></i>
+                </button>
+                <span class="fw-bold">{{ selectedSize?.quantity || 0 }}</span>
+                <button class="btn btn-sm btn-outline-success" (click)="addQuantity(selectedSize)" [disabled]="!selectedSize">
+                <i class="bi bi-plus"></i>
+                </button>
             </div>
+            </div>
+        </div>
+        </div>
     </div>
 
     

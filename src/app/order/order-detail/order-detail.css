@@ -323,3 +323,31 @@ button.btn-outline-success.btn-success {
   text-align: center;
   padding: 8px 0;
 }
+.quantity-controls button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #FC773E;
+  border: none;
+  transition: background-color 0.2s;
+}
+
+.quantity-controls button i {
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+.quantity-controls span {
+  min-width: 25px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.quantity-controls button:hover {
+  background-color: #ff8c42;
+}

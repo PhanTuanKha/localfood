@@ -54,9 +54,7 @@ export class Vendor {
   constructor(private router: Router) {}
 
   updateQuantityByStatus() {
-    if (this.newFood.status === 'out') {
-      this.newFood.quantity = 0;
-    }
+    if (this.newFood.status === 'out') this.newFood.quantity = 0;
   }
 
   addFood() {
@@ -97,6 +95,8 @@ export class Vendor {
   }
 
   saveEdit(index: number) {
+    if (this.editFood.price < 10000) return;
+
     this.foodList[index] = { ...this.editFood };
     this.editIndex = null;
   }

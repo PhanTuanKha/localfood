@@ -1,23 +1,40 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
-import { Router } from '@angular/router';
-import { checkLogin, User, users } from '../../data/users';
+import { RouterLink, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { HttpClient } from '@angular/common/http';
+import { User } from '../../data/users';
+
 @Component({
   selector: 'app-sigin',
   imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './sigin.html',
   styleUrl: './sigin.css',
 })
-export class Signin {
+export class Signin implements OnInit {
+
   username: string = '';
   password: string = '';
-  role: 'customer' | 'admin' | 'vendor' = 'admin';
   error: string = '';
+  users: User[] = [];
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private http: HttpClient
+  ) {}
+
+  ngOnInit() {
+    this.http.get<User[]>('assets/data/users.json').subscribe({
+      next: (data) => {
+        this.users = data;
+      },
+      error: () => {
+        this.error = 'Không thể tải dữ liệu người dùng.';
+      }
+    });
+  }
 
   onSubmit() {
     if (!this.username || !this.password) {
@@ -25,23 +42,29 @@ export class Signin {
       return;
     }
 
-    const user = users.find(
-      (u) => u.username === this.username && u.password === this.password && u.role===this.role
+    const user = this.users.find(
+      (u) => u.username === this.username && u.password === this.password
     );
 
     if (user) {
       this.error = '';
-      this.role = user.role;
 
-      const sessionData = {
-        user,
-        loginTime: new Date().toISOString(),
-      };
-      sessionStorage.setItem('currentUserSession', JSON.stringify(sessionData));
+      sessionStorage.setItem(
+        'currentUserSession',
+        JSON.stringify({
+          user,
+          loginTime: new Date().toISOString(),
+        })
+      );
+
       this.authService.login();
-      alert(`Đăng nhập thành công với vai trò ${this.role}`);
+      alert('Đăng nhập thành công!');
+      if (this.username.endsWith('_vendor') || user.role === 'vendor') {
+        this.router.navigate(['/vendor']);
+      } else {
+        this.router.navigate(['/']);
+      }
 
-      this.router.navigate(['/']);
     } else {
       this.error = 'Đăng nhập sai. Vui lòng đăng nhập lại hoặc chọn quên mật khẩu.';
     }

@@ -18,6 +18,7 @@ export class Mainpage implements AfterViewInit {
   username: string = '';
   password: string = '';
   error: string = '';
+
   isLoggedIn: boolean = false;
 
   constructor(
@@ -36,13 +37,21 @@ export class Mainpage implements AfterViewInit {
       return;
     }
 
-    const user: User | null = this.userService.checkLogin(this.username, this.password);
+    const user: User | null = this.userService.checkLogin(
+      this.username,
+      this.password
+    );
 
     if (user) {
       this.error = '';
 
-      const sessionData = { user, loginTime: new Date().toISOString() };
-      sessionStorage.setItem('currentUserSession', JSON.stringify(sessionData));
+      sessionStorage.setItem(
+        'currentUserSession',
+        JSON.stringify({
+          user,
+          loginTime: new Date().toISOString(),
+        })
+      );
 
       this.authService.login();
       this.isLoggedIn = true;

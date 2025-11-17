@@ -5,7 +5,7 @@ import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-group-order-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule,],
   templateUrl: './group-order-detail.html',
   styleUrl: './group-order-detail.css',
 })

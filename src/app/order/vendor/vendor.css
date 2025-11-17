@@ -137,7 +137,16 @@ button.btn-outline-success {
 button.btn-outline-success.btn-success {
   background-color: #FF8C00;
 }
+.btn-orange {
+  background-color: #FF8C00;
+  color: white;
+  transition: 0.2s;
+}
 
+.btn-orange:hover {
+  background-color: #e67e00;
+  color: white;
+}
 .map{
   text-align: center;
   display: flex;
@@ -297,18 +306,6 @@ button.btn-outline-success.btn-success {
   text-align: center;
   padding: 8px 0;
 }
-.btn-orange {
-  background-color: #FF8C00;
-  color: white;
-  border-radius: 20px;
-  transition: 0.2s;
-}
-
-.btn-orange:hover {
-  background-color: #e67e00;
-  color: white;
-}
-
 .table thead.table-dark {
   display: table-header-group;
   width: 100%;

@@ -35,58 +35,62 @@
 <div class="home-page">
   <div class="first">
     <div class="container">
-    <div class="item">
+    <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/salad.png" alt="Không hiển thị được ảnh">
+        <img src="assets/images/logo/bun_moc.jpg" alt="Không hiển thị được ảnh">
         <div class="con">
           <span class="big">15</span>
           <span class="small">% off</span>
         </div>
       </div>
       <div class="content">
-        <p><b>Flat Hill Slingback</b></p>
+        <p><b>Bún chả</b></p>
         <div class="btn-remaining">Còn 5 ngày</div>
       </div>
     </div>
 
-    <div class="item">
+    <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/salad2.png" alt="Không hiển thị được ảnh">
+        <img src="assets/images/logo/bun_thit_nuong.jpg" alt="Không hiển thị được ảnh">
         <div class="con">
           <span class="big">10</span>
           <span class="small">% off</span>
         </div>
       </div>
       <div class="content">
-        <p><b>Fresh Caesar Salad</b></p>
+        <p><b>Bún thịt nướng</b></p>
         <div class="btn-remaining">Còn 3 ngày</div>
       </div>
     </div>
 
-    <div class="item">
+    <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/soup.png" alt="Không hiển thị được ảnh">
+        <img src="assets/images/logo/banh_mi_ga.jpg" alt="Không hiển thị được ảnh">
         <div class="con">
           <span class="big">25</span>
           <span class="small">% off</span>
         </div>
       </div>
       <div class="content">
-        <p><b>Hot Mushroom Soup</b></p>
+        <p><b>Bánh mì gà</b></p>
         <div class="btn-remaining">Còn 2 ngày</div>
       </div>
     </div>
 
-    <div class="item">
+    <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/noodle.png" alt="Không hiển thị được ảnh">
+        <img src="assets/images/logo/cao_lau_hoian.jpg" alt="Không hiển thị được ảnh">
         <div class="con">
           <span class="big">20</span>
           <span class="small">% off</span>
         </div>
       </div>
       <div class="content">
-        <p><b>Chicken Noodles</b></p>
+        <p><b>Cao lầu Hội An</b></p>
         <div class="btn-remaining">Còn 7 ngày</div>
       </div>
     </div>
@@ -100,51 +104,58 @@
 
     <div class="slider-container" #scrollContainer>
       <div class="slider">
-        <div class="item">
-          <img src="assets/images/logo/cheeseburger.png" alt="Không hiển thị được ảnh">
-          <p><b>Cheese Burger</b></p>
+        <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
+          <img src="assets/images/logo/che_hat_luu.jpg" alt="Không hiển thị được ảnh">
+          <p><b>Chè hạt lựu</b></p>
           <p class="main"><i class="bi bi-geo-alt-fill"></i> Burger Arena</p>
-          <p><b>50.000đ</b></p>
+          <p><b>20.000đ</b></p>
           <button>Đặt hàng ngay</button>
         </div>
-        <div class="item">
-          <img src="assets/images/logo/toffecake.png" alt="Không hiển thị được ảnh">
-          <p><b>Toffe's Cake</b></p>
-          <p class="main"><i class="bi bi-geo-alt-fill"></i> Top Sticks</p>
-          <p><b>40.000đ</b></p>
+        <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
+          <img src="assets/images/logo/hu_tieu_bo_vien.jpg" alt="Không hiển thị được ảnh">
+          <p><b>Hủ tiếu bò viên</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Hủ tiếu chú Sáu</p>
+          <p><b>30.000đ</b></p>
           <button>Đặt hàng ngay</button>
         </div>
-        <div class="item">
-          <img src="assets/images/logo/pancake.png" alt="Không hiển thị được ảnh">
-          <p><b>Pancake</b></p>
-          <p class="main"><i class="bi bi-geo-alt-fill"></i> Cake Word</p>
+        <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
+          <img src="assets/images/logo/chao_bo_to.jpg" alt="Không hiển thị được ảnh">
+          <p><b>Cháo bò tơ</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Đặc sản Tây Ninh/p>
           <p><b>28.000đ</b></p>
           <button>Đặt hàng ngay</button>
         </div>
-        <div class="item">
-          <img src="assets/images/logo/crispy.png" alt="Không hiển thị được ảnh">
-          <p><b>Crispy Sandwich</b></p>
-          <p class="main"><i class="bi bi-geo-alt-fill"></i>Fastfood Dine</p>
+        <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
+          <img src="assets/images/logo/pho_bo_vien.jpg" alt="Không hiển thị được ảnh">
+          <p><b>Phở bò viên</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Quán phở cô Hoa</p>
           <p><b>45.000đ</b></p>
           <button>Đặt hàng ngay</button>
         </div>
-        <div class="item">
-          <img src="assets/images/logo/thaisoup.png" alt="Không hiển thị được ảnh">
-          <p><b>Thai Soup</b></p>
-          <p class="main"><i class="bi bi-geo-alt-fill"></i>Foody Man</p>
+        <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
+          <img src="assets/images/logo/bun_moc.jpg" alt="Không hiển thị được ảnh">
+          <p><b>Bún mọc</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Quán phở cô Hoa</p>
           <p><b>48.000đ</b></p>
           <button>Đặt hàng ngay</button>
         </div>
-        <div class="item">
-          <img src="assets/images/logo/crispy.png" alt="Không hiển thị được ảnh">
-          <p><b>Crispy Sandwich</b></p>
-          <p class="main"><i class="bi bi-geo-alt-fill"></i>Fastfood Dine</p>
-          <p><b>45.000đ</b></p>
+        <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
+          <img src="assets/images/logo/thit_xien.jpg" alt="Không hiển thị được ảnh">
+          <p><b>Thịt xiên</b></p>
+          <p class="main"><i class="bi bi-geo-alt-fill"></i>Tiệm xiên</p>
+          <p><b>25.000đ</b></p>
           <button>Đặt hàng ngay</button>
         </div>
-        <div class="item">
-          <img src="assets/images/logo/thaisoup.png" alt="Không hiển thị được ảnh">
-          <p><b>Thai Soup</b></p>
+        <div class="item" [routerLink]="['/order-detail']" style="cursor: pointer;">
+
+          <img src="assets/images/logo/mien_luon.jpg" alt="Không hiển thị được ảnh">
+          <p><b>Miến Lươn</b></p>
           <p class="main"><i class="bi bi-geo-alt-fill"></i>Foody Man</p>
           <p><b>48.000đ</b></p>
           <button>Đặt hàng ngay</button>
@@ -158,144 +169,168 @@
 <div class="third">
   <h2>Nhà hàng nổi tiếng</h2>
   <div class="restaurant-grid">
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/rice.png" alt="Food world">
+        <img src="assets/images/logo/pho_xao.jpg" alt="Food world">
         <div class="badges">
-          <div class="discount">20% off</div>
+          <div class="discount">10% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-      <img src="assets/images/logo/food-world-logo.png" alt="Food Logo" class="brand-logo">
+      <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
       <div class="details">
-        <p class="title">Food world</p>
+        <p class="title">Phở gia truyền</p>
         <div class="rating"><i class="bi bi-star-fill"></i> 46</div>
         <div class="status tomorrow">Ngày mai</div>
       </div>
       </div>
       </div>
 
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/pizza.png" alt="Pizza hub">
+        <img src="assets/images/logo/banh_mi_hoi_an_co_phuong.jpg" alt="Pizza hub">
         <div class="badges">
           <div class="discount">10% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-        <img src="assets/images/logo/pizzahublogo.png" alt="Food Logo" class="brand-logo">
+        <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
         <div class="details">
-          <p class="title">Pizza hub</p>
+          <p class="title">Bánh mỳ Hội An</p>
           <div class="rating"><i class="bi bi-star-fill"></i> 40</div>
           <div class="status tomorrow">Ngày mai</div>
         </div>
       </div>
     </div>
 
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/cake1.png" alt="Donuts hut">
+        <img src="assets/images/logo/banh_xeo_nt.jpg" alt="Donuts hut">
         <div class="badges">
           <div class="discount">15% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-        <img src="assets/images/logo/donutshutlogo.png" alt="Food Logo" class="brand-logo">
+        <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
         <div class="details">
-          <p class="title">Donuts hut</p>
+          <p class="title">Bánh xèo Nha Trang</p>
           <div class="rating"><i class="bi bi-star-fill"></i> 20</div>
           <div class="status today">Hôm nay</div>
         </div>
       </div>
     </div>
 
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/cake2.png" alt="Donuts hut">
+        <img src="assets/images/logo/bun_cha_ho_tay.jpg" alt="Donuts hut">
         <div class="badges">
           <div class="discount">15% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-        <img src="assets/images/logo/donutlogo.png" alt="Food Logo" class="brand-logo">
+        <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
         <div class="details">
-          <p class="title">Donuts hut</p>
+          <p class="title">Bún chả Hồ Tây</p>
           <div class="rating"><i class="bi bi-star-fill"></i> 50</div>
           <div class="status today">Hôm nay</div>
         </div>
       </div>
     </div>
 
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/steak.png" alt="Ruby Tuesday">
+        <img src="assets/images/logo/bun_thit_nuong.jpg" alt="Ruby Tuesday">
         <div class="badges">
           <div class="discount">10% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-        <img src="assets/images/logo/rubylogo.png" alt="Food Logo" class="brand-logo">
+        <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
         <div class="details">
-          <p class="title">Ruby Tuesday</p>
+          <p class="title">Cái tiệm nướng</p>
           <div class="rating"><i class="bi bi-star-fill"></i> 50</div>
           <div class="status today">Hôm nay</div>
         </div>
       </div>
     </div>
 
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/chicken.png" alt="Kuakata Fried Chicken">
+        <img src="assets/images/logo/che_dau_xanh.jpg" alt="Kuakata Fried Chicken">
         <div class="badges">
           <div class="discount">10% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-        <img src="assets/images/logo/kuatalogo.png" alt="Food Logo" class="brand-logo">
+        <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
         <div class="details">
-          <p class="title">Kuakata Fried Chicken</p>
+          <p class="title">Chè ba miền</p>
           <div class="rating"><i class="bi bi-star-fill"></i> 50</div>
           <div class="status today">Hôm nay</div>
         </div>
       </div>
     </div>
 
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/soup2.png" alt="Soup House">
+        <img src="assets/images/logo/bun_thang.jpg" alt="Soup House">
         <div class="badges">
           <div class="discount">10% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-        <img src="assets/images/logo/redsquarelogo.png" alt="Food Logo" class="brand-logo">
+        <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
         <div class="details">
-          <p class="title">Soup House</p>
+          <p class="title">Ở đây có bún</p>
           <div class="rating"><i class="bi bi-star-fill"></i> 50</div>
           <div class="status today">Hôm nay</div>
         </div>
       </div>
     </div>
 
-    <div class="restaurant-card">
+    <div class="restaurant-card" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;">
+
       <div class="img-box">
-        <img src="assets/images/logo/eggxsau.png" alt="Taco bell">
+        <img src="assets/images/logo/bun_bo_chay.jpg" alt="Taco bell">
         <div class="badges">
           <div class="discount">10% off</div>
           <div class="fast">Fast</div>
         </div>
       </div>
       <div class="info">
-        <img src="assets/images/logo/tacobell.png" alt="Food Logo" class="brand-logo">
+        <img src="assets/images/logo/localfood.jpg" alt="Food Logo" class="brand-logo">
       <div class="details">
-          <p class="title">Taco bell</p>
+          <p class="title">Tiệm chay</p>
           <div class="rating"><i class="bi bi-star-fill"></i> 50</div>
           <div class="status today">Hôm nay</div>
         </div>
@@ -315,14 +350,30 @@
   </div>
   <div class="food-category-wrapper">
       <div class="food-category" id="foodCategory">
-        <div class="circle"><img src="assets/images/logo/pizza.png" alt="Pizza"><p>Pizza</p></div>
-        <div class="circle"><img src="assets/images/logo/burger.png" alt="Burger"><p>Burger</p></div>
-        <div class="circle"><img src="assets/images/logo/noodle.png" alt="Noodles"><p>Noodles</p></div>
-        <div class="circle"><img src="assets/images/logo/sub_sandwiches.png" alt="Sandwich"><p>Sandwich</p></div>
-        <div class="circle"><img src="assets/images/logo/chowmain.png" alt="Chowmein"><p>Chowmein</p></div>
-        <div class="circle"><img src="assets/images/logo/steak.png" alt="Steak"><p>Steak</p></div>
-        <div class="circle"><img src="assets/images/logo/salad.png" alt="Salad"><p>Salad</p></div>
-        <div class="circle"><img src="assets/images/logo/soup.png" alt="Soup"><p>Soup</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/cao_lau_hoian.jpg" alt="Pizza"><p>Cao lầu</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/che_hat_luu.jpg" alt="Burger"><p>Chè hạt lựu</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/bun_bo_gan.jpg" alt="Noodles"><p>Bún bò</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/bun_moc.jpg" alt="Sandwich"><p>Bún mọc</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/chowmain.png" alt="Chowmein"><p>Mỳ giòn</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/hu_tieu_hai_san.jpg" alt="Steak"><p>Hủ tiếu</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/salad.png" alt="Salad"><p>Rau trộn</p></div>
+        <div class="circle" 
+     [routerLink]="['/order-detail']" 
+     style="cursor: pointer;"><img src="assets/images/logo/soup.png" alt="Soup"><p>Cháo</p></div>
       </div>
     </div>
   </div>
@@ -330,34 +381,34 @@
 <div class="fifth">
   <div class="deal-card">
     <div class="deal-text">
-      <h3>Deal hời với <span>Crispy Sandwiches</span></h3>
-      <p>Thưởng thức món sandwich thơm lừng, cảm nhận hương vị tan chảy trong từng lớp giòn rụm.</p>
-      <button class="btn-deal">Đặt hàng ngay</button>
+      <h3>Deal hời với <span>Cao lầu Hội An</span></h3>
+      <p>Thưởng thức món cao lầu thơm lừng, cảm nhận hương vị tan chảy trong từng sợi.</p>
+      <button class="btn-deal" [routerLink]="['/order-detail']">Đặt hàng ngay</button>
     </div>
     <div class="deal-img">
-      <img src="assets/images/logo/sandwich.png" alt="Crispy Sandwich">
+      <img src="assets/images/logo/cao_lau_hoian.jpg" alt="Crispy Sandwich">
     </div>
   </div>
 
   <div class="deal-card reverse">
     <div class="deal-img">
-      <img src="assets/images/logo/fried.png" alt="Fried Chicken">
+      <img src="assets/images/logo/banh_xeo_nt.jpg" alt="Fried Chicken">
     </div>
     <div class="deal-text">
-      <h3>Tiệc tùng cùng <span>Fried Chicken</span></h3>
+      <h3>Giòn rụm <span>Bánh xèo</span></h3>
       <p>Thưởng thức bữa ăn giòn rụm và cay nồng - lựa chọn hoàn hảo cho mọi dịp sum họp!</p>
-      <button class="btn-deal">Đặt hàng ngay</button>
+      <button class="btn-deal" [routerLink]="['/order-detail']">Đặt hàng ngay</button>
     </div>
   </div>
 
   <div class="deal-card">
     <div class="deal-text">
-      <h3>Nóng hổi & bùng nổ với <span>Pizza</span></h3>
-      <p>Thưởng thức miếng pizza phủ phô mai tan chảy, kết hợp hương vị khó quên.</p>
-      <button class="btn-deal">Đặt hàng ngay</button>
+      <h3>Thanh mát & nhẹ bụng với <span>Chè Khoai</span></h3>
+      <p>Thưởng thức chè khoai phủ nước cốt dừa béo ngậy, kết hợp hương vị khó quên.</p>
+      <button class="btn-deal" [routerLink]="['/order-detail']">Đặt hàng ngay</button>
     </div>
     <div class="deal-img">
-      <img src="assets/images/logo/pizza.png" alt="Pizza">
+      <img src="assets/images/logo/che_khoai.jpg" alt="Pizza">
     </div>
   </div>
 </div>
@@ -365,5 +416,5 @@
 <div class="foot">
   <h2>Bạn đã sẵn sàng order với những deal hời nhất chưa?</h2>
   <button class="btn btn-order">Đặt hàng ngay</button>
-  <img src="assets/images/logo/footer.png" alt="Không hiển thị được ảnh">
+  <img src="assets/images/logo/footer.png" alt="Không hiển thị được ảnh" width="2000">
 </div>

@@ -6,7 +6,6 @@
   text-align: center;
 }
 
-
 .title {
   font-size: 34px;
   font-weight: 700;
@@ -14,17 +13,15 @@
   margin-bottom: 60px;
 }
 
-
 .timeline-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 70px auto;
   position: relative;
-  margin-bottom: 70px;
+  flex-wrap: wrap; /* CHO PHÉP XUỐNG HÀNG */
 }
-
 
 .timeline-wrapper::before {
   content: "";
@@ -36,7 +33,6 @@
   background: #000;
   z-index: 1;
 }
-
 
 .timeline-wrapper::after {
   content: "";
@@ -50,7 +46,6 @@
   transition: 0.3s;
 }
 
-
 .timeline-step {
   position: relative;
   z-index: 3;
@@ -58,8 +53,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
-
 
 .dot {
   width: 22px;
@@ -67,48 +62,41 @@
   border-radius: 50%;
   background: #000;
   transition: .3s;
+  z-index: 3;
 }
-
 
 .dot.done {
   background: #ff8c42;
 }
 
-
 .step-box {
   width: 180px;
   height: 130px;
   margin-top: 25px;
-
-
-  background: #e9e9e9;
   padding: 18px;
   border-radius: 12px;
+
+  background: #e9e9e9;
   color: black;
   font-weight: 600;
-
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-
   transition: 0.3s;
 }
-
 
 .step-box.active {
   background: #f68032;
   color: #000;
 }
 
-
 .step-box i {
   font-size: 40px;
   margin-bottom: 10px;
 }
-
 
 .step-text {
   font-size: 16px;
@@ -116,11 +104,37 @@
   line-height: 20px;
 }
 
-
 .description {
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
 }
 
+@media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
 
+  .timeline-step {
+    width: 100%;
+  }
+
+  .step-box {
+    width: 200px;
+    height: 120px;
+  }
+
+  .step-box i {
+    font-size: 32px;
+  }
+
+  .step-text {
+    font-size: 14px;
+  }
+
+  .timeline-wrapper::before,
+  .timeline-wrapper::after {
+    display: none;
+  }
+}

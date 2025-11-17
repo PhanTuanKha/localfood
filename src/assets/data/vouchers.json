@@ -1,0 +1,7 @@
+[
+  { "voucher_id": 1, "code": "SAVE0",  "discount_percent": 0,  "label": "Không", "active": true },
+  { "voucher_id": 2, "code": "SAVE5",  "discount_percent": 5,  "label": "5%",   "active": true },
+  { "voucher_id": 3, "code": "SAVE10", "discount_percent": 10, "label": "10%",  "active": true },
+  { "voucher_id": 4, "code": "SAVE15", "discount_percent": 15, "label": "15%",  "active": true },
+  { "voucher_id": 5, "code": "SAVE20", "discount_percent": 20, "label": "20%",  "active": true }
+]

@@ -1,10 +1,11 @@
 import { CommonModule} from '@angular/common';
 import { AfterViewChecked, AfterViewInit, Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './detail.html',
   styleUrl: './detail.css',
 })

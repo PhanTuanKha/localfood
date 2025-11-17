@@ -49,135 +49,164 @@
     <div class="col-lg-9 col-md-8">
     <h3 class="fw-bold mb-4 text-dark">Phở</h3>
         <div class="card mb-4 shadow-sm rounded-4 hover-card">
-        <div class="row g-0 align-items-center p-3">
-            <div class="col-md-8">
-            <h5 class="fw-bold mb-2">Phở tái</h5>
-            <p class="mb-2 text-warning">
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire" style="color: grey"></i>
-                <i class="bi bi-fire" style="color: grey"></i>
-            </p>
-            <p class="text-muted mb-3">
-                Phở bò tái chuẩn Hà Nội, nước trong thanh.
-            </p> 
-            <div class="d-flex gap-2 flex-wrap mb-3">
-                <button
-                *ngFor="let size of sizes"
-                (click)="selectSize(size)"
-                [ngClass]="{
-                    'btn btn-sm rounded': true,
-                    'btn-dark': selectedSize === size,
-                    'btn-outline-dark': selectedSize !== size
-                }">
-                <div class="fw-semibold">{{ size.label }}</div>
-                <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
-                </button>
-            </div>
-            </div>
-            <div class="col-md-4 text-center">
-            <img src="assets/images/logo/pho_tai_lan.jpg"
-                class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
-            <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
-                <button class="btn btn-sm btn-outline-danger" (click)="removeQuantity(selectedSize)" [disabled]="!selectedSize || selectedSize.quantity === 0">
-                <i class="bi bi-dash"></i>
-                </button>
-                <span class="fw-bold">{{ selectedSize?.quantity || 0 }}</span>
-                <button class="btn btn-sm btn-outline-success" (click)="addQuantity(selectedSize)" [disabled]="!selectedSize">
-                <i class="bi bi-plus"></i>
-                </button>
-            </div>
-            </div>
-        </div>
-        </div>
-        <div class="card mb-4 shadow-sm rounded-4 hover-card">
-        <div class="row g-0 align-items-center p-3">
-            <div class="col-md-8">
-            <h5 class="fw-bold mb-2">Phở gầu</h5>
-            <p class="mb-2 text-warning">
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire" style="color: grey"></i>
-                <i class="bi bi-fire" style="color: grey"></i>
-            </p>
-            <p class="text-muted mb-3">
-                Gầu bò béo mềm, nước dùng trong thanh.
-            </p> 
-            <div class="d-flex gap-2 flex-wrap mb-3">
-                <button
-                *ngFor="let size of sizes"
-                (click)="selectSize(size)"
-                [ngClass]="{
-                    'btn btn-sm rounded': true,
-                    'btn-dark': selectedSize === size,
-                    'btn-outline-dark': selectedSize !== size
-                }">
-                <div class="fw-semibold">{{ size.label }}</div>
-                <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
-                </button>
-            </div>
-            </div>
-            <div class="col-md-4 text-center">
-            <img src="assets/images/logo/pho_chin.jpg"
-                class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
-            <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
-                <button class="btn btn-sm btn-outline-danger" (click)="removeQuantity(selectedSize)" [disabled]="!selectedSize || selectedSize.quantity === 0">
-                <i class="bi bi-dash"></i>
-                </button>
-                <span class="fw-bold">{{ selectedSize?.quantity || 0 }}</span>
-                <button class="btn btn-sm btn-outline-success" (click)="addQuantity(selectedSize)" [disabled]="!selectedSize">
-                <i class="bi bi-plus"></i>
-                </button>
-            </div>
-            </div>
-        </div>
-        </div>
+  <div class="row g-0 align-items-center p-3">
+      <div class="col-md-8">
+      <h5 class="fw-bold mb-2">Phở tái</h5>
+      <p class="mb-2 text-warning">
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire" style="color: grey"></i>
+          <i class="bi bi-fire" style="color: grey"></i>
+      </p>
+      <p class="text-muted mb-3">
+          Phở bò tái chuẩn Hà Nội, nước trong thanh.
+      </p> 
+      <div class="d-flex gap-2 flex-wrap mb-3">
+          <button
+          *ngFor="let size of sizes1"
+          (click)="selectSize(1, size)"
+          [ngClass]="{
+              'btn btn-sm rounded': true,
+              'btn-dark': selectedSize1 === size,
+              'btn-outline-dark': selectedSize1 !== size
+          }">
+          <div class="fw-semibold">{{ size.label }}</div>
+          <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
+          </button>
+      </div>
+      </div>
+      <div class="col-md-4 text-center">
+      <img src="assets/images/logo/pho_tai_lan.jpg"
+          class="img-fluid rounded-circle shadow-sm"  alt="Pizza"
+          style="width: 150px; height: 150px; object-fit: cover"/>
+
+      <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-sm btn-outline-danger"
+                  (click)="removeQuantity(1)"
+                  [disabled]="!selectedSize1 || selectedSize1.quantity === 0">
+              <i class="bi bi-dash"></i>
+          </button>
+
+          <span class="fw-bold">{{ selectedSize1?.quantity || 0 }}</span>
+
+          <button class="btn btn-sm btn-outline-success"
+                  (click)="addQuantity(1)"
+                  [disabled]="!selectedSize1">
+              <i class="bi bi-plus"></i>
+          </button>
+      </div>
+      </div>
+  </div>
+</div>
 
         <div class="card mb-4 shadow-sm rounded-4 hover-card">
-        <div class="row g-0 align-items-center p-3">
-            <div class="col-md-8">
-            <h5 class="fw-bold mb-2">Phở tái nạm</h5>
-            <p class="mb-2 text-warning">
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire"></i>
-                <i class="bi bi-fire" style="color: grey"></i>
-                <i class="bi bi-fire" style="color: grey"></i>
-            </p>
-            <p class="text-muted mb-3">
-                Thịt tái kết hợp nạm, vị đậm đà.
-            </p> 
-            <div class="d-flex gap-2 flex-wrap mb-3">
-                <button
-                *ngFor="let size of sizes"
-                (click)="selectSize(size)"
-                [ngClass]="{
-                    'btn btn-sm rounded': true,
-                    'btn-dark': selectedSize === size,
-                    'btn-outline-dark': selectedSize !== size
-                }">
-                <div class="fw-semibold">{{ size.label }}</div>
-                <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
-                </button>
-            </div>
-            </div>
-            <div class="col-md-4 text-center">
-            <img src="assets/images/logo/pho_bo_vien.jpg"
-                class="img-fluid rounded-circle shadow-sm"  alt="Pizza" style="width: 150px; height: 150px; object-fit: cover"/>
-            <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
-                <button class="btn btn-sm btn-outline-danger" (click)="removeQuantity(selectedSize)" [disabled]="!selectedSize || selectedSize.quantity === 0">
-                <i class="bi bi-dash"></i>
-                </button>
-                <span class="fw-bold">{{ selectedSize?.quantity || 0 }}</span>
-                <button class="btn btn-sm btn-outline-success" (click)="addQuantity(selectedSize)" [disabled]="!selectedSize">
-                <i class="bi bi-plus"></i>
-                </button>
-            </div>
-            </div>
-        </div>
-        </div>
+  <div class="row g-0 align-items-center p-3">
+      <div class="col-md-8">
+      <h5 class="fw-bold mb-2">Phở gầu</h5>
+      <p class="mb-2 text-warning">
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire" style="color: grey"></i>
+          <i class="bi bi-fire" style="color: grey"></i>
+      </p>
+      <p class="text-muted mb-3">
+          Gầu bò béo mềm, nước dùng trong thanh.
+      </p> 
+      <div class="d-flex gap-2 flex-wrap mb-3">
+          <button
+          *ngFor="let size of sizes2"
+          (click)="selectSize(2, size)"
+          [ngClass]="{
+              'btn btn-sm rounded': true,
+              'btn-dark': selectedSize2 === size,
+              'btn-outline-dark': selectedSize2 !== size
+          }">
+          <div class="fw-semibold">{{ size.label }}</div>
+          <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
+          </button>
+      </div>
+      </div>
+      <div class="col-md-4 text-center">
+      <img src="assets/images/logo/pho_chin.jpg"
+          class="img-fluid rounded-circle shadow-sm"  alt="Pizza"
+          style="width: 150px; height: 150px; object-fit: cover"/>
+
+      <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-sm btn-outline-danger"
+                  (click)="removeQuantity(2)"
+                  [disabled]="!selectedSize2 || selectedSize2.quantity === 0">
+              <i class="bi bi-dash"></i>
+          </button>
+
+          <span class="fw-bold">{{ selectedSize2?.quantity || 0 }}</span>
+
+          <button class="btn btn-sm btn-outline-success"
+                  (click)="addQuantity(2)"
+                  [disabled]="!selectedSize2">
+              <i class="bi bi-plus"></i>
+          </button>
+      </div>
+      </div>
+  </div>
+</div>
+
+
+        <div class="card mb-4 shadow-sm rounded-4 hover-card">
+  <div class="row g-0 align-items-center p-3">
+      <div class="col-md-8">
+      <h5 class="fw-bold mb-2">Phở tái nạm</h5>
+      <p class="mb-2 text-warning">
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire"></i>
+          <i class="bi bi-fire" style="color: grey"></i>
+          <i class="bi bi-fire" style="color: grey"></i>
+      </p>
+      <p class="text-muted mb-3">
+          Thịt tái kết hợp nạm, vị đậm đà.
+      </p> 
+      <div class="d-flex gap-2 flex-wrap mb-3">
+          <button
+          *ngFor="let size of sizes3"
+          (click)="selectSize(3, size)"
+          [ngClass]="{
+              'btn btn-sm rounded': true,
+              'btn-dark': selectedSize3 === size,
+              'btn-outline-dark': selectedSize3 !== size
+          }">
+          <div class="fw-semibold">{{ size.label }}</div>
+          <div>{{ size.price | currency: 'VND':'':'1.0-0' }}đ</div>
+          </button>
+      </div>
+      </div>
+
+      <div class="col-md-4 text-center">
+      <img src="assets/images/logo/pho_bo_vien.jpg"
+          class="img-fluid rounded-circle shadow-sm"  
+          style="width: 150px; height: 150px; object-fit: cover"/>
+
+      <div class="quantity-controls mt-3 d-flex justify-content-center align-items-center gap-2">
+          <button class="btn btn-sm btn-outline-danger"
+                  (click)="removeQuantity(3)"
+                  [disabled]="!selectedSize3 || selectedSize3.quantity === 0">
+              <i class="bi bi-dash"></i>
+          </button>
+
+          <span class="fw-bold">{{ selectedSize3?.quantity || 0 }}</span>
+
+          <button class="btn btn-sm btn-outline-success"
+                  (click)="addQuantity(3)"
+                  [disabled]="!selectedSize3">
+              <i class="bi bi-plus"></i>
+          </button>
+      </div>
+      </div>
+
+  </div>
+</div>
+
     </div>
 
     

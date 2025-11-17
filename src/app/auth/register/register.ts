@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { users, User, addUser, UsersService } from '../../data/users';
+import { User, UsersService } from '../../data/users';
 @Component({
   selector: 'app-register',
   imports: [CommonModule, FormsModule, RouterLink],

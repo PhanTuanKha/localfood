@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component,Input, Output, EventEmitter, OnInit} from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart-sidebar',
-  imports: [CommonModule, FormsModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './cart-sidebar.html',
   styleUrl: './cart-sidebar.css',
 })
@@ -13,14 +15,18 @@ export class CartSidebar implements OnInit {
     @Input() isOpen: boolean = false;
     @Output() close = new EventEmitter<void>();
 
-    deliveryTime: string = ''; // Thời gian giao hàng
+    constructor(private router: Router) {}
+
+    deliveryTime: string = '';
     selectedDiscount: number = 0;
 
+    paymentMethod: string = "Tiền mặt";
+
     cartItems = [
-        { name: '12” Vegetarian Pizza', price: 27.90, qty: 1, desc: 'Không nấm + ớt chuông xanh' },
-        { name: '12” Vegetarian Pizza', price: 27.90, qty: 1, desc: 'Không nấm + ớt chuông xanh' },
-        { name: '12” Vegetarian Pizza', price: 27.90, qty: 1, desc: 'Không nấm + ớt chuông xanh' },
-        { name: '12” Vegetarian Pizza', price: 27.90, qty: 1, desc: 'Không nấm + ớt chuông xanh' }
+        { name: 'Phở tái', price: 45000, qty: 1, desc: 'Không nấm + ớt chuông xanh' },
+        { name: 'Phở gầu', price: 45000, qty: 1, desc: 'Không nấm + ớt chuông xanh' },
+        { name: 'Phở tái nạm', price: 55000, qty: 1, desc: 'Không nấm + ớt chuông xanh' },
+        { name: 'Bún thang', price: 52000, qty: 1, desc: 'Không nấm + ớt chuông xanh' }
     ];
 
     ngOnInit(): void {
@@ -44,14 +50,32 @@ export class CartSidebar implements OnInit {
     get total() {
         return this.cartItems.reduce((s, i) => s + i.price * i.qty, 0);
     }
-    
+
     get calculatedDiscount() {
         return 3.00 + (this.total * this.selectedDiscount);
     }
-    
+
     get finalTotal() {
         const shippingFee = 2.50;
         const serviceFee = 2.50;
         return this.total + shippingFee + serviceFee - this.calculatedDiscount;
     }
+
+   confirmPayment() {
+    if (this.paymentMethod !== "Tiền mặt") {
+        alert("Phương thức thanh toán này đang được bảo trì. Vui lòng chọn Tiền mặt.");
+        return;
+    }
+
+    const ok = confirm("Xác nhận thanh toán tiền mặt khi nhận hàng?");
+    if (!ok) return;
+
+    this.processPayment();
+    }
+
+    processPayment() {
+        alert("Đặt hàng thành công!");
+        this.router.navigate(['/detail']);
+    }
+
 }

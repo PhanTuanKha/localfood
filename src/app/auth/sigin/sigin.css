@@ -80,3 +80,18 @@ button:hover {
   align-items: center;
   gap: 3rem;
 }
+@media (max-width: 768px) {
+  .signin-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .signin-image {
+    display: none;
+  }
+
+  .signin-container {
+    width: 100%;
+    max-width: 380px;
+  }
+}

@@ -13,10 +13,8 @@ selectedSize: any = null;
 activeTab: string = 'personal';
 
 sizes = [
-  { label: 'Nhỏ', price: 40000 },
-  { label: 'Vừa', price: 60000 },
-  { label: 'Lớn', price: 70000 },
-  { label: 'XL', price: 80000 },
+  { label: 'Tô thường', price: 45000 },
+  { label: 'Đặc biệt', price: 55000 },
 ];
 constructor(private router: Router) {}
 

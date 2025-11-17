@@ -97,3 +97,29 @@ button:hover {
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+@media (max-width: 768px) {
+
+  .register-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .register-image {
+    display: none !important;   /* ẨN ẢNH — QUAN TRỌNG */
+  }
+
+  .register-container {
+    width: 100% !important;
+    max-width: 380px !important;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    max-width: 340px !important;
+  }
+}
+

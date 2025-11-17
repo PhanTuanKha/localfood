@@ -1,12 +1,12 @@
 import { Component, OnInit, NgZone, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { Subscription } from 'rxjs';
 import { CartSidebar } from '../order/cart-sidebar/cart-sidebar';
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, CartSidebar],
+  imports: [CommonModule, CartSidebar, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
@@ -66,7 +66,7 @@ export class Header implements OnInit, OnDestroy {
 
   switch (menu) {
     case 'Đơn hàng':
-      this.toggleCart();
+      this.router.navigate(['/order-history']);
       break;
     case 'Tài khoản':
       this.router.navigate(['/account']);

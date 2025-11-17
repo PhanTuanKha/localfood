@@ -25,7 +25,7 @@ import { Support } from './pages/support/support';
 import { Help } from './pages/help/help';
 import { FavoritesComponent } from './pages/favorites/favorites';
 export const routes: Routes = [
-  { path: '', redirectTo: 'reply-detail', pathMatch: 'full' },
+  { path: '', redirectTo: 'mainpage', pathMatch: 'full' },
   { path: 'signin', component: Signin },
   { path: 'register', component: Register },
   { path: 'forgot-password', component: ForgotPasswordComponent },

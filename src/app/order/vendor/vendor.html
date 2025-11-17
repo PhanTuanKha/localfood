@@ -1,277 +1,171 @@
 <div class="container-fluid main-page py-3">
-    <div class="container mt-3 main-page-img"> 
-        <div class="content">
-            <h3>Desi Flavours with a blend of Italian aessthetics!</h3>
-            <h1>Tandoori Pizza London</h1>
-            <img src="assets/images/logo/Rectangle64.png" alt="Không hiển thị được ảnh">
-        </div>
-        <img src="assets/images/logo/Rectangle.png" class="rounded" alt="Không hiển thị được ảnh"> 
+  <div class="container mt-3 main-page-img">
+    <div class="content">
+      <h3>Desi Flavours with a blend of Italian aessthetics!</h3>
+      <h1>Tandoori Pizza London</h1>
+      <img src="assets/images/logo/Rectangle64.png" alt="Không hiển thị được ảnh">
     </div>
-    <div class="find container mb-4">
+    <img src="assets/images/logo/Rectangle.png" class="rounded" alt="Không hiển thị được ảnh">
+  </div>
+
+  <div class="find container mb-4">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
       <h2 class="fw-bold text-orange mb-3">Đơn hàng từ Tandoori Pizza London</h2>
       <form class="d-flex" role="search">
-        <input class="form-control me-2 rounded-pill" type="search" placeholder="Tìm kiếm món ăn" aria-label="Search">
+        <input class="form-control me-2 rounded-pill" type="search" placeholder="Tìm kiếm món ăn">
       </form>
     </div>
+  </div>
+
+  <div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold text-dark">Quản lý món ăn</h2>
+
+      <button class="btn btn-orange px-4" (click)="openAddForm = !openAddForm">
+        <i class="bi bi-plus-circle"></i> Thêm món mới
+      </button>
+
+      <button class="btn btn-outline-success px-4" (click)="goToMyReply()">
+        <i class="bi bi-chat-left-text"></i> Xem phản hồi
+      </button>
     </div>
 
-    <div class="container mt-5">
+    <div *ngIf="openAddForm" class="card shadow-sm rounded-4 p-4 mb-4">
+      <h5 class="fw-bold mb-3">Thêm món mới</h5>
 
-  <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="fw-bold text-dark">Quản lý món ăn</h2>
+      <form (ngSubmit)="addFood()">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">Tên món</label>
+            <input class="form-control" [(ngModel)]="newFood.name" name="name" required>
+          </div>
 
-    <button class="btn btn-orange px-4" (click)="openAddForm = !openAddForm">
-      <i class="bi bi-plus-circle"></i> Thêm món mới
-    </button>
-    <button class="btn btn-outline-success px-4" (click)="goToMyReply()">
-      <i class="bi bi-chat-left-text"></i> Xem phản hồi
-    </button>
-  </div>
+          <div class="col-md-3">
+            <label class="form-label">Giá</label>
+            <input class="form-control" type="number" [(ngModel)]="newFood.price" name="price" required>
+            <small class="text-danger" *ngIf="newFood.price && newFood.price < 10000">
+              Giá phải lớn hơn 10.000
+            </small>
+          </div>
 
-  <div *ngIf="openAddForm" class="card shadow-sm rounded-4 p-4 mb-4">
-    <h5 class="fw-bold mb-3">Thêm món mới</h5>
-    <form>
-      <div class="row g-3">
-        <div class="col-md-4">
-          <label class="form-label">Tên món</label>
-          <input class="form-control" placeholder="Nhập tên món">
+          <div class="col-md-3">
+            <label class="form-label">Số lượng</label>
+            <input class="form-control" type="number" [(ngModel)]="newFood.quantity" name="quantity">
+          </div>
+
+          <div class="col-md-2">
+            <label class="form-label">Trạng thái</label>
+            <select class="form-select" [(ngModel)]="newFood.status" name="status" (change)="updateQuantityByStatus()">
+              <option value="available">Đang bán</option>
+              <option value="out">Hết món</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label class="form-label">Size</label>
+            <select class="form-select" [(ngModel)]="newFood.size" name="size">
+              <option *ngFor="let s of sizes" [value]="s.label">{{ s.label }} ({{ s.price | currency:'VND':'' }})</option>
+            </select>
+          </div>
+
         </div>
 
-        <div class="col-md-3">
-          <label class="form-label">Giá</label>
-          <input class="form-control" type="number" placeholder="100000">
+        <div class="mt-3 text-end">
+          <button class="btn btn-dark" [disabled]="newFood.price < 10000">Lưu món mới</button>
         </div>
-
-        <div class="col-md-3">
-          <label class="form-label">Số lượng</label>
-          <input class="form-control" type="number" placeholder="0">
-        </div>
-
-        <div class="col-md-2">
-          <label class="form-label">Trạng thái</label>
-          <select class="form-select">
-            <option value="available">Đang bán</option>
-            <option value="out">Hết món</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="mt-3 text-end">
-        <button class="btn btn-dark">Lưu món mới</button>
-      </div>
-    </form>
-  </div>
+      </form>
+    </div>
 
     <div class="card shadow-sm rounded-4 p-0">
-    <div class="table-responsive">
-      <table class="table table-hover align-middle mb-0">
-        <thead class="table-dark">
-          <tr>
-            <th>Ảnh</th>
-            <th>Món ăn</th>
-            <th>Số lượng</th>
-            <th>Trạng thái</th>
-            <th class="text-center">Hành động</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr *ngFor="let item of foodList">
-            <td><img [src]="item.img" class="rounded" width="60"></td>
-
-            <td class="fw-semibold">
-                {{ item.name }}
-                <div class="mt-1 d-flex gap-2 flex-wrap">
-                <button class="btn btn-outline-dark btn-sm rounded-pill"
-                        *ngFor="let s of sizes"
-                        [ngClass]="{ 'btn-dark text-white': selectedSize?.label === s.label }"
-                        (click)="selectSize(s)">
-                    {{ s.label }} - {{ s.price | currency:'VND':'' }}
-                </button>
-                </div>
-            </td>
-            <td>
-                <input type="number" class="form-control form-control-sm" [(ngModel)]="item.quantity">
-            </td>
-
-            <td>
-                <span class="badge"
-                    [ngClass]="{
-                        'bg-success': item.status === 'available',
-                        'bg-secondary': item.status === 'out'
-                    }">
-                {{ item.status === 'available' ? 'Đang bán' : 'Hết món' }}
-                </span>
-            </td>
-
-            <td class="text-center">
-                <button class="btn btn-outline-dark btn-sm me-2">
-                <i class="bi bi-pencil"></i>
-                </button>
-                <button class="btn btn-outline-danger btn-sm">
-                <i class="bi bi-trash"></i>
-                </button>
-            </td>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>Ảnh</th>
+              <th>Món ăn</th>
+              <th>Size</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Trạng thái</th>
+              <th class="text-center">Hành động</th>
             </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
+          </thead>
 
-    
-    <div class="d-flex justify-content-center mt-4 gap-2">
-          <i class="bi bi-arrow-left-circle-fill arrow left"></i>
-          <i class="bi bi-arrow-right-circle-fill arrow left"></i>
-</div>
-</div>
-<div class="map-section container my-5">
-  <div class="map-wrapper position-relative">
-    <img src="assets/images/logo/Rectangle52.png" alt="Map" class="img-fluid rounded">
-    <div class="map-info position-absolute top-50 start-50 translate-middle bg-dark text-white p-4 rounded-3 shadow-lg">
-      <p>Tooley St, London Bridge, London SE1 2TF, United Kingdom</p>
-      <h5>Phone number</h5>
-      <h4 class="text-warning">+934443-43</h4>
-      <h5>Website</h5>
-      <a href="http://mcdonalds.uk/" class="text-warning text-decoration-none" target="_blank">http://mcdonalds.uk/</a>
-    </div>
-  </div>
-</div>
+          <tbody>
+            <tr *ngFor="let item of foodList; let i = index">
 
-<div>
-    <h2 class="fw-bold mb-4" style="color: #000000; text-align: left; font-weight: 700; font-size: 1.6rem; margin-bottom: 25px;">Bình luận khách hàng</h2>
-    <section class="reviews py-5">
-    <div class="container">
-    <div class="review-slider d-flex justify-content-between align-items-center flex-wrap">
-    <div class="review-item">
-        <div class="review-header d-flex align-items-center justify-content-between mb-3">
-            <div class="d-flex align-items-center">
-            <img src="assets/images/logo/Ellipse3.png" alt="User" class="rounded-circle me-3" width="50">
-            <div class="user-info text-start">
-                <h6 class="fw-bold mb-0">St Glx</h6>
-                <small class="text-warning">South London</small>
-            </div>
-            </div>
+              <td><img [src]="item.img" class="rounded" width="60"></td>
 
-            <div class="text-end">
-            <div class="stars text-warning mb-1">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-            <small class="text-muted"><i class="bi bi-clock me-1"></i>24th September, 2023</small>
-            </div>
-        </div>
+              <ng-container *ngIf="editIndex === i; else viewMode">
+                <td><input class="form-control form-control-sm" [(ngModel)]="editFood.name"></td>
 
-        <p class="review-text">
-            The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard - hot and satisfying.
-        </p>
-    </div>
+                <td>
+                  <select class="form-select form-select-sm" [(ngModel)]="editFood.size">
+                    <option *ngFor="let s of sizes" [value]="s.label">{{ s.label }}</option>
+                  </select>
+                </td>
 
-    <div class="review-item">
-        <div class="review-header d-flex align-items-center justify-content-between mb-3">
-            <div class="d-flex align-items-center">
-            <img src="assets/images/logo/Ellipse3.png" alt="User" class="rounded-circle me-3" width="50">
-            <div class="user-info text-start">
-                <h6 class="fw-bold mb-0">St Glx</h6>
-                <small class="text-warning">South London</small>
-            </div>
-            </div>
+                <td>
+                  <input type="number" class="form-control form-control-sm" [(ngModel)]="editFood.price">
+                </td>
 
-            <div class="text-end">
-            <div class="stars text-warning mb-1">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-            <small class="text-muted"><i class="bi bi-clock me-1"></i>24th September, 2023</small>
-            </div>
-        </div>
+                <td>
+                  <input type="number" class="form-control form-control-sm" [(ngModel)]="editFood.quantity">
+                </td>
 
-        <p class="review-text">
-            The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard - hot and satisfying.
-        </p>
-    </div>
+                <td>
+                  <select class="form-select form-select-sm" [(ngModel)]="editFood.status">
+                    <option value="available">Đang bán</option>
+                    <option value="out">Hết món</option>
+                  </select>
+                </td>
 
-    <div class="review-item">
-        <div class="review-header d-flex align-items-center justify-content-between mb-3">
-            <div class="d-flex align-items-center">
-            <img src="assets/images/logo/Ellipse3.png" alt="User" class="rounded-circle me-3" width="50">
-            <div class="user-info text-start">
-                <h6 class="fw-bold mb-0">St Glx</h6>
-                <small class="text-warning">South London</small>
-            </div>
-            </div>
+                <td class="text-center">
+                  <button class="btn btn-success btn-sm me-2" (click)="saveEdit(i)">
+                    <i class="bi bi-check-lg"></i>
+                  </button>
+                  <button class="btn btn-secondary btn-sm" (click)="cancelEdit()">
+                    <i class="bi bi-x-lg"></i>
+                  </button>
+                </td>
+              </ng-container>
 
-            <div class="text-end">
-            <div class="stars text-warning mb-1">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-            <small class="text-muted"><i class="bi bi-clock me-1"></i>24th September, 2023</small>
-            </div>
-        </div>
+              <ng-template #viewMode>
+                <td class="fw-semibold">{{ item.name }}</td>
+                <td>{{ item.size }}</td>
+                <td>{{ item.price | currency:'VND':'' }}</td>
 
-        <p class="review-text">
-            The positive aspect was undoubtedly the efficiency of the service. The queue moved quickly, the staff was friendly, and the food was up to the usual McDonald's standard - hot and satisfying.
-        </p>
-    </div>
+                <td>
+                  <input type="number" class="form-control form-control-sm"
+                         [(ngModel)]="item.quantity"
+                         (change)="autoFixQuantity(item)">
+                </td>
 
-     <div class="text-center w-100 mt-4">
-        <img src="assets/images/logo/Rectangle64.png" alt="reviews">
-        <p class="text-muted mb-0">1,306 reviews</p>
-      </div>
+                <td>
+                  <select class="form-select form-select-sm w-auto"
+                          [(ngModel)]="item.status"
+                          (change)="autoUpdateStatus(item)">
+                    <option value="available">Đang bán</option>
+                    <option value="out">Hết món</option>
+                  </select>
+                </td>
 
-    <div class="d-flex justify-content-center align-items-center mt-4 gap-3">
-        <i class="bi bi-arrow-left-circle-fill arrow"></i> 
-        <i class="bi bi-arrow-right-circle-fill arrow"></i>
-    </div>
-    </div>
-    </div>
-</section>
-</div>
+                <td class="text-center">
+                  <button class="btn btn-outline-dark btn-sm me-2" (click)="editItem(i)">
+                    <i class="bi bi-pencil"></i>
+                  </button>
+                  <button class="btn btn-outline-danger btn-sm" (click)="deleteItem(i)">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </ng-template>
 
-<section class="similar-restaurants py-5">
-  <div class="container">
-    <h2 class="fw-bold mb-4">Các nhà hàng tương tự</h2>
-    <div class="restaurant-row d-flex flex-wrap justify-content-center">
-      <div class="brand-card" style="background-color:#DA291C;">
-        <img src="assets/images/logo/Mcdonalds.png" alt="McDonald's">
-        <div class="brand-footer">McDonald's London</div>
-      </div>
+            </tr>
+          </tbody>
 
-      <div class="brand-card" style="background-color:#006633;">
-        <img src="assets/images/logo/papajohns.png" alt="Papa John's">
-        <div class="brand-footer">Papa Johns</div>
-      </div>
-
-      <div class="brand-card" style="background-color:#FFFFFF;">
-        <img src="assets/images/logo/kfc.png" alt="KFC">
-        <div class="brand-footer">KFC West London</div>
-      </div>
-
-      <div class="brand-card" style="background-color:#FFD100;">
-        <img src="assets/images/logo/texas.png" alt="Texas Chicken">
-        <div class="brand-footer">Texas Chicken</div>
-      </div>
-
-      <div class="brand-card" style="background-color:#FFB600;">
-        <img src="assets/images/logo/burgerking.png" alt="Burger King">
-        <div class="brand-footer">Burger King</div>
-      </div>
-
-      <div class="brand-card" style="background-color:#FFFFFF;">
-        <img src="assets/images/logo/shaurma.png" alt="Shaurma">
-        <div class="brand-footer">Shaurma 1</div>
+        </table>
       </div>
     </div>
   </div>
-</section>
+</div>

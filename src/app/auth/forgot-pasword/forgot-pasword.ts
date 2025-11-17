@@ -1,14 +1,15 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { users, User } from '../../data/users';
-users
 import { Router } from '@angular/router';
+import { UsersService } from '../../data/users';
+
 @Component({
   selector: 'app-forgot-pasword',
+  standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './forgot-pasword.html',
-  styleUrl: './forgot-pasword.css',
+  styleUrls: ['./forgot-pasword.css'],
 })
 export class ForgotPasswordComponent {
   email = '';
@@ -18,9 +19,9 @@ export class ForgotPasswordComponent {
   error = '';
   success = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private userService: UsersService) {}
 
-  onSubmit() {
+  async onSubmit() {
     this.error = '';
     this.success = '';
 
@@ -29,7 +30,7 @@ export class ForgotPasswordComponent {
       return;
     }
 
-    if (!this.phone.match(/^[0-9]{9}$/)) {
+    if (!/^[0-9]{9}$/.test(this.phone)) {
       this.error = 'Số điện thoại phải gồm 9 chữ số (không tính mã quốc gia).';
       return;
     }
@@ -39,7 +40,10 @@ export class ForgotPasswordComponent {
       return;
     }
 
+    await this.userService.loadUsers();
+
     const fullPhone = '+84' + this.phone;
+    const users = this.userService.getUsers();
 
     const user = users.find(u => u.email === this.email && u.phone === fullPhone);
 
@@ -49,7 +53,6 @@ export class ForgotPasswordComponent {
     }
 
     user.password = this.newPassword;
-
     this.success = 'Cập nhật mật khẩu thành công! Đang chuyển hướng...';
 
     setTimeout(() => {

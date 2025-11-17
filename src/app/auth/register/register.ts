@@ -2,18 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { users, User, addUser } from '../../data/users';
+import { users, User, addUser, UsersService } from '../../data/users';
 @Component({
   selector: 'app-register',
   imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './register.html',
-  styleUrl: './register.css',
+  styleUrls: ['./register.css'],
 })
 export class Register {
 
   username = '';
   phone = '';
-  countryCode = '+84'; 
   email = '';
   password = '';
   confirmPassword = '';
@@ -26,7 +25,7 @@ export class Register {
 
   error = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private userService: UsersService) {}
 
   onImageSelected(event: any) {
     const file = event.target.files[0];
@@ -40,52 +39,76 @@ export class Register {
     reader.readAsDataURL(file);
   }
 
-  onSubmit() {
-
-    if (!this.username || !this.phone || !this.email || !this.password) {
-    this.error = 'Vui lòng nhập đầy đủ thông tin.';
-    return;
+  private async generateVendorUsername(baseName: string): Promise<string> {
+    await this.userService.loadUsers();
+    const nextNumber = this.userService.getNextVendorNumber();
+    return `${baseName}./vendor_${nextNumber}`;
   }
+
+  async onSubmit() {
+    this.error = '';
+
+    if (!this.username.trim() || !this.phone || !this.email || !this.password) {
+      this.error = 'Vui lòng nhập đầy đủ thông tin.';
+      return;
+    }
 
     if (this.password !== this.confirmPassword) {
       this.error = 'Mật khẩu không trùng khớp.';
       return;
     }
 
-    if (users.find(u => u.username === this.username)) {
+    await this.userService.loadUsers();
+    const users = this.userService.getUsers();
+
+    if (this.role === "customer" && users.find(u => u.username === this.username.trim())) {
       this.error = 'Tên đăng ký đã tồn tại.';
       return;
     }
 
-    if (users.find(u => (u as any).email === this.email)) {
+    if (users.find(u => u.email === this.email)) {
       this.error = 'Email đã được sử dụng.';
       return;
     }
 
-    if (!this.phone.match(/^[0-9]{9}$/)) {
-    this.error = 'Số điện thoại phải gồm 9 chữ số.';
-    return;
+    if (!/^[0-9]{9}$/.test(this.phone)) {
+      this.error = 'Số điện thoại phải gồm 9 chữ số.';
+      return;
     }
-    const fullPhone = '+84' + this.phone;
-    if (users.find(u => (u as any).phone === fullPhone)) 
-      {this.error = 'Số điện thoại đã được sử dụng.';
-    return;
+
+    const fullPhone = "+84" + this.phone;
+    if (users.find(u => u.phone === fullPhone)) {
+      this.error = 'Số điện thoại đã được sử dụng.';
+      return;
     }
-    const newUser: any = {
-      username: this.username,
+
+    let finalUsername = this.username.trim();
+    if (this.role === "vendor") {
+      finalUsername = await this.generateVendorUsername(finalUsername);
+    }
+
+    const newUser: User = {
+      username: finalUsername,
       password: this.password,
       role: this.role,
-      phone: this.phone,
-      email: this.email
+      phone: fullPhone,
+      email: this.email,
     };
 
-    if (this.role === 'vendor') {
+    if (this.role === "vendor") {
       newUser.address = this.address;
       newUser.description = this.description;
-      newUser.image = this.imageBase64;
+      if (this.imageBase64) newUser.image = this.imageBase64;
     }
-    addUser(newUser as User);
-    alert('Đăng ký thành công!');
-    this.router.navigate(['/sigin']);
+
+    this.userService.addUser(newUser);
+
+    if (this.role === "vendor") {
+      alert(`Đăng ký thành công! Username của bạn là: ${finalUsername}`);
+    } else {
+      alert('Đăng ký thành công!');
+    }
+
+    this.router.navigate(['/signin'])
   }
 }

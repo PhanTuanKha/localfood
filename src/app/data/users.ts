@@ -1,8 +1,9 @@
+import { Injectable } from '@angular/core';
 
 export interface User {
   username: string;
   password: string;
-  role: 'customer' | 'admin' | 'vendor';
+  role: 'customer' | 'vendor' | 'admin';
   phone?: string;
   email?: string;
   address?: string;
@@ -10,59 +11,36 @@ export interface User {
   image?: string;
 }
 
+@Injectable({ providedIn: 'root' })
+export class UsersService {
+  private users: User[] = [];
 
-export let users: User[] = [
-  {
-    username: 'nicky',
-    password: '123456',
-    role: 'admin',
-    phone: '+84987654321',
-    email: 'nicky.admin@localfood.com'
-  },
-  {
-    username: 'user1',
-    password: 'abcdef',
-    role: 'customer',
-    phone: '+84123456789',
-    email: 'user1@gmail.com'
-  },
-  {
-    username: 'Tandoori Pizza London',
-    password: 'yummypizzawithtandoori',
-    role: 'vendor',
-    phone: '+84123459999',
-    email: 'contact@tandooripizza.vn',
-    address: '45 Lê Duẩn, Quận 1, TP.HCM',
-    description: 'Nhà hàng chuyên các món pizza mang phong cách Ý.',
-    image: 'assets/images/vendors/tandoori_pizza.png'
-  },
-  {
-    username: 'PhanTuanKha',
-    password: 'sauluoi',
-    role: 'admin',
-    phone: '+84991234567',
-    email: 'phantuankha@uel.edu.vn'
-  },
-  {
-    username: 'gautruc',
-    password: 'toichilaconca',
-    role: 'customer',
-    phone: '+84777777777',
-    email: 'gautruc@gmail.com'
-  },
-  {
-    username: 'nakhongbietnauan',
-    password: '1234',
-    role: 'customer',
-    phone: '+84888888888',
-    email: 'na@gmail.com'
+  constructor() {}
+
+  async loadUsers(): Promise<void> {
+    const saved = localStorage.getItem('users');
+    this.users = saved ? JSON.parse(saved) : [];
   }
-];
 
-export function addUser(newUser: User) {
-  users.push(newUser);
-}
+  getUsers(): User[] {
+    return this.users;
+  }
 
-export function checkLogin(username: string, password: string): User | null {
-  return users.find(user => user.username === username && user.password === password) || null;
+  addUser(user: User) {
+    this.users.push(user);
+    this.saveUsers();
+  }
+
+  private saveUsers() {
+    localStorage.setItem('users', JSON.stringify(this.users));
+  }
+
+  getNextVendorNumber(): number {
+    const vendorCount = this.users.filter(u => u.role === 'vendor').length;
+    return vendorCount + 1;
+  }
+
+  checkLogin(username: string, password: string): User | null {
+    return this.users.find(u => u.username === username && u.password === password) || null;
+  }
 }
